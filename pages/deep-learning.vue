@@ -1,12 +1,25 @@
 <template>
-  <div class="page-container">
-    <h1>Deep Learning</h1>
-    <p>
-      Deep Learning is a subset of machine learning that utilizes neural
-      networks with many layers. It's particularly effective for tasks such as
-      image and speech recognition, natural language processing, and more. At
-      Aryan Research Lab, we explore cutting-edge deep learning techniques to
-      solve complex problems and advance the field.
-    </p>
+  <div>
+    <h1>Deep Learning Posts</h1>
+    <ul>
+      <li v-for="post in posts" :key="post.slug">
+        <nuxt-link :to="`/deep-learning/${post.slug}`">{{
+          post.title
+        }}</nuxt-link>
+      </li>
+    </ul>
   </div>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content }) {
+    console.log("Fetching posts...");
+    const posts = await $content("deep-learning").fetch();
+    console.log("Posts:", posts);
+    return {
+      posts,
+    };
+  },
+};
+</script>
