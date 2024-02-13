@@ -3,9 +3,9 @@
     <h1>Deep Learning Posts</h1>
     <ul>
       <li v-for="post in posts" :key="post.slug">
-        <nuxt-link :to="`/deep-learning/${post.slug}`">{{
-          post.title
-        }}</nuxt-link>
+        <nuxt-link :to="`/deep-learning/${post.slug}`">
+          {{ post.title }} (Slug: {{ post.slug }})
+        </nuxt-link>
       </li>
     </ul>
   </div>
@@ -20,6 +20,9 @@ export default {
     return {
       posts,
     };
+  },
+  mounted() {
+    console.log("Deep Learning page mounted!");
   },
 };
 </script>
