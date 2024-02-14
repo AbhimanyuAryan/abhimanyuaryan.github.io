@@ -1,7 +1,7 @@
 ---
-title: "CNNs"
+title: "Deep NN"
 date: "2024-02-13"
 author: "Aryan"
 ---
 
-Convolution Neural Network
+Deep Neural Network

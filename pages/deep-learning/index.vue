@@ -1,11 +1,11 @@
 <template>
   <main>
-    <ContentList path="/deeplearning" v-slot="{ list }">
+    <ContentList path="/deep-learning" v-slot="{ list }">
       <div class="cards">
         <nuxt-link
           v-for="item in list"
           :key="item._id"
-          :to="`/deeplearning/${item._path?.split('/').pop() || 'fallback-path'}`"
+          :to="`/deep-learning/${item._path?.split('/').pop() || 'fallback-path'}`"
           class="card-link"
         >
           <div class="card">
