@@ -1,29 +1,40 @@
 <template>
-  <div>
-    <h1>Deep Learning Posts</h1>
-    <p>fuck you nuxt you are horrible. should have used gatsby</p>
-    <ul>
-      <li v-for="post in posts" :key="post.slug">
-        <nuxt-link :to="`/deep-learning/${post.slug}`">
-          {{ post.title }} (Slug: {{ post.slug }})
+  <main>
+    <ContentList path="/deep-learning" v-slot="{ list }">
+      <div class="cards">
+        <nuxt-link
+          v-for="item in list"
+          :key="item._id"
+          :to="`/deep-learning/${item._path.split('/').pop()}`"
+          class="card-link"
+        >
+          <div class="card">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.description }}</p>
+            <p>Author: {{ item.author }}, Date: {{ new Date(item.date).toLocaleDateString() }}</p>
+          </div>
         </nuxt-link>
-      </li>
-    </ul>
-  </div>
+      </div>
+    </ContentList>
+  </main>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content }) {
-    console.log("Fetching posts...");
-    const posts = await $content("deep-learning").fetch();
-    console.log("Posts:", posts);
-    return {
-      posts,
-    };
-  },
-  mounted() {
-    console.log("Deep Learning page mounted!");
-  },
-};
-</script>
+<style>
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+}
+</style>
