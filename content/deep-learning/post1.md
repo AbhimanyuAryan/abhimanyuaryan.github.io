@@ -1,7 +1,8 @@
 ---
-title: "Understanding Deep Learning"
+title: "Linear/Logistic Regression"
 date: "2024-02-13"
 author: "Aryan"
 ---
 
-Dataset representation
+# Linear Regression
+

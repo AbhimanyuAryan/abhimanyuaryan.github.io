@@ -1,5 +1,5 @@
 <template>
   <main>
-    <ContentDoc />
+    <ContentDoc path="/deep-learning/" />
   </main>
 </template>
