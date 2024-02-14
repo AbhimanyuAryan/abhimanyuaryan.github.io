@@ -5,7 +5,7 @@
         <nuxt-link
           v-for="item in list"
           :key="item._id"
-          :to="`/deep-learning/${item._path.split('/').pop()}`"
+          :to="`/deep-learning/${item._path?.split('/').pop() || 'fallback-path'}`"
           class="card-link"
         >
           <div class="card">
