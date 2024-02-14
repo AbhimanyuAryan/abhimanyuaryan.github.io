@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       subjects: [
-        "deep-learning",
+        "deeplearning",
         "agents",
         "databases",
         "big-data",
