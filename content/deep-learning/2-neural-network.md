@@ -10,7 +10,7 @@ author: "Aryan"
 
 The perceptron was invented by Frank Rosenblatt in 1957. Perceptrons are important in deep learning because they laid the foundation for more complex neural networks. Concept of the perceptron was inspired by the understanding of the human brain, specifically mimicking the way neurons function
 
-![perceptron](images/perceptron.png)
+![perceptron](/deep-learning/perceptron.png)
 
 sample code
 
