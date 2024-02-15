@@ -47,9 +47,24 @@ Now, you can have weights associated with these priorities. So, let's say:
 1 has weight 2
 ```
 
-And the threshold is, let's say, 6. You see, even if conditions 2 and 1 are true, which is weight_of_two x input_of_two + weight_of_one x input_of_one, i.e., 3x1 + 2x1, it still doesn't cut the threshold; it's less than 6, so the model is gonna predict 0, which means I won't end up getting married lol.
+And the threshold is, let's say, 6. You see, even if conditions 2 and 1 are true, which is weight_of_two x input_of_two + weight_of_one x input_of_one, i.e., 3x1 + 2x1, it still doesn't cut the threshold; it's less or equal to 6, so the model is gonna predict 0, which means I won't end up getting married lol.
 
 But if the 3rd condition is true, i.e., 1x7 = 7, which is higher than 6, so I'll end up getting married. This is so stupid, but it is what it is lmao. The model is gonna end up predicting 1. I'll get married.
 
+### Structure of perceptron: Vamos cavar fundo
+
+![perceptron](/deep-learning/perceptron2.png)
+
+Activation Function
+
+Supervised Learning
+
+Cost function
+
+Backpropagation algorithm
+
+Backpropagation steps
+
+Python implementation
 
 wip .... 🚧
