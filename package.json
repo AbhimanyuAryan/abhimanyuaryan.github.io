@@ -13,6 +13,8 @@
   "dependencies": {
     "@nuxt/content": "^2.12.0",
     "nuxt": "^3.10.1",
+    "rehype-katex": "^7.0.0",
+    "remark-math": "^6.0.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
