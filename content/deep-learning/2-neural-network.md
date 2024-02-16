@@ -1,10 +1,8 @@
 ---
-title: "Deep Neural Network"
+title: "Deep Neural Network (Rede Neural Profunda)"
 date: "2024-02-14"
 author: "Aryan"
 ---
-
-# Deep Neural Network (Rede Neural Profunda)
 
 ## Perceptron
 
