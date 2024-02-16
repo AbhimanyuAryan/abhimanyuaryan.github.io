@@ -9,12 +9,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content"],
   content: {
     markdown: {
-      remarkPlugins: [
-        'remark-math', // Assuming you're using remark-math
-      ],
-      rehypePlugins: [
-        'rehype-katex', // Correct way without passing specific options
-      ]
+      remarkPlugins: ['remark-math'],
+      rehypePlugins: ['rehype-mathjax'],
     }
   }
 });

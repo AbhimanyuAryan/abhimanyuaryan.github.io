@@ -51,20 +51,38 @@ And the threshold is, let's say, 6. You see, even if conditions 2 and 1 are true
 
 But if the 3rd condition is true, i.e., 1x7 = 7, which is higher than 6, so I'll end up getting married. This is so stupid, but it is what it is lmao. The model is gonna end up predicting 1. I'll get married.
 
-### Structure of perceptron: Vamos cavar fundo
+### Sigmoid Neurons : Vamos cavar fundo
 
-![perceptron](/deep-learning/perceptron2.png)
+Small changes in weight and bias should make small changes in output. However that's not the case in single perceptron a small change in w/b can cause the output to completely predict wrong value. To resolve this issue we introduced sigmoid neurons. Sigmoid neurons are similar to perceptrons, but modified so that small changes in w/b cause only a small change output i.e.
 
-Activation Function
+Also, unlike perceptron a sigmoid neuron can output probabilities so not just just 0 and 1. The output of a sigmoid function is defined by σ(z).
 
-Supervised Learning
+The output of a sigmoid neuron is mathematically represented by applying the sigmoid activation function to the weighted sum of its inputs plus a bias term. The sigmoid function, $\sigma(z)$, is defined as:
 
-Cost function
+$$ \sigma(z) = \frac{1}{1 + e^{-z}} $$
 
-Backpropagation algorithm
+The weighted sum, $z$, that is input to the sigmoid function is calculated as:
 
-Backpropagation steps
+$$ z = \sum_{j} w_j x_j + b $$
 
-Python implementation
+where:
+- $w_j$ are the weights associated with each input $x_j$,
+- $x_j$ are the input values to the neuron,
+- $b$ is the bias term,
+- $e$ is the base of the natural logarithm, approximately equal to 2.71828.
 
-wip .... 🚧
+Combining these, the output of a sigmoid neuron, $y$, can be expressed as:
+
+$$ y = \sigma\left(\sum_{j} w_j x_j + b\right) = \frac{1}{1 + e^{-(\sum_{j} w_j x_j + b)}} $$
+
+This equation captures the entire process of calculating the output of a sigmoid neuron, from combining inputs with their weights, adding a bias, and passing the result through the sigmoid function to produce an output in the range (0, 1). This output can be interpreted as a probability in the context of binary classification problems, making sigmoid neurons particularly useful for such tasks.
+
+In general, Sigmoid Neural behaves exactly like perceptron except that with small changes in input sigmoid produces small changes in output
+
+The smoothness of σ means that small changes Δwj in the weights and Δb in the bias will produce a small change Δoutput in the output from the neuron. In fact, calculus tells us that Δoutput is well approximated by
+
+$$ \Delta \text{output} \approx \sum_{j} \frac{\partial \text{output}}{\partial w_j} \Delta w_j + \frac{\partial \text{output}}{\partial b} \Delta b, $$
+
+Lastly the biggest difference between perceptron and sigmoid is that output of sigmoid can be any real number between 0 and 1. ie. 0.16 and 0.68
+
+Code Coming Soon 🚧
