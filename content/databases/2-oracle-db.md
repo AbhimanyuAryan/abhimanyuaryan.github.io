@@ -15,6 +15,14 @@ click on database > enterprise > accept t&c
 
 3) login to registry `docker login container-registry.oracle.com`
 4) Pull the image `docker pull container-registry.oracle.com/database/enterprise:19.19.0.0` for macos m1
+
+4.1) Create a container from image
+
+```
+docker run --name my_oracle_db 1521:1521 -p 5500:5500 -e ORACLE_PWD=12345 ORACLE_CHARACTERSET=AL32UTF8 -d container-registry.oracle.com/database/enterprise:19.19.0.0
+```
+where my_oracle_db is the name of the container
+
 5) Connect to my docker container `docker exec -it my_oracle_db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"`
 6) Connect to DB
 
