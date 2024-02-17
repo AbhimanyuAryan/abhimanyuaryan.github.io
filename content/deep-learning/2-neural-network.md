@@ -8,7 +8,7 @@ author: "Aryan"
 
 The perceptron was invented by Frank Rosenblatt in 1957. Perceptrons are important in deep learning because they laid the foundation for more complex neural networks. The concept of the perceptron was inspired by the understanding of the human brain, specifically mimicking the way neurons function.
 
-![perceptron](/deep-learning/perceptron.png)
+![perceptron](/deep-learning/neural-network/perceptron.png)
 
 Rosenblatt proposed a simple rule to calculate the output. Here, $x_i$ denotes input features, and $w_j$ denotes weights associated with each input feature, with the summation $\sum_j w_jx_j$ being over all input features j.
 
@@ -74,4 +74,14 @@ Combining these, the output of a sigmoid neuron, $y$, can be expressed as:
 
 $$ y = \sigma\left(\sum_{j} w_j x_j + b\right) = \frac{1}{1 + e^{-(\sum_{j} w_j x_j + b)}} $$
 
+Shape of sigmoid 
+
 This equation captures the entire process of calculating the output of a sigmoid neuron, from combining inputs with their weights, adding a bias, and passing the result through the sigmoid function to produce an output in the range (0, 1). This output can be interpreted as a probability in the context of binary classification problems, making sigmoid
+
+The sigmoid graph, characterized by its smooth S-shaped curve, represents the sigmoid function, which is mathematically defined as 
+
+![sigmoid graph](/deep-learning/neural-network/sigmoid.png)
+
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
