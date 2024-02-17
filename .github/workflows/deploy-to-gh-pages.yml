@@ -26,12 +26,6 @@ jobs:
       - name: Generate Static Files
         run: pnpm generate
 
-      - name: Check dist directory
-        run: |
-          echo "Checking the dist directory..."
-          ls -alh dist/
-
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
