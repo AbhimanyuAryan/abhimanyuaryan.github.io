@@ -3,7 +3,6 @@ title: "Oracle DB"
 date: "2024-02-16"
 author: "Aryan"
 ---
-
 Downloading Oracle DB:
 
 1) Create an account.
@@ -19,8 +18,9 @@ click on database > enterprise > accept t&c
 4.1) Create a container from image
 
 ```
-docker run --name my_oracle_db 1521:1521 -p 5500:5500 -e ORACLE_PWD=12345 ORACLE_CHARACTERSET=AL32UTF8 -d container-registry.oracle.com/database/enterprise:19.19.0.0
+docker run -d --name <db_name> -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=<your_password> -e ORACLE_CHARACTERSET=AL32UTF8 container-registry.oracle.com/database/enterprise:19.19.0.0
 ```
+
 where my_oracle_db is the name of the container
 
 5) Connect to my docker container `docker exec -it my_oracle_db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"`
@@ -99,11 +99,11 @@ SQL> DESC publisher
  ----------------------------------------- -------- ----------------------------
  id_publisher				   NOT NULL NUMBER(3)
  name					   NOT NULL VARCHAR2(200)
- ```
+```
 
- 14) Inserting to the table
+14) Inserting to the table
 
- ```sql
+```sql
  SQL> INSERT INTO publisher ("id_publisher", "name") VALUES (2, 'Another Publisher');
 
 1 row created.
