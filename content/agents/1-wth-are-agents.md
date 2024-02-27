@@ -1,6 +1,6 @@
 ---
 title: "WTH are agents"
-date: "2024-02-13"
+date: "2024-02-27"
 author: "Aryan"
 ---
 
@@ -26,3 +26,45 @@ An agent is a computer program or an entity that is capable of acting autonomous
 ------
 
 1. <u>Agent Class (spade.agent.Agent)</u>
+
+
+#### Writing Simple Agent with spade
+
+
+```python
+from spade.agent import Agent
+from spade.behaviour import CyclicBehaviour
+from spade.message import Message
+
+class SenderAgent(Agent):
+    class InformBehav(CyclicBehaviour):
+        async def run(self):
+            print("Sending a message...")
+            msg = Message(to="receiver@yourserver.com")  # Change to the receiver's JID
+            msg.set_metadata("performative", "inform")  # Set the type of message
+            msg.body = "Hello, this is a greeting from the sender agent."
+
+            await self.send(msg)
+            print("Message sent!")
+
+    async def setup(self):
+        print("Sender Agent started")
+        self.add_behaviour(self.InformBehav())
+
+# Create the agent
+sender = SenderAgent("sender@yourserver.com", "senderpassword")  # Change to your sender agent's JID and password
+sender.start()
+
+# Stop the agent after some time
+import time
+time.sleep(10)  # Waits for 10 seconds
+sender.stop()
+```
+
+#### Lifecycle of this program
+
+1. <u>Initialization</u>: When a behavior is added to an agent, it's initialized with any necessary setup parameters. This is where you can prepare the behavior for execution, such as configuring initial states or loading resources.
+
+2. <u>Start</u>: The behavior is started either immediately when the agent starts or later, based on conditions or events. The starting of a behavior might involve preliminary actions before entering its main execution loop.
+
+3. <u>run</u>: `run` is called repeatedly based on the behavior 
