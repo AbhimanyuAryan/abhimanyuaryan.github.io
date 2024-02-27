@@ -1,11 +1,11 @@
 <template>
   <main>
-    <ContentList path="/agents" v-slot="{ list }">
+    <ContentList path="/multi-agents" v-slot="{ list }">
       <div class="cards">
         <nuxt-link
           v-for="item in list"
           :key="item._id"
-          :to="`/agents/${item._path?.split('/').pop() || 'fallback-path'}`"
+          :to="`/multi-agents/${item._path?.split('/').pop() || 'fallback-path'}`"
           class="card-link"
         >
           <div class="card">

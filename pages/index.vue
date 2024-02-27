@@ -20,7 +20,7 @@ export default {
     return {
       subjects: [
         "deep-learning",
-        "agents",
+        "multi-agents",
         "databases",
         "big-data",
         "data-mining",
