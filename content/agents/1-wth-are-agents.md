@@ -68,3 +68,19 @@ sender.stop()
 2. <u>Start</u>: The behavior is started either immediately when the agent starts or later, based on conditions or events. The starting of a behavior might involve preliminary actions before entering its main execution loop.
 
 3. <u>run</u>: `run` is called repeatedly based on the behavior 
+
+
+
+### Structure of project
+
+Project
+|
+|---- main.py
+|
+|---- Agents
+|       |-- seller.py
+|       |-- buyer.py
+|
+|---- Behaviors
+|       |-- whatever.py
+
