@@ -70,17 +70,13 @@ sender.stop()
 3. <u>run</u>: `run` is called repeatedly based on the behavior 
 
 
+### Project startup for (macos)
 
-### Structure of project
+1. starting openfire
 
-Project
-|
-|---- main.py
-|
-|---- Agents
-|       |-- seller.py
-|       |-- buyer.py
-|
-|---- Behaviors
-|       |-- whatever.py
-
+```bash
+$ sudo su
+sh-3.2# cd /usr/local/openfire/bin
+sh-3.2# export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+sh-3.2# ./openfire.sh
+```
