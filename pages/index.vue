@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Aryan Research Lab (under construction 🎁)</h1>
+    <h1>Aryan ॐ Research Lab (under construction 🎁)</h1>
     <div class="subjects">
       <a
         class="subject"
