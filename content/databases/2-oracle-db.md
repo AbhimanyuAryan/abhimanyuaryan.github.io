@@ -3,17 +3,18 @@ title: "Oracle DB"
 date: "2024-02-16"
 author: "Aryan"
 ---
+
 Downloading Oracle DB:
 
-1) Create an account.
-2) Accept terms and condition on Docker registry: https://container-registry.oracle.com
+1. Create an account.
+2. Accept terms and condition on Docker registry: https://container-registry.oracle.com
 
 click on database > enterprise > accept t&c
 
 ![accept terms and conditions](/oracle-db/terms_and_condition.gif)
 
-3) login to registry `docker login container-registry.oracle.com`
-4) Pull the image `docker pull container-registry.oracle.com/database/enterprise:19.19.0.0` for macos m1
+3. login to registry `docker login container-registry.oracle.com`
+4. Pull the image `docker pull container-registry.oracle.com/database/enterprise:19.19.0.0` for macos m1
 
 4.1) Create a container from image
 
@@ -23,8 +24,8 @@ docker run -d --name <db_name> -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=<your_pas
 
 where my_oracle_db is the name of the container
 
-5) Connect to my docker container `docker exec -it my_oracle_db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"`
-6) Connect to DB
+5. Connect to my docker container `docker exec -it my_oracle_db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"`
+6. Connect to DB
 
 ```
 SQL> connect sys as sysdba;
@@ -32,7 +33,7 @@ Enter password:
 Connected.
 ```
 
-7) Alter the session
+7. Alter the session
 
 ```
 SQL> alter session set "_ORACLE_SCRIPT"=true;
@@ -40,7 +41,7 @@ SQL> alter session set "_ORACLE_SCRIPT"=true;
 Session altered.
 ```
 
-8) Create a new user aryan
+8. Create a new user aryan
 
 ```
 SQL> create user aryan identified by aryan;
@@ -48,7 +49,7 @@ SQL> create user aryan identified by aryan;
 User created.
 ```
 
-9) Grant all preveleges to that user
+9. Grant all preveleges to that user
 
 ```
 SQL> GRANT ALL PRIVILEGES TO aryan;
@@ -56,19 +57,21 @@ SQL> GRANT ALL PRIVILEGES TO aryan;
 Grant succeeded.
 ```
 
-9) Exec docker container
+9. Exec docker container
 
 ```
 docker exec -it my_oracle_db bash
 ```
 
-10) Connect to your new user
+10. Connect to your new user
 
 ```
 sqlplus aryan/aryan@localhost:1521/ORCLPDB1
 ```
 
-11) Now that you are connect with user aryan with password aryan. You can create a table
+DEFAULT SID: ORCLCDB (from docs)
+
+11. Now that you are connect with user aryan with password aryan. You can create a table
 
 ```sql
 SQL> CREATE TABLE publisher
@@ -91,7 +94,7 @@ TABLE_NAME
 PUBLISHER
 ```
 
-13) Showing the table
+13. Showing the table
 
 ```sql
 SQL> DESC publisher
@@ -101,7 +104,7 @@ SQL> DESC publisher
  name					   NOT NULL VARCHAR2(200)
 ```
 
-14) Inserting to the table
+14. Inserting to the table
 
 ```sql
  SQL> INSERT INTO publisher ("id_publisher", "name") VALUES (2, 'Another Publisher');
@@ -109,7 +112,7 @@ SQL> DESC publisher
 1 row created.
 ```
 
-15) Updated the record on second ID
+15. Updated the record on second ID
 
 ```sql
 SQL> UPDATE publisher SET "name" = 'novo nome da editora' WHERE "id_publisher" = 2;
