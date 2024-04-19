@@ -19,7 +19,7 @@ click on database > enterprise > accept t&c
 4.1) Create a container from image
 
 ```
-docker run -d --name <db_name> -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=<your_password> -e ORACLE_CHARACTERSET=AL32UTF8 container-registry.oracle.com/database/enterprise:19.19.0.0
+docker run -d --name my_oracle_db -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=<your_password> -e ORACLE_CHARACTERSET=AL32UTF8 container-registry.oracle.com/database/enterprise:19.19.0.0
 ```
 
 where my_oracle_db is the name of the container
