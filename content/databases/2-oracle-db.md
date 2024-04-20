@@ -22,100 +22,45 @@ click on database > enterprise > accept t&c
 docker run -d --name my_oracle_db -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=12345 -e ORACLE_CHARACTERSET=AL32UTF8 container-registry.oracle.com/database/enterprise:19.19.0.0
 ```
 
-where my_oracle_db is the name of the container
-
-5. Connect to my docker container `docker exec -it my_oracle_db bash -c "source /home/oracle/.bashrc; sqlplus /nolog"`
-6. Connect to DB
+4.2) Check logs
 
 ```
-SQL> connect sys as sysdba;
-Enter password:
-Connected.
+docker logs my_oracle_db
 ```
 
-7. Alter the session
+wait for the message `DATABASE IS READY TO USE!`
+
+4.3) Change sys password
 
 ```
-SQL> alter session set "_ORACLE_SCRIPT"=true;
-
-Session altered.
+docker exec my_oracle_db ./setPassword.sh 12345;
 ```
 
-8. Create a new user aryan
+4.4) Connect to database
 
 ```
-SQL> create user aryan identified by aryan;
-
-User created.
+docker exec -it my_oracle_db sqlplus sys/12345@ORCLCDB as sysdba
 ```
 
-9. Grant all preveleges to that user
+4.5) Create a user
 
 ```
-SQL> GRANT ALL PRIVILEGES TO aryan;
-
-Grant succeeded.
+CREATE USER c##abhimanyuaryan IDENTIFIED BY 12345;
 ```
 
-9. Exec docker container
+4.6) Grant ALL privileges
 
 ```
-docker exec -it my_oracle_db bash
+GRANT ALL PRIVILEGES TO c##abhimanyuaryan;
 ```
 
-10. Connect to your new user
+Now login to sql developer with the following credentials:
 
 ```
-sqlplus aryan/aryan@localhost:1521/ORCLPDB1
+username: c##abhimanyuaryan
+password: 12345
+role: default
+Service Name: ORCLCDB
 ```
 
-DEFAULT SID: ORCLCDB (from docs)
-
-11. Now that you are connect with user aryan with password aryan. You can create a table
-
-```sql
-SQL> CREATE TABLE publisher
-  2  (
-  3  "id_publisher" NUMBER(3, 0) NOT NULL ENABLE,
-  4  "name" VARCHAR2(200 byte) NOT NULL ENABLE,
-  5  CONSTRAINT "PUBLISHER_PK" PRIMARY KEY ("id_publisher")
-  6  );
-
-Table created.
-```
-
-12. See what tables are accessible to aryan user
-
-```sql
-SQL> SELECT table_name FROM user_tables;
-
-TABLE_NAME
-------------------------------------------------------------
-PUBLISHER
-```
-
-13. Showing the table
-
-```sql
-SQL> DESC publisher
- Name					   Null?    Type
- ----------------------------------------- -------- ----------------------------
- id_publisher				   NOT NULL NUMBER(3)
- name					   NOT NULL VARCHAR2(200)
-```
-
-14. Inserting to the table
-
-```sql
- SQL> INSERT INTO publisher ("id_publisher", "name") VALUES (2, 'Another Publisher');
-
-1 row created.
-```
-
-15. Updated the record on second ID
-
-```sql
-SQL> UPDATE publisher SET "name" = 'novo nome da editora' WHERE "id_publisher" = 2;
-
-1 row updated.
-```
+Enjoy :)
