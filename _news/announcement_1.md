@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-09-01 09:00:00+0100
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Started as **Senior FullStack Engineer at CEGID** (Lisbon & Lyon), leading the AI Agentic evals team after Shine's acquisition.
