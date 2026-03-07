@@ -438,11 +438,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon-amp-amp-lyon-leading-the-ai-agentic-evals-team-after-shine-s-acquisition",
-          title: 'Started as Senior FullStack Engineer at CEGID (Lisbon &amp;amp;amp; Lyon), leading the AI...',
+            },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon",
+          title: 'Started as Senior FullStack Engineer at CEGID (Lisbon).',
           description: "",
-          section: "News",},{id: "news-started-postgraduate-in-marketing-intelligence-at-nova-ims-information-management-school-lisbon-amp-amp-lyon-sparkles",
-          title: 'Started Postgraduate in Marketing Intelligence at NOVA IMS Information Management School (Lisbon &amp;amp;amp;...',
+          section: "News",},{id: "news-started-postgraduate-in-marketing-intelligence-at-nova-ims-information-management-school-lisbon-sparkles",
+          title: 'Started Postgraduate in Marketing Intelligence at NOVA IMS Information Management School (Lisbon). :sparkles:...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
@@ -511,7 +511,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%61%62%68%69%6D%61%6E%79%75%61%72%79%61%6E@%70%72%6F%74%6F%6E%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%61%62%68%69%6D%61%6E%79%75%61%72%79%61%6E@%7A%6F%68%6F%6D%61%69%6C.%65%75", "_blank");
         },
       },{
         id: 'social-github',
