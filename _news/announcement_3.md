@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started Postgraduate in **Marketing Intelligence** at NOVA IMS Information Management School (Lisbon & Lyon). :sparkles:
+Started Postgraduate in **Marketing Intelligence** at NOVA IMS Information Management School (Lisbon). :sparkles:
