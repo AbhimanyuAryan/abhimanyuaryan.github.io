@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started as **Senior FullStack Engineer at CEGID** (Lisbon & Lyon), leading the AI Agentic evals team after Shine's acquisition.
+Started as **Senior FullStack Engineer at CEGID** (Lisbon).

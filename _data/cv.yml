@@ -1,7 +1,7 @@
 cv:
   name: Abhimanyu Aryan
   label: Senior FullStack Engineer & Educator
-  email: abhimanyuaryan@protonmail.com
+  email: abhimanyuaryan@zohomail.eu
   location: Braga, Portugal
   image: ""
   summary: Senior FullStack Engineer with 10+ years of experience building web frameworks, multi-agent systems, AR/VR applications, and ML pipelines. Currently pursuing a Masters in Informatics Engineering at University of Minho.
@@ -41,17 +41,25 @@ cv:
         end_date: 2017
 
     Experience:
+      - company: Shine
+        position: Senior FullStack Engineer
+        location: Denmark
+        start_date: 2024-01
+        end_date: 2024-09
+        highlights:
+          - Building internal tooling with Agents
+
       - company: CEGID
         position: Senior FullStack Engineer
         location: Lisbon
         start_date: 2024-09
         end_date: Present
         highlights:
-          - Leading small business enterprise CPA Agentic evals team after Shine's acquisition
           - Developed PulseOS's Agentic Framework on top of AG2
           - Worked on frontend, middle layer BFF NestJS, and PulseOS backend
           - Proposed and developed Human in the Loop for products like Vendus, ERP, and Retail
           - Developed Assistant in NextJS and backend in FastAPI
+
 
       - company: Genie Cloud
         position: FullStack Engineer
