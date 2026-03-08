@@ -145,29 +145,23 @@ cv:
         releaseDate: 2015
 
     Talks:
-      - title: Why Julia
-        date: 2023
-        location: University of UMinho
+      - label: "2023"
+        details: "Why Julia — University of UMinho, Braga, Portugal"
 
-      - title: "Building PongGame using TensorflowJS"
-        date: 2019
-        location: Google Developer Conference Hyderabad
+      - label: "2019"
+        details: "Speaker, Building PongGame using TensorflowJS — Google Developer Conference, Hyderabad"
 
-      - title: Trends in XR (AR/VR)
-        date: 2019
-        location: Entrepreneur Summit Hyderabad
+      - label: "2019"
+        details: "Speaker, Trends in XR (AR/VR) — Entrepreneur Summit, Hyderabad"
 
-      - title: Why we need more women in Indian Gaming Industry
-        date: 2018
-        location: PyCon Hyderabad
+      - label: "2018"
+        details: "Speaker, Why We Need More Women in Indian Gaming Industry — PyCon, Hyderabad"
 
-      - title: "ML-Agents in Synthetic Environments"
-        date: 2018
-        location: International Conference on Artificial Intelligence and Cognitive Computing, MLR Institute of Technology
+      - label: "2018"
+        details: "Speaker, ML-Agents in Synthetic Environments — International Conference on Artificial Intelligence and Cognitive Computing, MLR Institute of Technology"
 
-      - title: Building Flappy Bird Game clone with Unity3D
-        date: 2017
-        location: Women Who Code Delhi
+      - label: "2017"
+        details: "Speaker, Building Flappy Bird Game Clone with Unity3D — Women Who Code, Delhi"
 
     Skills:
       - name: Languages
@@ -191,16 +185,11 @@ cv:
         keywords: "PyTorch, Caffe, Object Detection, LLMs, Agentic Frameworks, RAG"
 
     Community:
-      - name: Women Who Code Delhi
-        icon: fa-solid fa-people-group
-        reference: Mentor
-        url: https://www.linkedin.com/company/women-who-code-delhi/
+      - label: "Mentor"
+        details: "[Women Who Code Delhi](https://www.linkedin.com/company/women-who-code-delhi/)"
 
-      - name: Innovation Cell, MLR Institute of Technology, Hyderabad
-        icon: fa-solid fa-vr-cardboard
-        reference: VR/AR Mentor
+      - label: "VR/AR Mentor"
+        details: "Innovation Cell, MLR Institute of Technology, Hyderabad"
 
-      - name: JuliaCon Committee Member
-        icon: fa-solid fa-users
-        reference: Committee Member
-        url: https://juliacon.org/local/paris2025/committee/
+      - label: "Committee Member"
+        details: "[JuliaCon Paris 2025](https://juliacon.org/local/paris2025/committee/)"
