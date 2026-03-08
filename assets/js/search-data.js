@@ -87,17 +87,6 @@ ninja.data = [{
             window.location.href = "/blog/2019/active-learning/";
           
         },
-      },{id: "post-svms-are-useless",
-        
-          title: "SVMs are Useless?",
-        
-        description: "A mathematical walkthrough of Support Vector Machines — from decision boundaries to the widest street approach",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2019/svms-are-useless/";
-          
-        },
       },{id: "post-getting-setup-with-fast-ai-for-machine-learning-no-gpu-required",
         
           title: "Getting Setup with Fast.ai for Machine Learning (No GPU Required)",
@@ -109,11 +98,11 @@ ninja.data = [{
             window.location.href = "/blog/2019/gpu-less-fastai-ml-course/";
           
         },
-      },{id: "post-just-a-moment",
+      },{id: "post-object-oriented-programming-in-julia",
         
-          title: 'Just a moment... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'Object-Oriented Programming in Julia <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "",
+        description: "Julia doesn&#39;t have classes, but it supports powerful OOP-like patterns through multiple dispatch, abstract types, and structs. Learn how to write clean, composable Julia code.",
         section: "Posts",
         handler: () => {
           
@@ -131,11 +120,11 @@ ninja.data = [{
             window.location.href = "/blog/2018/competitive-programming/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
+      },{id: "books-web-development-with-julia-and-genie",
+          title: 'Web Development with Julia and Genie',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
+              window.location.href = "/books/web_development_julia_genie/";
             },},{id: "news-started-masters-in-informatics-engineering-at-university-of-minho",
           title: 'Started Masters in Informatics Engineering at University of Minho',
           description: "",
@@ -147,7 +136,17 @@ ninja.data = [{
           section: "News",},{id: "news-started-postgraduate-in-marketing-intelligence-at-nova-ims-information-management-school-lisbon-sparkles",
           title: 'Started Postgraduate in Marketing Intelligence at NOVA IMS Information Management School (Lisbon). :sparkles:...',
           description: "",
-          section: "News",},{id: "projects-battle-tank-with-enemy-ai",
+          section: "News",},{id: "projects-anthropic-agent",
+          title: 'Anthropic Agent',
+          description: "A Python agent framework built on top of Anthropic&#39;s Claude API, implementing tool use, multi-step reasoning, and autonomous task execution.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/0_anthropic_agent/";
+            },},{id: "projects-copilot-teams",
+          title: 'Copilot Teams',
+          description: "Introducing Agents for GitHub Copilot CLI — a multi-agent framework that extends GitHub Copilot with autonomous, specialized agents for complex development workflows.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/0_copilot_teams/";
+            },},{id: "projects-battle-tank-with-enemy-ai",
           title: 'Battle Tank with Enemy AI',
           description: "A Tank FPS Game made in Unreal Engine with C++ and AI pathfinding",
           section: "Projects",handler: () => {
