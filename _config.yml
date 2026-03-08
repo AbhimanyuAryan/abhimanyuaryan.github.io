@@ -128,13 +128,6 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
 external_sources:
-  - name: My Blog on Medium
-    posts:
-      - url: https://medium.com/@abhimanyuaryan/object-oriented-programming-in-julia-4dbde2661fde
-        published_date: 2019-01-15
-        title: Object-Oriented Programming in Julia
-    categories: [external-posts]
-    tags: [medium]
 
 # -----------------------------------------------------------------------------
 # Newsletter
