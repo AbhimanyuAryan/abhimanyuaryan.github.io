@@ -133,7 +133,22 @@ ninja.data = [{
             },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon",
           title: 'Started as Senior FullStack Engineer at CEGID (Lisbon).',
           description: "",
-          section: "News",},{id: "news-started-postgraduate-in-marketing-intelligence-at-nova-ims-information-management-school-lisbon-sparkles",
+          section: "News",},{id: "news-upcoming-finishing-thesis-at-university-of-minho",
+          title: 'Upcoming: Finishing Thesis at University of Minho',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_5/";
+            },},{id: "news-organized-juliacon-paris-2025-oct-2-5",
+          title: 'Organized JuliaCon Paris 2025 (Oct 2–5)',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_6/";
+            },},{id: "news-added-github-copilot-cli-support-to-massgen",
+          title: 'Added GitHub Copilot CLI Support to MassGen',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_4/";
+            },},{id: "news-started-postgraduate-in-marketing-intelligence-at-nova-ims-information-management-school-lisbon-sparkles",
           title: 'Started Postgraduate in Marketing Intelligence at NOVA IMS Information Management School (Lisbon). :sparkles:...',
           description: "",
           section: "News",},{id: "projects-anthropic-agent",
