@@ -43,9 +43,9 @@ cv:
     Experience:
       - company: Shine
         position: Senior FullStack Engineer
-        location: Denmark
-        start_date: 2024-01
-        end_date: 2024-09
+        location: Remote
+        start_date: 2026-01
+        end_date: Present
         highlights:
           - Building internal tooling with Agents
 
