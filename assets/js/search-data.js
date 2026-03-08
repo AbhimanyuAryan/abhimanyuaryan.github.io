@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "Talks and workshops I have given on Julia, machine learning, game development, and more.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -182,16 +182,16 @@ ninja.data = [{
           description: "A clone of Google Tilt Brush built with Apple ARKit and Unity — paint in 3D with augmented reality",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_tilt_brush/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+            },},{id: "teachings-introduction-to-julia",
+          title: 'Introduction to Julia',
+          description: "A talk introducing the Julia programming language to students at the University of Minho, covering performance, syntax, and real-world applications in scientific computing and web development.",
           section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+              window.location.href = "/teachings/introduction-to-julia-uminho/";
+            },},{id: "teachings-why-javascript-will-eat-the-world",
+          title: 'Why JavaScript Will Eat the World',
+          description: "A talk at T-Hub Hyderabad on the rise of JavaScript across full-stack, mobile, ML, and IoT — and why it&#39;s becoming the universal language of the web.",
           section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
+              window.location.href = "/teachings/why-javascript-will-eat-the-world/";
             },},{
         id: 'social-cv',
         title: 'CV',
