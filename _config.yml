@@ -90,8 +90,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: Abhimanyu's Blog # blog_name will be displayed in your blog page
+blog_description: Thoughts on machine learning, game development, web frameworks, and more
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -128,16 +128,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 # Optional: Set default categories and tags for posts from each source.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+  - name: My Blog on Medium
+    posts:
+      - url: https://medium.com/@abhimanyuaryan/object-oriented-programming-in-julia-4dbde2661fde
+        published_date: 2019-01-15
+        title: Object-Oriented Programming in Julia
     categories: [external-posts]
     tags: [medium]
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
-    categories: [external-posts]
-    tags: [google]
 
 # -----------------------------------------------------------------------------
 # Newsletter
