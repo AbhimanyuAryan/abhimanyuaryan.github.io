@@ -194,7 +194,13 @@ cv:
       - name: Women Who Code Delhi
         icon: fa-solid fa-people-group
         reference: Mentor
+        url: https://www.linkedin.com/company/women-who-code-delhi/
 
       - name: Innovation Cell, MLR Institute of Technology, Hyderabad
         icon: fa-solid fa-vr-cardboard
         reference: VR/AR Mentor
+
+      - name: JuliaCon Committee Member
+        icon: fa-solid fa-users
+        reference: Committee Member
+        url: https://juliacon.org/local/paris2025/committee/
