@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Upcoming: Finishing Thesis at University of Minho"
-date: 2025-04-30 09:00:00+0100
+date: 2026-04-30 09:00:00+0100
 inline: false
 related_posts: false
 ---

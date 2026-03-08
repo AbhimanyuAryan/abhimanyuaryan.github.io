@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Added GitHub Copilot CLI Support to MassGen
-date: 2025-11-01 09:00:00+0100
+date: 2026-02-01 09:00:00+0100
 inline: false
 related_posts: false
 ---
