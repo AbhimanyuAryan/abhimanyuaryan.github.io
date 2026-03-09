@@ -1,21 +1,22 @@
-cv:
-  name: Abhimanyu Aryan
+extra:
   label: Senior FullStack Engineer & Educator
-  email: abhimanyuaryan@zohomail.eu
-  location: Braga, Portugal
   image: ""
   summary: Senior FullStack Engineer with 10+ years of experience building web frameworks, multi-agent systems, AR/VR applications, and ML pipelines. Currently pursuing a Masters in Informatics Engineering at University of Minho.
-
-  social_networks:
-    - network: GitHub
-      username: AbhimanyuAryan
-
   address:
     street: "R. da Quinta da Armada, 22"
     city: Braga
     region: Portugal
     postalCode: "4719-006"
     countryCode: PT
+
+cv:
+  name: Abhimanyu Aryan
+  email: abhimanyuaryan@zohomail.eu
+  location: Braga, Portugal
+
+  social_networks:
+    - network: GitHub
+      username: AbhimanyuAryan
 
   sections:
     Education:
@@ -24,7 +25,7 @@ cv:
         area: Marketing Intelligence
         studyType: Postgraduate
         start_date: 2026-09
-        end_date: Present
+        end_date: present
 
       - institution: University of Minho
         location: Braga, Portugal
@@ -45,7 +46,7 @@ cv:
         position: Senior FullStack Engineer
         location: Remote
         start_date: 2026-01
-        end_date: Present
+        end_date: present
         highlights:
           - Building internal tooling with Agents
 
@@ -53,7 +54,7 @@ cv:
         position: Senior FullStack Engineer
         location: Lisbon
         start_date: 2024-09
-        end_date: Present
+        end_date: present
         highlights:
           - Developed PulseOS's Agentic Framework on top of AG2
           - Worked on frontend, middle layer BFF NestJS, and PulseOS backend
