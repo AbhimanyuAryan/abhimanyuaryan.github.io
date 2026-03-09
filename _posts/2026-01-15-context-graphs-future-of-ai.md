@@ -18,11 +18,11 @@ Let me walk through how I got here.
 
 I started working seriously with knowledge graphs in late 2023. The problem that pulled me in was deceptively simple: **LLMs hallucinate**, and no amount of prompt engineering fully fixes it.
 
-The insight was that if you ground LLM outputs in structured, verifiable knowledge — a graph of entities and their real relationships — the model has something to reason *from* rather than just generating plausible-sounding text. Knowledge graphs become a source of truth that constrains generation.
+The insight was that if you ground LLM outputs in structured, verifiable knowledge — a graph of entities and their real relationships — the model has something to reason _from_ rather than just generating plausible-sounding text. Knowledge graphs become a source of truth that constrains generation.
 
-This became the foundation of my [talk at the Voxel51 AI Meetup in September 2024](/news/announcement_10/), where I demonstrated using **LangChain and Neo4j** to reduce hallucinations in ChatGPT-style systems. The [code is on GitHub](https://github.com/AbhimanyuAryan/voxel51). The core approach: instead of retrieving flat text chunks, retrieve *graph-structured knowledge* — entities, relationships, and their context — so the LLM has structured facts to anchor its response.
+This became the foundation of my [talk at the Voxel51 AI Meetup in September 2024](/news/announcement_10/), where I demonstrated using **LangChain and Neo4j** to reduce hallucinations in ChatGPT-style systems. The [code is on GitHub](https://github.com/AbhimanyuAryan/voxel51). The core approach: instead of retrieving flat text chunks, retrieve _graph-structured knowledge_ — entities, relationships, and their context — so the LLM has structured facts to anchor its response.
 
-But this raised a deeper question: where does the graph come from? How do you build and maintain it? And how do you make sure the *structure itself* is right?
+But this raised a deeper question: where does the graph come from? How do you build and maintain it? And how do you make sure the _structure itself_ is right?
 
 ## Understanding Database Paradigms (The Migration Project)
 
@@ -57,7 +57,7 @@ Jérémy and I discussed how ontologies could:
 
 We spent a lot of time on **framework selection** — which tools and standards to use for building ontologies. OWL? SKOS? Custom schemas? The choice shapes everything downstream. As we agreed: "a good beginning is half done."
 
-This conversation planted a seed: what if you combined the *grounding power* of knowledge graphs (reducing hallucinations), the *structural flexibility* of different database paradigms (relational, document, graph), and the *formal precision* of ontologies (defining what entities and relationships are possible)?
+This conversation planted a seed: what if you combined the _grounding power_ of knowledge graphs (reducing hallucinations), the _structural flexibility_ of different database paradigms (relational, document, graph), and the _formal precision_ of ontologies (defining what entities and relationships are possible)?
 
 ## The World Model Connection (September 2025)
 
@@ -68,8 +68,8 @@ CWM learns compressed representations of how environments work by observing traj
 The connection to knowledge graphs:
 
 - **Knowledge graphs** capture static structure — what exists and how it's connected
-- **World models** capture dynamics — how the system *behaves*
-- **Ontologies** provide the schema — what *kinds* of structures and dynamics are possible
+- **World models** capture dynamics — how the system _behaves_
+- **Ontologies** provide the schema — what _kinds_ of structures and dynamics are possible
 
 Mix them and you get something that doesn't just store what's true — it models how things work and can predict what happens next. That's not a database anymore. That's **infrastructure for intelligence**.
 
@@ -81,7 +81,7 @@ When Jaya Gupta's [context graph article](https://www.linkedin.com/pulse/how-do-
 
 Gupta identifies that we've built trillion-dollar infrastructure for the **state clock** (what's true now) and almost nothing for the **event clock** (what happened, in what order, with what reasoning).
 
-I've seen this firsthand. The Oracle database in my migration project captures state perfectly — current patients, current staff, current bills. The MongoDB version captures richer context per entity. The Neo4j version captures relationships. **But none of them capture *why* the data looks the way it does** — the decisions, the reasoning, the traces that produced the current state.
+I've seen this firsthand. The Oracle database in my migration project captures state perfectly — current patients, current staff, current bills. The MongoDB version captures richer context per entity. The Neo4j version captures relationships. **But none of them capture _why_ the data looks the way it does** — the decisions, the reasoning, the traces that produced the current state.
 
 That's exactly the gap. The reasoning connecting observations to actions was never treated as data.
 
@@ -89,7 +89,7 @@ That's exactly the gap. The reasoning connecting observations to actions was nev
 
 Gupta draws on **node2vec** and graph representation learning: you don't need to predefine the ontology. Agent trajectories through problem space discover structure through use. The schema isn't the starting point — it's the output.
 
-This resonates with everything I've built. When I migrated the hospital database to Neo4j, I had to *manually* discover which entities mattered and how they related. I consolidated Doctor, Nurse, and Technician into Staff. I debated whether to keep Episode as a node or remove it. These were ontology design decisions that required deep understanding of how the system is actually used.
+This resonates with everything I've built. When I migrated the hospital database to Neo4j, I had to _manually_ discover which entities mattered and how they related. I consolidated Doctor, Nurse, and Technician into Staff. I debated whether to keep Episode as a node or remove it. These were ontology design decisions that required deep understanding of how the system is actually used.
 
 Agents could do this automatically. An agent traversing a system — investigating issues, completing tasks, making decisions — implicitly discovers the ontology through its trajectory. Accumulate enough trajectories and the structure emerges.
 

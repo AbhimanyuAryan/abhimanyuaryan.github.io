@@ -12,10 +12,12 @@ A clone of **Google Tilt Brush** built with **Apple ARKit** and **Unity**. Googl
 The app allows users to draw and paint in 3D space using their device's camera, with strokes anchored to the real world via ARKit's spatial tracking.
 
 ### Tech Stack
+
 - **Apple ARKit**
 - **Unity**
 - **C#**
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/SOAL-ARKit)
 - [Google Tilt Brush](https://www.tiltbrush.com/)

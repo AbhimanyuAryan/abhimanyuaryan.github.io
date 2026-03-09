@@ -17,11 +17,13 @@ This project consists of two components:
 The goal is to replicate a real driver experience where the car perceives its environment via segmented camera input and navigates autonomously.
 
 ### Tech Stack
+
 - **Unity** + **ML-Agents**
 - **PyTorch**
 - **Python**
 - Image Segmentation
 
 ### Links
+
 - [CamVid Segmentation (GitHub)](https://github.com/AbhimanyuAryan/CamVidSegmentation)
 - [Self Driving Car Simulator (GitHub)](https://github.com/AbhimanyuAryan/self-driving-car-sim)

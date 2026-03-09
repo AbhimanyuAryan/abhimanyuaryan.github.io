@@ -10,9 +10,11 @@ category: work
 A tank FPS game I created back in 2016 using **Unreal Engine** and **C++**. The game features tank AI with pathfinding built using Unreal Engine's navigation system.
 
 ### Tech Stack
+
 - **C++**
 - **Unreal Engine**
 - Pathfinding / Game AI
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/04_BattleTank)

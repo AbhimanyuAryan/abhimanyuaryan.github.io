@@ -10,9 +10,11 @@ category: agentic
 **Copilot Teams** extends GitHub Copilot's CLI with a fully agentic, multi-agent architecture. Specialized agents collaborate to handle complex developer tasks beyond what a single Copilot interaction can achieve.
 
 ### Tech Stack
+
 - **TypeScript**
 - GitHub Copilot API
 - Multi-agent orchestration
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/copilot-teams)

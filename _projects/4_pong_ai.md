@@ -12,11 +12,13 @@ Built for **Google DevFest Hyderabad**, this project demonstrates the power of *
 When TensorFlow.js was first introduced by Google, I wanted to show audiences how it could transform machine learning accessibility. The entire training loop runs client-side in JavaScript.
 
 ### Tech Stack
+
 - **TensorFlow.js**
 - **JavaScript / HTML5**
 - Reinforcement Learning
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/GDGDevFest)
 - [Live Demo](https://pongai.herokuapp.com/)
 - [TensorFlow.js](https://www.tensorflow.org/js/)

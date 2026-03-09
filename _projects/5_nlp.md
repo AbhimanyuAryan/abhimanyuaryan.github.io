@@ -12,9 +12,11 @@ This project demonstrates how NLP models are able to perform **sentiment analysi
 The model learns to classify reviews as positive or negative, and can also complete partial sentences based on learned patterns.
 
 ### Tech Stack
+
 - **Python**
 - **PyTorch**
 - NLP / Sentiment Analysis
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/IMDB-NLP)
