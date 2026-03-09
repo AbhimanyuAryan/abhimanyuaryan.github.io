@@ -28,6 +28,6 @@ latest_posts:
 
 I'm a Senior FullStack Engineer with 10+ years of experience across web development, machine learning, AR/VR, and multi-agent systems. Currently working at **CEGID** (Lisbon) leading an AI Agentic evals team, and pursuing a **Masters in Informatics Engineering** at the University of Minho.
 
-I've contributed to open-source Julia web frameworks ([Genie](https://genieframework.com/)), built AR/VR experiences for JPMorgan and Mahindra, developed ML pipelines for UAV object detection, and spoken at conferences including Google Developer Conference Hyderabad, PyCon, and Women Who Code.
+I've contributed to open-source Julia web frameworks ([Genie](https://genieframework.com/)), built AR/VR experiences for JPMorgan and Mahindra, tested UAV object detection systems with the Indian Air Force in the Pokhran desert (site of India's first nuclear test, 1974), and spoken at Google Developer Conference, PyCon, and Women Who Code.
 
 My recent work focuses on **multi-agent orchestration**, **LLM fine-tuning**, and **agentic frameworks**. I'm currently building [MassGen](https://discord.massgen.ai) — an open-source multi-agent scaling system that runs in your terminal, autonomously orchestrating frontier models and agents to collaborate, reason, and produce high-quality results. Join us on Discord: [discord.massgen.ai](https://discord.massgen.ai)
