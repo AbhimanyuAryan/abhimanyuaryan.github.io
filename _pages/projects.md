@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
-display_categories: [agentic, work]
+display_categories: [agentic, work, julia]
 horizontal: false
 ---
 
