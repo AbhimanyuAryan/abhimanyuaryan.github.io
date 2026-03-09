@@ -61,7 +61,7 @@ nav_order: 4
   <div class="col">
     <div class="card h-100 shadow-sm">
       <div class="card-body d-flex align-items-start gap-3">
-        <div style="width:56px;height:56px;border-radius:8px;background:#9558b2;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">⚡</div>
+        <div style="width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">🧩</div>
         <div>
           <h5 class="card-title mb-1"><a href="https://github.com/GenieFramework/Stipple.jl" target="_blank" rel="noopener">GenieFramework/Stipple.jl</a></h5>
           <p class="card-text text-muted small">Reactive UI library for building interactive data applications in pure Julia — Vue.js powered frontend with Julia backend.</p>
@@ -76,7 +76,7 @@ nav_order: 4
   <div class="col">
     <div class="card h-100 shadow-sm">
       <div class="card-body d-flex align-items-start gap-3">
-        <div style="width:56px;height:56px;border-radius:8px;background:#9558b2;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">🎨</div>
+        <div style="width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">🎨</div>
         <div>
           <h5 class="card-title mb-1"><a href="https://github.com/GenieFramework/StippleUI.jl" target="_blank" rel="noopener">GenieFramework/StippleUI.jl</a></h5>
           <p class="card-text text-muted small">Library of reactive UI components for Stipple.jl — buttons, forms, tables, charts, and more powered by Quasar.</p>
@@ -91,7 +91,7 @@ nav_order: 4
   <div class="col">
     <div class="card h-100 shadow-sm">
       <div class="card-body d-flex align-items-start gap-3">
-        <div style="width:56px;height:56px;border-radius:8px;background:#9558b2;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">🔍</div>
+        <div style="width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">💾</div>
         <div>
           <h5 class="card-title mb-1"><a href="https://github.com/GenieFramework/SearchLight.jl" target="_blank" rel="noopener">GenieFramework/SearchLight.jl</a></h5>
           <p class="card-text text-muted small">ORM layer for Genie.jl — database-agnostic models, migrations, and queries for Julia web applications.</p>
@@ -106,7 +106,7 @@ nav_order: 4
   <div class="col">
     <div class="card h-100 shadow-sm">
       <div class="card-body d-flex align-items-start gap-3">
-        <div style="width:56px;height:56px;border-radius:8px;background:#9558b2;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">📊</div>
+        <div style="width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;">📊</div>
         <div>
           <h5 class="card-title mb-1"><a href="https://github.com/GenieFramework/StipplePlotly.jl" target="_blank" rel="noopener">GenieFramework/StipplePlotly.jl</a></h5>
           <p class="card-text text-muted small">Plotly integration for Stipple.jl — reactive, interactive charts and graphs for Julia data apps.</p>
