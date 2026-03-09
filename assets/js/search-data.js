@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -232,6 +232,11 @@ ninja.data = [{
           description: "Comparing Oracle, MongoDB, and Neo4j — migrating a relational database to NoSQL and graph database to understand how concepts translate between different systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_nosql_database_evaluation/";
+            },},{id: "projects-pkgvizboard",
+          title: '📦 PkgVizBoard',
+          description: "Package download statistics visualization for the entire Julia ecosystem, built with the Genie framework.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_pkgvizboard/";
             },},{id: "teachings-introduction-to-julia",
           title: 'Introduction to Julia',
           description: "A talk introducing the Julia programming language to students at the University of Minho, covering performance, syntax, and real-world applications in scientific computing and web development.",
