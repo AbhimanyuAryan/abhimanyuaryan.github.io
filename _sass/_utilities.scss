@@ -25,8 +25,9 @@ figure.highlight {
 pre {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
 
   // Responsive behavior for code blocks
   overflow-x: auto;
@@ -47,7 +48,9 @@ pre {
 code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875em;
   padding: 3px 3px;
 
   // Inline code should wrap

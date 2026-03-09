@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Navigation bar and header customization
+ * Navigation bar — HumanLayer-inspired clean, modern navbar
  ******************************************************************************/
 
 @use "variables" as v;
@@ -8,13 +8,20 @@
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  opacity: 0.98;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .navbar .dropdown-menu,
 .btn-group.dropdown .dropdown-menu {
-  background-color: var(--global-bg-color);
+  background-color: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
   a:not(.active) {
     color: var(--global-text-color);
@@ -31,6 +38,7 @@
 
 .dropdown-item {
   color: var(--global-text-color);
+  transition: color 0.2s ease, background-color 0.2s ease;
 
   &:hover {
     color: var(--global-hover-color);
@@ -40,7 +48,7 @@
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: var(--global-hover-color);
+  background-color: var(--global-theme-color);
   color: var(--global-hover-text-color) !important;
 
   &:hover {
@@ -57,10 +65,15 @@
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--global-hover-color);
@@ -69,7 +82,7 @@
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 600;
     color: var(--global-theme-color);
 
     &:hover {

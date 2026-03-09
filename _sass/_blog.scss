@@ -5,12 +5,14 @@
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   padding-bottom: 3rem;
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -49,16 +51,18 @@
     list-style: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    transition: background-color 0.2s ease;
 
     .post-meta {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       margin-bottom: 0;
+      font-family: "JetBrains Mono", monospace;
     }
 
     .post-tags {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
     }
@@ -66,6 +70,7 @@
     a {
       color: var(--global-text-color);
       text-decoration: none;
+      transition: color 0.2s ease;
 
       &:hover {
         color: var(--global-theme-color);
@@ -83,18 +88,24 @@
     .page-link {
       color: var(--global-text-color);
       padding: 0.75rem 1.15rem;
+      background-color: var(--global-card-bg-color);
+      border-color: var(--global-divider-color);
+      transition: all 0.2s ease;
 
       &:hover {
-        color: #000;
+        color: var(--global-theme-color);
+        background-color: var(--global-card-bg-color);
+        border-color: var(--global-theme-color);
       }
     }
 
     &.active .page-link {
       color: #fff;
       background-color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
 
       &:hover {
-        background-color: var(--global-theme-color);
+        background-color: var(--global-hover-color);
       }
     }
   }
@@ -103,19 +114,21 @@
 .post {
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     margin-bottom: 0;
+    font-family: "JetBrains Mono", monospace;
   }
 
   .post-tags {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 
     a {
       color: var(--global-text-color-light);
       text-decoration: none;
+      transition: color 0.2s ease;
 
       &:hover {
         color: var(--global-theme-color);
@@ -128,6 +141,7 @@
   a {
     color: var(--global-text-color-light);
     text-decoration: none;
+    transition: color 0.2s ease;
 
     .card-text {
       overflow: hidden;
@@ -146,9 +160,10 @@
 
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     margin-bottom: 0;
     padding-top: 0.5rem;
+    font-family: "JetBrains Mono", monospace;
   }
 }
 

@@ -34,10 +34,17 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
-// Card
+// Card — modern, subtle border card style
 
 .card {
   background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+  }
 
   .card-img {
     width: 100%;
@@ -46,10 +53,11 @@ ul.task-list input[type="checkbox"] {
 
   .card-title {
     color: var(--global-text-color);
+    font-weight: 600;
   }
 
   .card-body {
-    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+    padding: 1.5rem;
   }
 }
 
@@ -61,7 +69,8 @@ ul.task-list input[type="checkbox"] {
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
 
     p {
       display: inline-block;
@@ -98,6 +107,7 @@ ul.task-list input[type="checkbox"] {
   .card {
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
+    border-radius: 12px;
 
     .list-group-item {
       background-color: inherit;
@@ -127,6 +137,7 @@ ul.task-list input[type="checkbox"] {
 .projects {
   a {
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
       .card-title {
@@ -138,6 +149,7 @@ ul.task-list input[type="checkbox"] {
   .card {
     img {
       width: 100%;
+      border-radius: 8px;
     }
   }
 
@@ -197,7 +209,7 @@ ul.task-list input[type="checkbox"] {
 
       i::before {
         color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        transition: color 0.2s ease;
       }
 
       &:hover {

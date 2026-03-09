@@ -1,41 +1,43 @@
 /*******************************************************************************
  * Variables used throughout the theme.
  * To adjust anything, simply edit the variables below and rebuild the theme.
+ *
+ * HumanLayer.dev-inspired dark, modern design
  ******************************************************************************/
 
 @use "sass:color";
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
+// Colors — HumanLayer-inspired palette
+$red-color: #ef4444 !default;
+$red-color-dark: #dc2626 !default;
+$orange-color: #f97316 !default;
+$blue-color: #3b82f6 !default;
+$blue-color-dark: #2563eb !default;
+$cyan-color: #06b6d4 !default;
 $light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
+$green-color: #10b981 !default;
+$green-color-lime: #a3e635 !default;
+$green-color-dark: #059669 !default;
+$green-color-light: #d1fae5 !default;
+$green-color-bright: #34d399 !default;
+$purple-color: #8b5cf6 !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+$pink-color: #ec4899 !default;
+$pink-color-light: #fce7f3 !default;
+$yellow-color: #eab308 !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+// Zinc-based neutrals (HumanLayer-style)
+$grey-color: #a1a1aa !default; // zinc-400
+$grey-color-light: #d4d4d8; // zinc-300
+$grey-color-dark: #09090b; // zinc-950 — primary dark bg
+$grey-900: #18181b; // zinc-900 — card bg
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: #fafafa !default; // zinc-50
+$black-color: #09090b !default; // zinc-950
 
-// Theme colors
-
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+// Theme colors — emerald accent
+$code-bg-color-light: rgba($green-color, 0.08);
+$code-bg-color-dark: #1a1a2e !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";
