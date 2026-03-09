@@ -65,7 +65,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-getting-started-with-deep-learning-in-swift-and-tensorflow",
+            },{id: "post-context-graphs-are-the-future-of-ai-infrastructure",
+        
+          title: "Context Graphs Are the Future of AI Infrastructure",
+        
+        description: "From reducing LLM hallucinations with knowledge graphs, to migrating between database paradigms, to ontology-driven AI — how two years of work led me to context graphs as the next frontier.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/context-graphs-future-of-ai/";
+          
+        },
+      },{id: "post-getting-started-with-deep-learning-in-swift-and-tensorflow",
         
           title: "Getting Started with Deep Learning in Swift and TensorFlow",
         
@@ -133,7 +144,17 @@ ninja.data = [{
             },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon",
           title: 'Started as Senior FullStack Engineer at CEGID (Lisbon).',
           description: "",
-          section: "News",},{id: "news-organized-juliacon-paris-2025-oct-2-5",
+          section: "News",},{id: "news-talk-at-voxel51-reducing-hallucinations-in-chatgpt-using-knowledge-graphs",
+          title: 'Talk at Voxel51: Reducing Hallucinations in ChatGPT Using Knowledge Graphs',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_10/";
+            },},{id: "news-had-a-call-with-jérémy-ravenel-on-future-ontologies-and-knowledge-graph",
+          title: 'Had a call with Jérémy Ravenel on future Ontologies and Knowledge Graph',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8/";
+            },},{id: "news-organized-juliacon-paris-2025-oct-2-5",
           title: 'Organized JuliaCon Paris 2025 (Oct 2–5)',
           description: "",
           section: "News",handler: () => {
@@ -143,6 +164,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_7/";
+            },},{id: "news-wrote-about-context-graphs-as-the-future-of-ai-infrastructure",
+          title: 'Wrote about Context Graphs as the Future of AI Infrastructure',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_9/";
             },},{id: "news-added-github-copilot-cli-support-to-massgen",
           title: 'Added GitHub Copilot CLI Support to MassGen',
           description: "",
@@ -201,6 +227,11 @@ ninja.data = [{
           description: "A clone of Google Tilt Brush built with Apple ARKit and Unity — paint in 3D with augmented reality",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_tilt_brush/";
+            },},{id: "projects-database-migration-oracle-to-mongodb-amp-neo4j",
+          title: 'Database Migration: Oracle to MongoDB &amp;amp; Neo4j',
+          description: "Comparing Oracle, MongoDB, and Neo4j — migrating a relational database to NoSQL and graph database to understand how concepts translate between different systems.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_nosql_database_evaluation/";
             },},{id: "teachings-introduction-to-julia",
           title: 'Introduction to Julia',
           description: "A talk introducing the Julia programming language to students at the University of Minho, covering performance, syntax, and real-world applications in scientific computing and web development.",
