@@ -11,7 +11,7 @@ Active Learning was introduced by [Burr Settles](http://burrsettles.com/) at the
 
 According to Wikipedia, **Active Learning** is a sub-field of Semi-Supervised Learning. Let's understand Semi-Supervised Learning in simple terms:
 
-> *"The ability to get a large number of images makes this a great candidate for semi-supervised learning."*
+> _"The ability to get a large number of images makes this a great candidate for semi-supervised learning."_
 
 A very simple approach to semi-supervised learning:
 

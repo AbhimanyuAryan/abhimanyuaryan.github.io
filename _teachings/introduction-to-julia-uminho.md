@@ -10,6 +10,7 @@ location: Braga, Portugal
 In 2023, I gave a talk at the **University of Minho** introducing the Julia programming language to students. The session covered why Julia is fast, its unique design, and how it compares to Python — with live coding demos.
 
 Topics covered:
+
 - Why Julia? Performance benchmarks vs Python
 - Julia syntax and type system
 - Multiple dispatch

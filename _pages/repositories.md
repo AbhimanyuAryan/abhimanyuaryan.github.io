@@ -8,6 +8,7 @@ nav_order: 4
 ---
 
 {% if site.data.repositories.github_users %}
+
 ## GitHub Profile
 
 <div class="d-flex align-items-center gap-4 p-3 mb-4 border rounded shadow-sm" style="max-width:480px;">
@@ -19,6 +20,7 @@ nav_order: 4
 </div>
 
 ---
+
 {% endif %}
 
 ## GitHub Repositories

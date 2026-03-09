@@ -12,10 +12,12 @@ Competed in the [Kaggle Planet: Understanding the Amazon from Space](https://www
 The challenge involved multi-label classification of satellite imagery to track deforestation and land use changes in the Amazon rainforest.
 
 ### Tech Stack
+
 - **Python**
 - **PyTorch**
 - Machine Learning / Data Science
 
 ### Links
+
 - [GitHub Repository](https://github.com/AbhimanyuAryan/Planet_Amazon_Prediction_Kaggle)
 - [Kaggle Competition](https://www.kaggle.com/c/planet-understanding-the-amazon-from-space)

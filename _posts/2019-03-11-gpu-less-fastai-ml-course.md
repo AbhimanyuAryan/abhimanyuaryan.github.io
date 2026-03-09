@@ -13,10 +13,12 @@ Howdy! This post is for people who own laptops without good GPU specs, have a po
 Setting up a dev environment can feel like a waste of time. If you're one of those people, this post should help.
 
 ## Free Options
+
 - **Kaggle**
 - **Google Colab + GitHub**
 
 ## Paid Options
+
 - **AWS**
 
 ---
@@ -53,10 +55,12 @@ Google Colab provides a **free GPU**. Here's how to use it with GitHub:
 #### Ways to download datasets in Colab:
 
 **Curl:**
+
 ```bash
 curl <link_to_dataset>
 ```
-*(as shown in [Jeremy's video](https://youtu.be/CzdWqFTmn0Y?t=969))*
+
+_(as shown in [Jeremy's video](https://youtu.be/CzdWqFTmn0Y?t=969))_
 
 **Kaggle API:**
 

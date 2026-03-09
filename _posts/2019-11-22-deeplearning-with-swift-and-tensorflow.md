@@ -10,9 +10,9 @@ thumbnail: assets/img/posts/deeplearning-with-swift-and-tensorflow/swift.jpg
 
 There are 3 ways to get started coding with Swift & TensorFlow:
 
-- **Google Colab** *(Basic: Windows/Mac/Linux)*
-- **Command Line** *(Advanced: Mac/Linux)*
-- **REPL Playground XCode** *(Basic: Mac — Coming Soon)*
+- **Google Colab** _(Basic: Windows/Mac/Linux)_
+- **Command Line** _(Advanced: Mac/Linux)_
+- **REPL Playground XCode** _(Basic: Mac — Coming Soon)_
 
 > Note: I'll cover the first two approaches today — Google Colab & command line. The 3rd approach (XCode Playground) will be a separate post.
 
@@ -52,11 +52,7 @@ Open it in VSCode and paste this JSON to make it a Swift kernel notebook:
         "colab_type": "code"
       },
       "cell_type": "code",
-      "source": [
-        "let x = 2\n",
-        "let y = 2\n",
-        "print(\"Hello world, this is Swift! \\(x + y)\")"
-      ],
+      "source": ["let x = 2\n", "let y = 2\n", "print(\"Hello world, this is Swift! \\(x + y)\")"],
       "execution_count": 0,
       "outputs": []
     }
@@ -90,6 +86,7 @@ swift basics.swift
 ```
 
 Output:
+
 ```
 Tensorflow Basics Tutorial
 [[2.0, 2.0], [2.0, 2.0]]

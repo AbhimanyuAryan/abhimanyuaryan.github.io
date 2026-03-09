@@ -10,6 +10,7 @@ location: Hyderabad, India
 In 2019, I gave a talk at **T-Hub**, Hyderabad's leading startup incubator, on why JavaScript is rapidly expanding beyond the browser to dominate every layer of software development.
 
 Topics covered:
+
 - JavaScript's evolution from browser scripting to full-stack (Node.js)
 - React Native for mobile, Electron for desktop
 - TensorFlow.js — machine learning in the browser
