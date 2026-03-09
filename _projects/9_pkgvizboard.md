@@ -2,9 +2,9 @@
 layout: page
 title: "📦 PkgVizBoard"
 description: Package download statistics visualization for the entire Julia ecosystem, built with the Genie framework.
-img: assets/img/projects/pkgvizboard.png
+img: assets/img/projects/pkgvizboard.gif
 importance: 3
-category: work
+category: julia
 ---
 
 A web dashboard showing **download statistics for every package in the Julia ecosystem**. Built with the [Genie Framework](https://genieframework.com/) (Genie.jl, Stipple.jl, StippleUI.jl, StipplePlotly.jl), it provides interactive visualizations of package popularity, trends, and ecosystem health.
