@@ -2,7 +2,7 @@
 layout: page
 title: Battle Tank with Enemy AI
 description: A Tank FPS Game made in Unreal Engine with C++ and AI pathfinding
-img: assets/img/projects/TankGame.png
+img: assets/img/projects/TankGame.webp
 importance: 1
 category: work
 ---
