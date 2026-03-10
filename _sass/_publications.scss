@@ -48,16 +48,20 @@
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          background-color: #ec4899 !important;
           margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          color: white !important;
 
           a {
-            color: white;
+            color: white !important;
 
             &:hover {
               text-decoration: none;
             }
+          }
+
+          div {
+            color: white !important;
           }
         }
 
@@ -122,7 +126,7 @@
         padding-bottom: 0.5rem;
         span {
           display: inline-block;
-          color: v.$black-color;
+          color: var(--global-text-color);
           height: 100%;
           padding-right: 0.5rem;
           vertical-align: middle;
@@ -185,4 +189,27 @@
 .citation,
 .citation-number {
   color: var(--global-theme-color);
+}
+
+// Ensure bibliography text is visible in both themes
+ol.bibliography {
+  li {
+    color: var(--global-text-color);
+
+    .title {
+      color: var(--global-text-color);
+    }
+
+    .author {
+      color: var(--global-text-color);
+    }
+
+    .periodical {
+      color: var(--global-text-color-light);
+    }
+
+    .links a {
+      color: var(--global-text-color);
+    }
+  }
 }
