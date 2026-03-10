@@ -5,7 +5,6 @@ date: 2019-11-22 09:56:23
 description: TensorFlow is now available in Swift for Deep Learning. This post helps you get started with Google Colab and the command line.
 tags: deep-learning swift tensorflow
 categories: machine-learning
-thumbnail: assets/img/posts/deeplearning-with-swift-and-tensorflow/swift.jpg
 ---
 
 There are 3 ways to get started coding with Swift & TensorFlow:

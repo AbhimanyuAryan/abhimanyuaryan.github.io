@@ -5,7 +5,6 @@ date: 2026-03-09
 description: A walkthrough of formalizing single-agent systems for LLM-powered autonomous task execution, with a complete Python implementation using the GitHub Copilot SDK and a GTA V environment.
 tags: agents LLM AI architecture
 categories: AI
-thumbnail: assets/img/posts/single-agent-cover.webp
 ---
 
 Large language models are increasingly used not just as chatbots, but as the reasoning core of _autonomous agents_ — systems that observe an environment, decide on actions, and execute them in a loop until a goal is reached.

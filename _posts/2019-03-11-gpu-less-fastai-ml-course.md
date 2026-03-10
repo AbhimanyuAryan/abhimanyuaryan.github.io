@@ -5,7 +5,6 @@ date: 2019-03-11 09:56:23
 description: How to run the Fast.ai ML course on Kaggle, Google Colab, and AWS — even without a good GPU or fast internet
 tags: machine-learning fastai python
 categories: machine-learning
-thumbnail: assets/img/posts/gpu-less-fastai-ml-course/gpu.jpg
 ---
 
 Howdy! This post is for people who own laptops without good GPU specs, have a poor internet connection, and still want to learn ML from fast.ai.
