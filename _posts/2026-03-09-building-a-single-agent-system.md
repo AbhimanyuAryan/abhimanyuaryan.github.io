@@ -5,7 +5,7 @@ date: 2026-03-09
 description: A walkthrough of formalizing single-agent systems for LLM-powered autonomous task execution, with a complete Python implementation using the GitHub Copilot SDK and a GTA V environment.
 tags: agents LLM AI architecture
 categories: AI
-thumbnail: assets/img/posts/single-agent-cover.png
+thumbnail: assets/img/posts/single-agent-cover.webp
 ---
 
 Large language models are increasingly used not just as chatbots, but as the reasoning core of _autonomous agents_ — systems that observe an environment, decide on actions, and execute them in a loop until a goal is reached.
@@ -14,7 +14,7 @@ In this post, I walk through the formal foundations of agent systems and then bu
 
 ## Formalizing Agent Systems
 
-Building on multi-agent formulations {% cite zhou2024webarena %} {% cite guo2024llmmultiagents %}, an agent system is denoted by:
+Building on multi-agent formulations {% cite zhou2024webarena --file references %} {% cite guo2024llmmultiagents --file references %}, an agent system is denoted by:
 
 $$
 S = \{A, E, C, \Omega\}
@@ -396,4 +396,4 @@ But the single-agent case is where you get the fundamentals right. Get the agent
 
 ## References
 
-{% bibliography --cited %}
+{% bibliography --cited --file references %}

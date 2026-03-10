@@ -2,7 +2,7 @@
 layout: page
 title: Self Driving Car & Object Detection
 description: Merging image segmentation with Unity ML-Agents for autonomous driving in a 3D simulated environment
-img: assets/img/projects/selfdriving.png
+img: assets/img/projects/selfdriving.webp
 importance: 6
 category: work
 ---
