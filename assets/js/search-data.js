@@ -65,7 +65,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-context-graphs-are-the-future-of-ai-infrastructure",
+            },{id: "post-building-a-single-agent-system-from-formal-foundations-to-working-code",
+        
+          title: "Building a Single Agent System: From Formal Foundations to Working Code",
+        
+        description: "A walkthrough of formalizing single-agent systems for LLM-powered autonomous task execution, with a complete Python implementation using the GitHub Copilot SDK and a GTA V environment.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-a-single-agent-system/";
+          
+        },
+      },{id: "post-context-graphs-are-the-future-of-ai-infrastructure",
         
           title: "Context Graphs Are the Future of AI Infrastructure",
         
