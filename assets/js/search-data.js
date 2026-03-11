@@ -147,6 +147,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/web_development_julia_genie/";
+            },},{id: "news-teaching-the-future-of-unity3d-and-virtual-reality",
+          title: 'Teaching the Future of Unity3D and Virtual Reality',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_11/";
             },},{id: "news-started-masters-in-informatics-engineering-at-university-of-minho",
           title: 'Started Masters in Informatics Engineering at University of Minho',
           description: "",
