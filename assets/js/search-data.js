@@ -167,6 +167,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_14/";
+            },},{id: "news-entrepreneur-summit-hyderabad-2019",
+          title: 'Entrepreneur Summit Hyderabad 2019',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_15/";
             },},{id: "news-started-masters-in-informatics-engineering-at-university-of-minho",
           title: 'Started Masters in Informatics Engineering at University of Minho',
           description: "",
