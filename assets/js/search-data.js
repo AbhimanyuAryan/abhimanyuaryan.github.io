@@ -206,7 +206,7 @@ ninja.data = [{
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8/";
             },},{id: "news-organized-juliacon-paris-2025-oct-2-5",
-          title: 'Organized JuliaCon Paris 2025 (Oct 2–5)',
+          title: 'Organized JuliaCon Paris 2025 (Oct 2-5)',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_6/";
