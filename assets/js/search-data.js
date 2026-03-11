@@ -152,6 +152,21 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_11/";
+            },},{id: "news-teaching-game-design-patterns-in-unity3d",
+          title: 'Teaching Game Design Patterns in Unity3D',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_12/";
+            },},{id: "news-representing-heforshe-at-iit-delhi",
+          title: 'Representing HeForShe at IIT Delhi',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_13/";
+            },},{id: "news-ivdstudio-scale-up-and-student-acquisition-workshop",
+          title: 'IVDStudio Scale-Up and Student Acquisition Workshop',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_14/";
             },},{id: "news-started-masters-in-informatics-engineering-at-university-of-minho",
           title: 'Started Masters in Informatics Engineering at University of Minho',
           description: "",
