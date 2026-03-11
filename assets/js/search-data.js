@@ -177,6 +177,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_15/";
+            },},{id: "news-teaching-blockchain-distributed-ledgers-at-uber-hyderabad",
+          title: 'Teaching Blockchain Distributed Ledgers at Uber Hyderabad',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_18/";
             },},{id: "news-started-masters-in-informatics-engineering-at-university-of-minho",
           title: 'Started Masters in Informatics Engineering at University of Minho',
           description: "",
