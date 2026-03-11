@@ -167,6 +167,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_14/";
+            },},{id: "news-speaking-at-international-conference-on-ai-and-cognitive-computing",
+          title: 'Speaking at International Conference on AI and Cognitive Computing',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_16/";
             },},{id: "news-entrepreneur-summit-hyderabad-2019",
           title: 'Entrepreneur Summit Hyderabad 2019',
           description: "",
