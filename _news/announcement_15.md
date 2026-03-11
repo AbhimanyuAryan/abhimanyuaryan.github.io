@@ -14,6 +14,7 @@ The talk explored why large-scale VR adoption is hard today, and why **Augmented
   <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit1.jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
   <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit2.jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
   <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit3.jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
+  <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit8.jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
   <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit_4.jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
   <div>{% include figure.liquid path="/assets/img/news/enterpreneur_summit_4 (2).jpg" class="img-fluid rounded z-depth-1" max-width="100%" %}</div>
 </div>
