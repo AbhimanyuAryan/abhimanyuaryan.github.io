@@ -182,6 +182,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
+            },},{id: "news-elixir-meetup-braga-2024",
+          title: 'Elixir Meetup Braga 2024',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_17/";
             },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon",
           title: 'Started as Senior FullStack Engineer at CEGID (Lisbon).',
           description: "",
