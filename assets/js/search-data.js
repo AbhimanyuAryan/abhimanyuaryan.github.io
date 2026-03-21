@@ -65,7 +65,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-building-a-single-agent-system-from-formal-foundations-to-working-code",
+            },{id: "post-agent-architectures-from-single-agent-to-hybrid-mas",
+        
+          title: "Agent Architectures: From Single Agent to Hybrid MAS",
+        
+        description: "A formal treatment of five agent architectural paradigms — single agent, independent, centralized, decentralized, and hybrid multi-agent systems — with mathematical foundations and implementation walkthroughs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/agent_architectures/";
+          
+        },
+      },{id: "post-building-a-single-agent-system-from-formal-foundations-to-working-code",
         
           title: "Building a Single Agent System: From Formal Foundations to Working Code",
         
