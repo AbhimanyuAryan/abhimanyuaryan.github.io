@@ -5,6 +5,7 @@ date: 2026-03-20
 description: A formal treatment of five agent architectural paradigms — single agent, independent, centralized, decentralized, and hybrid multi-agent systems — with mathematical foundations and implementation walkthroughs.
 tags: agents LLM AI architecture multi-agent-systems
 categories: AI
+giscus_comments: true
 ---
 
 This post is rendered directly from a Jupyter notebook. It covers five distinct agent architectural paradigms for benchmarking planning, from a baseline single-agent system to various multi-agent systems (MAS).
