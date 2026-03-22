@@ -65,6 +65,20 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
+            },{id: "dropdown-ai-bytes",
+              title: "AI Bytes",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ai-bytes/";
+              },
+            },{id: "dropdown-courses",
+              title: "courses",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/courses/";
+              },
             },{id: "post-agent-architectures-from-single-agent-to-hybrid-mas",
         
           title: "Agent Architectures: From Single Agent to Hybrid MAS",
@@ -153,11 +167,56 @@ ninja.data = [{
             window.location.href = "/blog/2018/competitive-programming/";
           
         },
-      },{id: "books-web-development-with-julia-and-genie",
+      },{id: "ai_bytes-llm-evals-are-the-new-unit-tests-and-most-teams-are-skipping-them",
+          title: 'LLM evals are the new unit tests — and most teams are skipping...',
+          description: "Running an agentic evals team at CEGID has made one thing clear: shipping LLM-powered features without evals is like shipping code without tests. Here&#39;s our approach.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-10-llm-evals/";
+            },},{id: "ai_bytes-ag2-why-i-switched-from-autogen-to-its-community-fork",
+          title: 'AG2: Why I switched from AutoGen to its community fork',
+          description: "AG2 (the community continuation of AutoGen) is what I&#39;m using to build the PulseOS agentic framework at CEGID — here&#39;s why.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-15-ag2-multi-agent/";
+            },},{id: "ai_bytes-google-releases-gemini-2-0-flash-with-native-tool-use",
+          title: 'Google releases Gemini 2.0 Flash with native tool use',
+          description: "Gemini 2.0 Flash is Google&#39;s fastest multimodal model yet, now with native code execution, function calling, and grounding — all in a single API call.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-20-gemini-2-flash/";
+            },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/web_development_julia_genie/";
+            },},{id: "course_catalog-unity-game-development",
+          title: 'Unity Game Development',
+          description: "Learn Unity3D from scratch — particle systems, game physics, AI, and building complete games. Taught in Hindi with English subtitles.",
+          section: "Course_catalog",handler: () => {
+              window.location.href = "/courses/unity-game-development/";
+            },},{id: "courses-particle-system-1-modules",
+          title: 'Particle System 1: Modules',
+          description: "An introduction to Unity&#39;s Particle System and its module-based architecture. Learn how the particle system is structured and how modules control every aspect of particle behaviour.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/unity-game-development/01-particle-system-modules/";
+            },},{id: "courses-particle-system-2-emission-amp-shape-module",
+          title: 'Particle System 2: Emission &amp;amp; Shape Module',
+          description: "Deep dive into the Emission and Shape modules — controlling how many particles are spawned per second and the 3D shape they emit from.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/unity-game-development/02-particle-system-emission-shape/";
+            },},{id: "courses-particle-system-3-velocity-modules",
+          title: 'Particle System 3: Velocity Modules',
+          description: "Control how particles move over their lifetime using Velocity over Lifetime, Limit Velocity, and Inherit Velocity modules.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/unity-game-development/03-particle-system-velocity-modules/";
+            },},{id: "courses-particle-system-4-force-control-modules",
+          title: 'Particle System 4: Force Control Modules',
+          description: "Apply physics forces to particles using the Force over Lifetime module and Unity&#39;s Particle System Force Fields.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/unity-game-development/04-particle-system-force-modules/";
+            },},{id: "courses-particle-system-5-importing-particle-system-packages",
+          title: 'Particle System 5: Importing Particle System Packages',
+          description: "Learn how to import, customize, and use pre-built Unity Particle System packages from the Asset Store and Unity&#39;s own sample packs.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/unity-game-development/05-importing-particle-packages/";
             },},{id: "news-teaching-the-future-of-unity3d-and-virtual-reality",
           title: 'Teaching the Future of Unity3D and Virtual Reality',
           description: "",
