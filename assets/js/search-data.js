@@ -182,6 +182,11 @@ ninja.data = [{
           description: "Gemini 2.0 Flash is Google&#39;s fastest multimodal model yet, now with native code execution, function calling, and grounding — all in a single API call.",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-03-20-gemini-2-flash/";
+            },},{id: "ai_bytes-7-step-nemo-guardrails-39-openclaw-enterprise-strategy",
+          title: '7-Step NeMo Guardrails&amp;#39; OpenCLAW Enterprise Strategy',
+          description: "NVIDIA&#39;s NeMo Guardrails provides a 7-step enterprise framework to sandbox the entire lifecycle of an AI agent — from preflight checks to policy enforcement.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-22-nvidia-nemoclaw-openclaw/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
