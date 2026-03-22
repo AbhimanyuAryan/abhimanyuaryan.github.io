@@ -10,4 +10,9 @@ children:
   - title: divider
   - title: blog
     permalink: /blog/
+  - title: divider
+  - title: AI Bytes
+    permalink: /ai-bytes/
+  - title: courses
+    permalink: /courses/
 ---

@@ -150,6 +150,15 @@ collections:
     output: true
   teachings:
     output: true
+  ai_bytes:
+    output: true
+    permalink: /ai-bytes/:name/
+  courses:
+    output: true
+    permalink: /courses/:path/
+  course_catalog:
+    output: true
+    permalink: /courses/:name/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
