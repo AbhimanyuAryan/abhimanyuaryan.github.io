@@ -35,7 +35,15 @@ pagination:
 
     <li>
       <h3>
-        {% if byte.source_url %}
+        {% assign byte_content = byte.content | strip %}
+        {% if byte.source_url and byte_content == "" %}
+          <a class="post-title" href="{{ byte.source_url }}" target="_blank" rel="noopener noreferrer">{{ byte.title }}</a>
+          <a href="{{ byte.source_url }}" target="_blank" rel="noopener noreferrer">
+            <svg width="1.2rem" height="1.2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 4px;">
+              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        {% elsif byte.source_url %}
           <a class="post-title" href="{{ byte.url | relative_url }}">{{ byte.title }}</a>
           <a href="{{ byte.source_url }}" target="_blank" rel="noopener noreferrer">
             <svg width="1.2rem" height="1.2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-left: 4px;">
