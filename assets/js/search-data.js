@@ -187,6 +187,11 @@ ninja.data = [{
           description: "NVIDIA&#39;s NeMo Guardrails provides a 7-step enterprise framework to sandbox the entire lifecycle of an AI agent — from preflight checks to policy enforcement.",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-03-22-nvidia-nemoclaw-openclaw/";
+            },},{id: "ai_bytes-vercel-39-s-agent-browser-why-i-prefer-it-over-playwright-mcp",
+          title: 'Vercel&amp;#39;s agent-browser: Why I Prefer It Over Playwright MCP',
+          description: "A Rust-powered browser automation CLI built for AI agents — no Node.js, no Playwright, just CDP and a clever &#39;skills&#39; system that teaches your AI assistant how to use it.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-24-vercel-agent-browser/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
