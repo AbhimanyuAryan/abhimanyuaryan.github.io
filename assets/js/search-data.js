@@ -197,6 +197,11 @@ ninja.data = [{
           description: "A Rust-powered browser automation CLI built for AI agents — no Node.js, no Playwright, just CDP and a clever &#39;skills&#39; system that teaches your AI assistant how to use it.",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-03-24-vercel-agent-browser/";
+            },},{id: "ai_bytes-rag-is-dead-most-banking-apps-have-shitty-chatbots",
+          title: 'RAG Is Dead. Most Banking Apps Have Shitty Chatbots',
+          description: "Traditional RAG can&#39;t handle real-world complexity — especially multilingual users navigating foreign banking systems. Agentic RAG is the fix.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-03-30-rag-is-dead-banking-chatbots/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
