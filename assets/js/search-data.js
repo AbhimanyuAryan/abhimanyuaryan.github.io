@@ -79,7 +79,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/courses/";
               },
-            },{id: "post-agent-architectures-from-single-agent-to-hybrid-mas",
+            },{id: "post-how-to-build-the-control-room-for-your-agent",
+        
+          title: "How to Build the Control Room for Your Agent",
+        
+        description: "A practical design guide for building an agent gateway as the control plane for inputs, sessions, routing, and client surfaces.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-to-build-the-control-room-for-your-agent/";
+          
+        },
+      },{id: "post-agent-architectures-from-single-agent-to-hybrid-mas",
         
           title: "Agent Architectures: From Single Agent to Hybrid MAS",
         
