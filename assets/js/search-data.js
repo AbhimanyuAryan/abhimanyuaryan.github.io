@@ -72,7 +72,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/courses/";
               },
-            },{id: "post-how-to-build-the-control-room-for-your-agent",
+            },{id: "post-how-to-redesign-the-dyad-agent",
+        
+          title: "How to Redesign the Dyad Agent",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-to-redesign-the-dyad-agent/";
+          
+        },
+      },{id: "post-how-to-build-the-harness",
+        
+          title: "How to Build the Harness",
+        
+        description: "A practical guide to building a robust evaluation harness that captures, replays, and measures agent behavior — the testing infrastructure your agent system actually needs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/how-to-build-the-harness/";
+          
+        },
+      },{id: "post-how-to-build-the-control-room-for-your-agent",
         
           title: "How to Build the Control Room for Your Agent",
         
