@@ -13,7 +13,7 @@ Most agent systems fail for a simple reason: they have a model, but no control r
 
 The control room is the part that receives events, routes them, keeps sessions isolated, and makes sure the agent only acts when it should.
 
-![Gateway control room diagram](/assets/img/posts/gateway-control-room.png)
+<!-- ![Gateway control room diagram](/assets/img/posts/gateway-control-room.png) -->
 
 ## What the gateway should do
 
