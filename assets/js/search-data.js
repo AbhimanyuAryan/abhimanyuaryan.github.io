@@ -193,7 +193,12 @@ ninja.data = [{
             window.location.href = "/blog/2018/competitive-programming/";
           
         },
-      },{id: "ai_bytes-llm-evals-are-the-new-unit-tests-and-most-teams-are-skipping-them",
+      },{id: "ai_bytes-challenges-in-taking-ai-agents-to-production",
+          title: 'Challenges in Taking AI Agents to Production',
+          description: "A look at the real engineering challenges when moving LLM-powered agents from demo to production.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2025-01-05-challenges-in-taking-ai-agents-to-production/";
+            },},{id: "ai_bytes-llm-evals-are-the-new-unit-tests-and-most-teams-are-skipping-them",
           title: 'LLM evals are the new unit tests — and most teams are skipping...',
           description: "Running an agentic evals team at CEGID has made one thing clear: shipping LLM-powered features without evals is like shipping code without tests. Here&#39;s our approach.",
           section: "Ai_bytes",handler: () => {
