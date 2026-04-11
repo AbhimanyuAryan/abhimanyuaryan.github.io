@@ -56,4 +56,54 @@ nav: false
       </div>
     </div>
   </div>
+  
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">OpenClaw Architecture</h5>
+        <p class="card-text">Production-ready agent gateway with advanced session management, streaming, and multi-agent routing capabilities.</p>
+        <ul class="card-text">
+          <li><strong>Streaming & Chunking</strong> - Real-time response streaming</li>
+          <li><strong>Session Pruning</strong> - Efficient memory management</li>
+          <li><strong>Session Management</strong> - Long-lived agent sessions</li>
+          <li><strong>Multi-agent Routing</strong> - Intelligent agent orchestration</li>
+        </ul>
+        <a href="https://docs.openclaw.ai/concepts/architecture" class="btn btn-primary btn-sm">Read Docs</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Anthropic Engineering</h5>
+        <p class="card-text">Daily technical blog from Anthropic's engineering team. Essential reading for production AI systems and agent development.</p>
+        <ul class="card-text">
+          <li><strong>Agent Infrastructure</strong> - Scaling managed agents</li>
+          <li><strong>Claude Code</strong> - Auto mode and security patterns</li>
+          <li><strong>Tool Design</strong> - Writing effective tools for agents</li>
+          <li><strong>Evals & Testing</strong> - Infrastructure noise quantification</li>
+        </ul>
+        <a href="https://www.anthropic.com/engineering" class="btn btn-primary btn-sm">Read Daily</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">J. Lowin's Blog</h5>
+        <p class="card-text">MCP-specific insights from the creator of FastMCP. Deep dives into MCP architecture, tool design, and agent patterns.</p>
+        <ul class="card-text">
+          <li><strong>FastMCP Framework</strong> - Building efficient MCP servers</li>
+          <li><strong>Code Mode</strong> - Stop calling tools, start writing code</li>
+          <li><strong>The Inverted Agent</strong> - How MCP flips the AI stack</li>
+          <li><strong>Internal MCP</strong> - Most MCP usage is invisible</li>
+        </ul>
+        <a href="https://www.jlowin.dev" class="btn btn-primary btn-sm">Read Blog</a>
+      </div>
+    </div>
+  </div>
 </div>
