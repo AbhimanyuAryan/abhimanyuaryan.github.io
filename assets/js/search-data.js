@@ -233,6 +233,11 @@ ninja.data = [{
           description: "Traditional RAG can&#39;t handle real-world complexity — especially multilingual users navigating foreign banking systems. Agentic RAG is the fix.",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-03-30-rag-is-dead-banking-chatbots/";
+            },},{id: "ai_bytes-opencode-cost-optimization-that-pissed-anthropic",
+          title: 'OpenCode cost optimization that pissed Anthropic',
+          description: "OpenCode promises open-source AI coding assistance, but the reality falls short. Here&#39;s why I&#39;m sticking with alternatives.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-04-11-why-i-dont-like-opencode/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
