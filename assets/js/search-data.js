@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/courses/";
               },
-            },{id: "post-how-to-redesign-the-dyad-agent",
+            },{id: "post-developing-cloud-based-invoicing-and-pos-agentic-software",
+        
+          title: "Developing Cloud-Based Invoicing and POS Agentic Software",
+        
+        description: "A deep dive into building modern cloud-based invoicing and Point of Sale systems with agentic capabilities",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/developing-cloud-based-invoicing-pos-agentic-software/";
+          
+        },
+      },{id: "post-how-to-redesign-the-dyad-agent",
         
           title: "How to Redesign the Dyad Agent",
         
