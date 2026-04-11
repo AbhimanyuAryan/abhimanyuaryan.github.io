@@ -94,15 +94,83 @@ nav: false
   <div class="col-sm-6 mt-3 mt-md-0">
     <div class="card h-100">
       <div class="card-body">
-        <h5 class="card-title">J. Lowin's Blog</h5>
-        <p class="card-text">MCP-specific insights from the creator of FastMCP. Deep dives into MCP architecture, tool design, and agent patterns.</p>
+        <h5 class="card-title">LangChain Blog</h5>
+        <p class="card-text">Deep insights into agent evaluation, harness engineering, and skills development from the LangChain team building Deep Agents.</p>
         <ul class="card-text">
-          <li><strong>FastMCP Framework</strong> - Building efficient MCP servers</li>
-          <li><strong>Code Mode</strong> - Stop calling tools, start writing code</li>
-          <li><strong>The Inverted Agent</strong> - How MCP flips the AI stack</li>
-          <li><strong>Internal MCP</strong> - Most MCP usage is invisible</li>
+          <li><strong>Evaluating Skills</strong> - Building skills for coding agents</li>
+          <li><strong>Deep Agents Evals</strong> - How to build effective evaluations</li>
+          <li><strong>Harness Engineering</strong> - Improving agents with Terminal Bench 2.0</li>
+          <li><strong>Agent Behavior</strong> - Measuring and improving reliability</li>
         </ul>
-        <a href="https://www.jlowin.dev" class="btn btn-primary btn-sm">Read Blog</a>
+        <a href="https://blog.langchain.com/" class="btn btn-primary btn-sm">Read Blog</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Efficient Inference with SGLang</h5>
+        <p class="card-text">DeepLearning.AI course on LLM inference optimization. Learn caching optimizations, KV cache, and RadixAttention for faster text and image generation.</p>
+        <ul class="card-text">
+          <li><strong>Inference Fundamentals</strong> - How LLM inference works under the hood</li>
+          <li><strong>KV Cache Optimization</strong> - Reduce memory usage and latency</li>
+          <li><strong>RadixAttention</strong> - Advanced attention mechanism optimization</li>
+          <li><strong>Text & Image Generation</strong> - Multi-modal inference techniques</li>
+        </ul>
+        <a href="https://learn.deeplearning.ai/courses/efficient-inference-with-sglang-text-and-image-generation/lesson/uzfnvt/overview-of-inference" class="btn btn-primary btn-sm">Take Course</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Meta-Harness</h5>
+        <p class="card-text">End-to-end optimization of model harnesses. Automatically optimizes code determining what to store, retrieve, and present to LLMs.</p>
+        <ul class="card-text">
+          <li><strong>TerminalBench-2</strong> - Harness evolution and optimization</li>
+          <li><strong>Text Classification</strong> - Surpasses hand-designed systems</li>
+          <li><strong>Math Reasoning</strong> - Advanced problem-solving capabilities</li>
+          <li><strong>Agentic Coding</strong> - TerminalBench-2 evaluation results</li>
+        </ul>
+        <a href="https://yoonholee.com/meta-harness/" class="btn btn-primary btn-sm">Read Paper</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">NeMo Agent Toolkit</h5>
+        <p class="card-text">DeepLearning.AI course on making agents reliable with NVIDIA's NeMo Agent Toolkit. Turn proof-of-concept demos into production-ready systems.</p>
+        <ul class="card-text">
+          <li><strong>Agent Observability</strong> - Monitor and debug agent behavior</li>
+          <li><strong>Evaluation Framework</strong> - Comprehensive agent testing</li>
+          <li><strong>Deployment Tools</strong> - Production-ready agent deployment</li>
+          <li><strong>Reliability Patterns</strong> - From demo to production systems</li>
+        </ul>
+        <a href="https://learn.deeplearning.ai/courses/nvidia-nat-making-agents-reliable/lesson/rmy8gb/introduction?startTime=0" class="btn btn-primary btn-sm">Take Course</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Deep Agents GitHub</h5>
+        <p class="card-text">Agent harness built with LangChain and LangGraph. Equipped with planning tool, filesystem backend, and sub-agent spawning capabilities.</p>
+        <ul class="card-text">
+          <li><strong>Agent Harness</strong> - Core tool calling loop with built-in tools</li>
+          <li><strong>Planning Tool</strong> - Plan before task execution</li>
+          <li><strong>Filesystem Backend</strong> - Shell and filesystem access</li>
+          <li><strong>Sub-agent Delegation</strong> - Isolated task execution</li>
+        </ul>
+        <a href="https://github.com/langchain-ai/deepagents" class="btn btn-primary btn-sm">View Repo</a>
       </div>
     </div>
   </div>
