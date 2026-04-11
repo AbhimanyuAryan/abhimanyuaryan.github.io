@@ -175,3 +175,21 @@ nav: false
     </div>
   </div>
 </div>
+
+<div class="row mt-4">
+  <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Criticism of Coding Harnesses</h5>
+        <p class="card-text">A must-watch critique of current coding agent harnesses. Exposes fundamental limitations and blind spots in how we build and evaluate coding agents today.</p>
+        <ul class="card-text">
+          <li><strong>Harness Limitations</strong> - What current harnesses get wrong</li>
+          <li><strong>Evaluation Gaps</strong> - Blind spots in agent benchmarks</li>
+          <li><strong>Design Flaws</strong> - Architectural weaknesses exposed</li>
+          <li><strong>Better Approaches</strong> - Paths forward for improvement</li>
+        </ul>
+        <a href="https://youtu.be/Dli5slNaJu0?t=987" class="btn btn-primary btn-sm">Watch Video</a>
+      </div>
+    </div>
+  </div>
+</div>
