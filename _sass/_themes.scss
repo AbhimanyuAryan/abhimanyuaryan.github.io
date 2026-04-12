@@ -321,12 +321,23 @@ html[data-theme="hacker"] {
 
   // Tables with dashed borders
   table {
+    color: #{$hacker-gallery};
+
     th {
+      color: #{$hacker-gallery};
       border-bottom: 1px dashed $hacker-conifer;
     }
     td {
+      color: #{$hacker-gallery};
       border-bottom: 1px dashed rgba($hacker-conifer, 0.3);
     }
+  }
+
+  // Force text color on all elements (Bootstrap overrides)
+  .table, .table th, .table td,
+  .card-body, .card-text, .card-title,
+  p, li, span, div {
+    color: #{$hacker-gallery};
   }
 
   // Horizontal rules
