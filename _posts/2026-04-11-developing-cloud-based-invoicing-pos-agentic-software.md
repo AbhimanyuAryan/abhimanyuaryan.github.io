@@ -26,7 +26,7 @@ A serious cloud invoicing/POS platform is really a **business operating system**
 
 That is why these products win. They sit in the middle of daily business operations, not just accounting.
 
-![Layered architecture of a cloud invoicing and POS platform](/assets/images/blog/cloud-pos-architecture.svg)
+{% include figure.liquid path="/assets/images/blog/cloud-pos-architecture.svg" alt="Layered architecture of a cloud invoicing and POS platform" class="img-fluid rounded z-depth-1" max-width="700px" %}
 
 ## Who It Serves
 
@@ -299,7 +299,7 @@ This is one of the biggest moats in the category.
 
 A lot of teams can build a slick POS UI. Far fewer can sustain country-specific fiscal correctness over time.
 
-![Flow of an invoice from UI to structured fiscal record and tax reporting](/assets/images/blog/invoice-tax-flow.svg)
+{% include figure.liquid path="/assets/images/blog/invoice-tax-flow.svg" alt="Flow of an invoice from UI to structured fiscal record and tax reporting" class="img-fluid rounded z-depth-1" max-width="700px" %}
 
 ### Devices and hardware
 
@@ -503,7 +503,7 @@ An agentic version should do more than add a chatbot to the sidebar.
 
 It should actively reduce operational work across the whole stack.
 
-![Map of where AI agents can automate setup, invoicing, POS, stock, analytics, and compliance](/assets/images/blog/agentic-automation-map.svg)
+{% include figure.liquid path="/assets/images/blog/agentic-automation-map.svg" alt="Map of where AI agents can automate setup, invoicing, POS, stock, analytics, and compliance" class="img-fluid rounded z-depth-1" max-width="700px" %}
 
 ## AI Automation Opportunities by Module
 
