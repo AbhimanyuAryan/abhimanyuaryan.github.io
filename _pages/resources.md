@@ -6,10 +6,76 @@ description: Personal collection of learning resources and tutorials.
 nav: false
 ---
 
+<style>
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--global-card-bg-color);
+  border-radius: 8px;
+}
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--global-theme-color);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--global-theme-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--global-theme-color);
+  color: white;
+}
+.resource-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.tag-video { background: #ef4444; color: white; }
+.tag-blog { background: #6366f1; color: white; }
+.tag-docs { background: #10b981; color: white; }
+.tag-paper { background: #f59e0b; color: white; }
+.tag-github { background: #1f2937; color: white; }
+.tag-course { background: #8b5cf6; color: white; }
+.resource-card {
+  transition: all 0.3s ease;
+}
+.resource-card.hidden {
+  display: none !important;
+}
+.resource-count {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 1rem;
+}
+</style>
+
+<div class="filter-container">
+  <button class="filter-btn active" onclick="filterResources('all')">All</button>
+  <button class="filter-btn" onclick="filterResources('video')">📺 Video</button>
+  <button class="filter-btn" onclick="filterResources('course')">🎓 Course</button>
+  <button class="filter-btn" onclick="filterResources('blog')">📝 Blog</button>
+  <button class="filter-btn" onclick="filterResources('docs')">📚 Docs</button>
+  <button class="filter-btn" onclick="filterResources('paper')">📄 Paper</button>
+  <button class="filter-btn" onclick="filterResources('github')">💻 GitHub</button>
+</div>
+
+<div class="resource-count">Showing <span id="visible-count">11</span> of <span id="total-count">11</span> resources</div>
+
 <div class="row">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="video">
       <div class="card-body">
+        <span class="resource-tag tag-video">Video</span>
         <h5 class="card-title">OpenAI Build Hours</h5>
         <p class="card-text">Comprehensive series covering advanced AI development concepts including prompt caching, memory management, and integration patterns.</p>
         <ul class="card-text">
@@ -24,8 +90,9 @@ nav: false
   </div>
   
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="blog">
       <div class="card-body">
+        <span class="resource-tag tag-blog">Blog</span>
         <h5 class="card-title">Mario Zechner's Blog</h5>
         <p class="card-text">Independent developer with deep expertise in ML, compilers, and coding agents. Essential reading for understanding agent architecture.</p>
         <ul class="card-text">
@@ -42,8 +109,9 @@ nav: false
 
 <div class="row mt-4">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="video">
       <div class="card-body">
+        <span class="resource-tag tag-video">Video</span>
         <h5 class="card-title">BAML Podcast: "AI That Works"</h5>
         <p class="card-text">Weekly interactive sessions with @hellovai & @dexhorthy building real AI applications. Live code, Q&A, and production techniques.</p>
         <ul class="card-text">
@@ -58,8 +126,9 @@ nav: false
   </div>
   
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="docs">
       <div class="card-body">
+        <span class="resource-tag tag-docs">Docs</span>
         <h5 class="card-title">OpenClaw Architecture</h5>
         <p class="card-text">Production-ready agent gateway with advanced session management, streaming, and multi-agent routing capabilities.</p>
         <ul class="card-text">
@@ -76,8 +145,9 @@ nav: false
 
 <div class="row mt-4">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="blog">
       <div class="card-body">
+        <span class="resource-tag tag-blog">Blog</span>
         <h5 class="card-title">Anthropic Engineering</h5>
         <p class="card-text">Daily technical blog from Anthropic's engineering team. Essential reading for production AI systems and agent development.</p>
         <ul class="card-text">
@@ -92,8 +162,9 @@ nav: false
   </div>
   
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="blog">
       <div class="card-body">
+        <span class="resource-tag tag-blog">Blog</span>
         <h5 class="card-title">LangChain Blog</h5>
         <p class="card-text">Deep insights into agent evaluation, harness engineering, and skills development from the LangChain team building Deep Agents.</p>
         <ul class="card-text">
@@ -110,8 +181,9 @@ nav: false
 
 <div class="row mt-4">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="course">
       <div class="card-body">
+        <span class="resource-tag tag-course">Course</span>
         <h5 class="card-title">Efficient Inference with SGLang</h5>
         <p class="card-text">DeepLearning.AI course on LLM inference optimization. Learn caching optimizations, KV cache, and RadixAttention for faster text and image generation.</p>
         <ul class="card-text">
@@ -126,8 +198,9 @@ nav: false
   </div>
   
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="paper">
       <div class="card-body">
+        <span class="resource-tag tag-paper">Paper</span>
         <h5 class="card-title">Meta-Harness</h5>
         <p class="card-text">End-to-end optimization of model harnesses. Automatically optimizes code determining what to store, retrieve, and present to LLMs.</p>
         <ul class="card-text">
@@ -144,8 +217,9 @@ nav: false
 
 <div class="row mt-4">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="course">
       <div class="card-body">
+        <span class="resource-tag tag-course">Course</span>
         <h5 class="card-title">NeMo Agent Toolkit</h5>
         <p class="card-text">DeepLearning.AI course on making agents reliable with NVIDIA's NeMo Agent Toolkit. Turn proof-of-concept demos into production-ready systems.</p>
         <ul class="card-text">
@@ -160,8 +234,9 @@ nav: false
   </div>
   
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="github">
       <div class="card-body">
+        <span class="resource-tag tag-github">GitHub</span>
         <h5 class="card-title">Deep Agents GitHub</h5>
         <p class="card-text">Agent harness built with LangChain and LangGraph. Equipped with planning tool, filesystem backend, and sub-agent spawning capabilities.</p>
         <ul class="card-text">
@@ -178,8 +253,9 @@ nav: false
 
 <div class="row mt-4">
   <div class="col-sm-6 mt-3 mt-md-0">
-    <div class="card h-100">
+    <div class="card h-100 resource-card" data-tags="video">
       <div class="card-body">
+        <span class="resource-tag tag-video">Video</span>
         <h5 class="card-title">Criticism of Coding Harnesses</h5>
         <p class="card-text">A must-watch critique of current coding agent harnesses. Exposes fundamental limitations and blind spots in how we build and evaluate coding agents today.</p>
         <ul class="card-text">
@@ -193,3 +269,40 @@ nav: false
     </div>
   </div>
 </div>
+
+<script>
+function filterResources(tag) {
+  const cards = document.querySelectorAll('.resource-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+  let visibleCount = 0;
+  
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  cards.forEach(card => {
+    if (tag === 'all' || card.dataset.tags.includes(tag)) {
+      card.classList.remove('hidden');
+      card.closest('.col-sm-6').style.display = '';
+      visibleCount++;
+    } else {
+      card.classList.add('hidden');
+      card.closest('.col-sm-6').style.display = 'none';
+    }
+  });
+  
+  document.getElementById('visible-count').textContent = visibleCount;
+  localStorage.setItem('resource-filter', tag);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const total = document.querySelectorAll('.resource-card').length;
+  document.getElementById('total-count').textContent = total;
+  document.getElementById('visible-count').textContent = total;
+  
+  const savedFilter = localStorage.getItem('resource-filter');
+  if (savedFilter && savedFilter !== 'all') {
+    const btn = document.querySelector(`.filter-btn[onclick*="'${savedFilter}'"]`);
+    if (btn) btn.click();
+  }
+});
+</script>
