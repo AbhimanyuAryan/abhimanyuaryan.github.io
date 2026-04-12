@@ -309,5 +309,4 @@ ninja.data = [
       },
     {%- endfor -%}
   {%- endif -%}
-  {%- endif -%}
 ];
