@@ -43,14 +43,19 @@ $(document).ready(function () {
   $(".jupyter-notebook-iframe-container iframe").each(function () {
     $(this).contents().find("head").append(cssLink);
 
-    if (jupyterTheme == "dark") {
-      $(this).bind("load", function () {
-        $(this).contents().find("body").attr({
-          "data-jp-theme-light": "false",
-          "data-jp-theme-name": "JupyterLab Dark",
-        });
+    // Set dark theme immediately if iframe already loaded
+    $(this).contents().find("body").attr({
+      "data-jp-theme-light": "false",
+      "data-jp-theme-name": "JupyterLab Dark",
+    });
+
+    // Also set on future load events
+    $(this).on("load", function () {
+      $(this).contents().find("body").attr({
+        "data-jp-theme-light": "false",
+        "data-jp-theme-name": "JupyterLab Dark",
       });
-    }
+    });
   });
 
   // trigger popovers
