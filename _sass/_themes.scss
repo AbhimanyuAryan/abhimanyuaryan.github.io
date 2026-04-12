@@ -55,6 +55,10 @@
     display: none;
   }
 
+  #light-toggle-hacker {
+    display: none;
+  }
+
   .only-light {
     display: block;
   }
@@ -134,6 +138,10 @@ html[data-theme-setting="dark"] {
     display: none;
   }
 
+  #light-toggle-hacker {
+    display: none;
+  }
+
   #back-to-top {
     color: var(--global-back-to-top-text-color);
     background: var(--global-back-to-top-bg-color);
@@ -151,6 +159,10 @@ html[data-theme-setting="light"] {
 
   #light-toggle-light {
     display: inline-block;
+  }
+
+  #light-toggle-hacker {
+    display: none;
   }
 }
 
@@ -205,4 +217,196 @@ html[data-theme-setting="light"] {
 
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
+}
+
+/*******************************************************************************
+ * Hacker Theme - Terminal/Console Aesthetic
+ * Ported from https://github.com/pages-themes/hacker
+ ******************************************************************************/
+
+// Hacker theme color palette
+$hacker-conifer: #b5e853;        // Signature green
+$hacker-cod-grey: #151515;       // Background
+$hacker-gallery: #eaeaea;        // Text
+$hacker-link-color: #63c0f5;     // Links
+$hacker-bouquet: #aa759f;        // Inline code
+$hacker-dove-grey: #666;         // Muted
+$hacker-silver-chalice: #aaa;    // Light text
+
+html[data-theme="hacker"] {
+  color-scheme: dark;
+  --global-bg-color: #{$hacker-cod-grey};
+  --global-code-bg-color: rgba(0, 0, 0, 0.9);
+  --global-text-color: #{$hacker-gallery};
+  --global-text-color-light: #ccc;
+  --global-theme-color: #{$hacker-conifer};
+  --global-hover-color: #{$hacker-conifer};
+  --global-hover-text-color: #{$hacker-cod-grey};
+  --global-footer-bg-color: #{darken($hacker-cod-grey, 2%)};
+  --global-footer-text-color: #{$hacker-silver-chalice};
+  --global-footer-link-color: #{$hacker-conifer};
+  --global-distill-app-color: #{$hacker-silver-chalice};
+  --global-divider-color: #{$hacker-dove-grey};
+  --global-card-bg-color: rgba(0, 0, 0, 0.3);
+  --global-highlight-color: #{$hacker-conifer};
+  --global-back-to-top-bg-color: rgba(0, 0, 0, 0.7);
+  --global-back-to-top-text-color: #{$hacker-conifer};
+  --global-newsletter-bg-color: rgba(0, 0, 0, 0.5);
+  --global-newsletter-text-color: #{$hacker-gallery};
+
+  --global-tip-block: #{$hacker-conifer};
+  --global-tip-block-bg: rgba(181, 232, 83, 0.1);
+  --global-tip-block-text: #{$hacker-gallery};
+  --global-tip-block-title: #{$hacker-conifer};
+  --global-warning-block: #f4bf75;
+  --global-warning-block-bg: rgba(244, 191, 117, 0.1);
+  --global-warning-block-text: #{$hacker-gallery};
+  --global-warning-block-title: #f4bf75;
+  --global-danger-block: #ac4142;
+  --global-danger-block-bg: rgba(172, 65, 66, 0.1);
+  --global-danger-block-text: #{$hacker-gallery};
+  --global-danger-block-title: #ac4142;
+
+  .only-light {
+    display: none;
+  }
+
+  .only-dark {
+    display: block;
+  }
+
+  // Typography - Monospace terminal feel
+  body {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    background-image: url('/assets/img/hacker-bg.png');
+  }
+
+  // Headings with signature green glow
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    font-weight: normal;
+    color: var(--global-theme-color);
+    letter-spacing: -0.03em;
+    text-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.1),
+      0 0 5px rgba(181, 232, 83, 0.1),
+      0 0 10px rgba(181, 232, 83, 0.1);
+  }
+
+  // Links with blue glow effect
+  a {
+    color: #{$hacker-link-color};
+    text-shadow: 0 0 5px rgba(104, 182, 255, 0.3);
+
+    &:hover {
+      color: lighten($hacker-link-color, 10%);
+      text-shadow: 0 0 8px rgba(104, 182, 255, 0.5);
+    }
+  }
+
+  // Code blocks
+  pre, code {
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  }
+
+  pre {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+  }
+
+  code:not([class]) {
+    color: #{$hacker-bouquet};
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  // Tables with dashed borders
+  table {
+    th {
+      border-bottom: 1px dashed $hacker-conifer;
+    }
+    td {
+      border-bottom: 1px dashed rgba($hacker-conifer, 0.3);
+    }
+  }
+
+  // Horizontal rules
+  hr {
+    border: 0;
+    border-bottom: 1px dashed $hacker-conifer;
+  }
+
+  // Cards
+  .card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+
+    &:hover {
+      border-color: rgba($hacker-conifer, 0.5);
+      box-shadow: 0 0 15px rgba($hacker-conifer, 0.1);
+    }
+  }
+
+  // Navbar
+  nav.navbar {
+    border-bottom: 1px dashed $hacker-conifer;
+  }
+
+  // Footer
+  footer {
+    border-top: 1px dashed $hacker-conifer;
+  }
+
+  // Selection color
+  ::selection {
+    background: rgba($hacker-conifer, 0.3);
+    color: $hacker-gallery;
+  }
+
+  // Custom scrollbar
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $hacker-cod-grey;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $hacker-dove-grey;
+    border-radius: 4px;
+
+    &:hover {
+      background: $hacker-conifer;
+    }
+  }
+
+  // Terminal icon styling
+  #light-toggle-hacker {
+    color: $hacker-conifer;
+  }
+}
+
+html[data-theme-setting="hacker"] {
+  #light-toggle-system {
+    display: none;
+  }
+
+  #light-toggle-dark {
+    display: none;
+  }
+
+  #light-toggle-light {
+    display: none;
+  }
+
+  #light-toggle-hacker {
+    display: inline-block;
+    color: #b5e853;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
 }

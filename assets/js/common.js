@@ -43,7 +43,7 @@ $(document).ready(function () {
   $(".jupyter-notebook-iframe-container iframe").each(function () {
     $(this).contents().find("head").append(cssLink);
 
-    if (jupyterTheme == "dark") {
+    if (jupyterTheme == "dark" || jupyterTheme == "hacker") {
       $(this).bind("load", function () {
         $(this).contents().find("body").attr({
           "data-jp-theme-light": "false",
