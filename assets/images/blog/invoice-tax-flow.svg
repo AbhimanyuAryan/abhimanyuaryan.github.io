@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Invoice to tax authority flow</title>
+  <desc id="desc">A flowchart showing how an invoice created in cloud software becomes compliant data, exports, and tax authority reporting.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .box { fill: #172554; stroke: #60a5fa; stroke-width: 2; rx: 18; }
+      .box2 { fill: #1e293b; stroke: #94a3b8; stroke-width: 2; rx: 18; }
+      .text { fill: #eff6ff; font-family: Inter, Arial, sans-serif; }
+      .muted { fill: #cbd5e1; font-family: Inter, Arial, sans-serif; }
+      .title { font-size: 36px; font-weight: 700; }
+      .h2 { font-size: 24px; font-weight: 700; }
+      .body { font-size: 20px; }
+      .small { font-size: 17px; }
+      .arrow { stroke: #93c5fd; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1400" height="760"/>
+  <text x="70" y="70" class="text title">How an Invoice Reaches the Tax Authority</text>
+  <text x="70" y="108" class="muted body">The PDF is for humans. The structured fiscal record is what matters for compliance.</text>
+
+  <rect x="80" y="190" width="220" height="110" class="box"/>
+  <text x="125" y="235" class="text h2">1. Issue Invoice</text>
+  <text x="118" y="268" class="muted body">POS / billing UI</text>
+
+  <rect x="370" y="190" width="280" height="110" class="box"/>
+  <text x="405" y="235" class="text h2">2. Structured Record</text>
+  <text x="406" y="268" class="muted body">lines, tax, totals, customer,</text>
+  <text x="449" y="295" class="muted body">series, timestamp</text>
+
+  <rect x="720" y="190" width="260" height="110" class="box"/>
+  <text x="754" y="235" class="text h2">3. Compliance Layer</text>
+  <text x="765" y="268" class="muted body">numbering, QR/ATCUD,</text>
+  <text x="792" y="295" class="muted body">validation, audit log</text>
+
+  <rect x="1050" y="190" width="260" height="110" class="box"/>
+  <text x="1112" y="235" class="text h2">4. Outputs</text>
+  <text x="1084" y="268" class="muted body">PDF, receipt, SAF-T,</text>
+  <text x="1105" y="295" class="muted body">fiscal communication</text>
+
+  <path d="M300 245 L370 245" class="arrow"/>
+  <path d="M650 245 L720 245" class="arrow"/>
+  <path d="M980 245 L1050 245" class="arrow"/>
+
+  <rect x="180" y="420" width="320" height="180" class="box2"/>
+  <text x="248" y="465" class="text h2">Human-facing outputs</text>
+  <text x="245" y="505" class="muted body">• A4 invoice</text>
+  <text x="245" y="538" class="muted body">• Thermal receipt</text>
+  <text x="245" y="571" class="muted body">• Email PDF</text>
+
+  <rect x="550" y="420" width="320" height="180" class="box2"/>
+  <text x="603" y="465" class="text h2">Business records</text>
+  <text x="615" y="505" class="muted body">• Ledger entry</text>
+  <text x="615" y="538" class="muted body">• Payment status</text>
+  <text x="615" y="571" class="muted body">• Customer balance</text>
+
+  <rect x="920" y="420" width="320" height="180" class="box2"/>
+  <text x="969" y="465" class="text h2">Authority-facing outputs</text>
+  <text x="985" y="505" class="muted body">• SAF-T export</text>
+  <text x="985" y="538" class="muted body">• Document communication</text>
+  <text x="985" y="571" class="muted body">• Accountant access</text>
+
+  <path d="M1150 300 L340 420" class="arrow"/>
+  <path d="M1178 300 L710 420" class="arrow"/>
+  <path d="M1210 300 L1080 420" class="arrow"/>
+</svg>
