@@ -76,7 +76,7 @@ ninja.data = [{
         
           title: "Developing Cloud-Based Invoicing and POS Agentic Software",
         
-        description: "A deep dive into building modern cloud-based invoicing and Point of Sale systems with agentic capabilities",
+        description: "A deep dive into building modern cloud-based invoicing and point-of-sale systems with agentic capabilities",
         section: "Posts",
         handler: () => {
           
