@@ -249,6 +249,11 @@ ninja.data = [{
           description: "OpenCode promises open-source AI coding assistance, but the reality falls short. Here&#39;s why I&#39;m sticking with alternatives.",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-04-11-why-i-dont-like-opencode/";
+            },},{id: "ai_bytes-how-to-use-google-genai-sdk-to-build-the-world-39-s-best-harness",
+          title: 'How to use Google GenAI SDK to build the world&amp;#39;s best harness',
+          description: "How to use Google GenAI SDK to build the world&#39;s best harness",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-04-16-google-genai-sdk-harness/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
