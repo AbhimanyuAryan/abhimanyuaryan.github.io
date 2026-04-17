@@ -12,14 +12,14 @@ nav: false
     <h2>{{ page.description }}</h2>
   </div>
 
-  {% assign all_courses = site.course_catalog %}
-  {% if all_courses.size > 0 %}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
-      {% for course in all_courses %}
-        {% assign lesson_count = site.courses | where: "course_slug", course.course_slug | size %}
-        <div class="col">
-          <a href="{{ course.url | relative_url }}" style="text-decoration: none; color: inherit;">
-            <div class="card h-100 hoverable" style="border-radius: 12px; overflow: hidden;">
+{% assign all_courses = site.course_catalog %}
+{% if all_courses.size > 0 %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
+{% for course in all_courses %}
+{% assign lesson_count = site.courses | where: "course_slug", course.course_slug | size %}
+<div class="col">
+<a href="{{ course.url | relative_url }}" style="text-decoration: none; color: inherit;">
+<div class="card h-100 hoverable" style="border-radius: 12px; overflow: hidden;">
 
               <div style="position: relative; padding-bottom: 56.25%; background: #000;">
                 <img
@@ -76,7 +76,9 @@ nav: false
         </div>
       {% endfor %}
     </div>
-  {% else %}
-    <p>No courses available yet. Check back soon.</p>
-  {% endif %}
+
+{% else %}
+<p>No courses available yet. Check back soon.</p>
+{% endif %}
+
 </div>

@@ -50,6 +50,7 @@ When a particle system is attached to a **moving object**, this module lets part
 ## Combining velocity modules
 
 A realistic **smoke trail** uses all three:
+
 1. **Velocity over Lifetime** — Upward Y drift in world space
 2. **Limit Velocity** — Terminal velocity so smoke doesn't go too fast
 3. **Inherit Velocity** (Initial) — Smoke inherits the emitter's speed when first emitted

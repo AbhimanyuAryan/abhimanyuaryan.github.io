@@ -1,9 +1,9 @@
-{% assign all_lessons = site.courses | sort: "order" %}
-{% assign course_names = all_lessons | map: "course" | uniq %}
+{% assign all_lessons = site.courses | sort: 'order' %}
+{% assign course_names = all_lessons | map: 'course' | uniq %}
 
 {% if course_names.size > 0 %}
   {% for course_name in course_names %}
-    {% assign lessons = all_lessons | where: "course", course_name %}
+    {% assign lessons = all_lessons | where: 'course', course_name %}
     {% assign first_lesson = lessons | first %}
 
     <div class="course-section" style="margin-bottom: 3rem;">
@@ -13,8 +13,12 @@
           {{ lessons.size }} video{% if lessons.size != 1 %}s{% endif %}
         </span>
         {% if first_lesson.playlist_url %}
-          <a href="{{ first_lesson.playlist_url }}" target="_blank" rel="noopener noreferrer"
-             style="font-size: 0.85rem;">
+          <a
+            href="{{ first_lesson.playlist_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-size: 0.85rem;"
+          >
             <i class="fa-brands fa-youtube fa-sm"></i> Full playlist
           </a>
         {% endif %}
@@ -32,14 +36,22 @@
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
                     loading="lazy"
                   >
-                  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                              background: rgba(0,0,0,0.65); border-radius: 50%;
-                              width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+                  <div
+                    style="
+                      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                      background: rgba(0,0,0,0.65); border-radius: 50%;
+                      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+                    "
+                  >
                     <i class="fa-solid fa-play" style="color: white; font-size: 1rem; margin-left: 3px;"></i>
                   </div>
-                  <span style="position: absolute; top: 8px; left: 8px;
-                               background: rgba(0,0,0,0.7); color: white;
-                               font-size: 0.75rem; padding: 2px 7px; border-radius: 4px;">
+                  <span
+                    style="
+                      position: absolute; top: 8px; left: 8px;
+                      background: rgba(0,0,0,0.7); color: white;
+                      font-size: 0.75rem; padding: 2px 7px; border-radius: 4px;
+                    "
+                  >
                     #{{ lesson.order }}
                   </span>
                 </div>
@@ -48,9 +60,14 @@
                     {{ lesson.title }}
                   </h6>
                   {% if lesson.description %}
-                    <p class="card-text" style="font-size: 0.8rem; color: var(--global-text-color-light);
-                                                 margin: 0; display: -webkit-box; -webkit-line-clamp: 2;
-                                                 -webkit-box-orient: vertical; overflow: hidden;">
+                    <p
+                      class="card-text"
+                      style="
+                        font-size: 0.8rem; color: var(--global-text-color-light);
+                        margin: 0; display: -webkit-box; -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical; overflow: hidden;
+                      "
+                    >
                       {{ lesson.description }}
                     </p>
                   {% endif %}

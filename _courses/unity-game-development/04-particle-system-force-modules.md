@@ -25,11 +25,11 @@ Applies a constant or animated **acceleration** to every particle. Unlike Veloci
 
 ### Common uses
 
-| Force | Application |
-|-------|-------------|
-| Negative Y | Custom gravity (more artistic than the global gravity modifier) |
-| Positive Y | Buoyancy — bubbles, helium balloons |
-| Oscillating X/Z | Wind turbulence on leaves/snow |
+| Force           | Application                                                     |
+| --------------- | --------------------------------------------------------------- |
+| Negative Y      | Custom gravity (more artistic than the global gravity modifier) |
+| Positive Y      | Buoyancy — bubbles, helium balloons                             |
+| Oscillating X/Z | Wind turbulence on leaves/snow                                  |
 
 ## Particle System Force Fields
 

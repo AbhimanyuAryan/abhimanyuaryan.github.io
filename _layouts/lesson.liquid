@@ -2,11 +2,8 @@
 layout: default
 ---
 <div class="post">
-
   <p>
-    <a href="{{ '/courses/' | relative_url }}">
-      <i class="fa-solid fa-arrow-left fa-sm"></i> {{ page.course }}
-    </a>
+    <a href="{{ '/courses/' | relative_url }}"> <i class="fa-solid fa-arrow-left fa-sm"></i> {{ page.course }} </a>
   </p>
 
   <header class="post-header">
@@ -22,7 +19,10 @@ layout: default
   </header>
 
   {% if page.youtube_id %}
-    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 2rem;">
+    <div
+      class="video-container"
+      style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 2rem;"
+    >
       <iframe
         src="https://www.youtube.com/embed/{{ page.youtube_id }}"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
@@ -48,7 +48,7 @@ layout: default
 
   <hr>
 
-  {% assign course_lessons = site.courses | where: "course_slug", page.course_slug | sort: "order" %}
+  {% assign course_lessons = site.courses | where: 'course_slug', page.course_slug | sort: 'order' %}
   {% assign total = course_lessons | size %}
   {% assign current_index = 0 %}
   {% for lesson in course_lessons %}
@@ -64,16 +64,15 @@ layout: default
     <div>
       {% if current_index > 0 %}
         {% assign prev_lesson = course_lessons[prev_index] %}
-        <a href="{{ prev_lesson.url | relative_url }}">
-          <i class="fa-solid fa-arrow-left fa-sm"></i> {{ prev_lesson.title }}
-        </a>
+        <a href="{{ prev_lesson.url | relative_url }}"> <i class="fa-solid fa-arrow-left fa-sm"></i> {{ prev_lesson.title }} </a>
       {% endif %}
     </div>
     <div>
       {% if next_index < total %}
         {% assign next_lesson = course_lessons[next_index] %}
         <a href="{{ next_lesson.url | relative_url }}">
-          {{ next_lesson.title }} <i class="fa-solid fa-arrow-right fa-sm"></i>
+          {{ next_lesson.title }}
+          <i class="fa-solid fa-arrow-right fa-sm"></i>
         </a>
       {% endif %}
     </div>

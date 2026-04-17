@@ -6,13 +6,13 @@
 @use "sass:color";
 
 // Hacker theme color palette
-$hacker-conifer: #b5e853;        // Signature green
-$hacker-cod-grey: #151515;       // Background
-$hacker-gallery: #eaeaea;        // Text
-$hacker-link-color: #63c0f5;     // Links
-$hacker-bouquet: #aa759f;        // Inline code
-$hacker-dove-grey: #666;         // Muted
-$hacker-silver-chalice: #aaa;    // Light text
+$hacker-conifer: #b5e853; // Signature green
+$hacker-cod-grey: #151515; // Background
+$hacker-gallery: #eaeaea; // Text
+$hacker-link-color: #63c0f5; // Links
+$hacker-bouquet: #aa759f; // Inline code
+$hacker-dove-grey: #666; // Muted
+$hacker-silver-chalice: #aaa; // Light text
 
 :root {
   color-scheme: dark;
@@ -70,11 +70,16 @@ $hacker-silver-chalice: #aaa;    // Light text
 // Typography - Monospace terminal feel
 body {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  background-image: url('/assets/img/hacker-bg.png');
+  background-image: url("/assets/img/hacker-bg.png");
 }
 
 // Headings with signature green glow
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-weight: normal;
   color: var(--global-theme-color);
@@ -97,7 +102,8 @@ a {
 }
 
 // Code blocks
-pre, code {
+pre,
+code {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
@@ -126,9 +132,16 @@ table {
 }
 
 // Force text color on Bootstrap elements
-.table, .table th, .table td,
-.card-body, .card-text, .card-title,
-p, li, span, div {
+.table,
+.table th,
+.table td,
+.card-body,
+.card-text,
+.card-title,
+p,
+li,
+span,
+div {
   color: #{$hacker-gallery};
 }
 

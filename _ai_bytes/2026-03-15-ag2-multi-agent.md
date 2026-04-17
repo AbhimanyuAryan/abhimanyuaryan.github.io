@@ -11,14 +11,16 @@ source_url: https://ag2.ai/
 When Microsoft paused development on the original AutoGen, the community forked it as **AG2**. I've been running it in production at CEGID for several months now. Quick notes:
 
 **What's good:**
+
 - `ConversableAgent` is a solid primitive — flexible enough for most orchestration patterns
 - Human-in-the-loop is first class: you can pause any agent turn for human review
 - Group chat with `GroupChatManager` handles most multi-agent topologies
 - Active maintenance from the community — bugs get fixed fast
 
 **What still needs work:**
+
 - Long-running conversations can get expensive — context management needs explicit attention
 - Debugging agent chains is still harder than it should be (working on tooling for this)
 - State persistence across sessions requires rolling your own
 
-For my MSc thesis on Census Mechanisms, I'm using AG2 as the execution backbone for MassGen while exploring what orchestration pattern to use *for what goal*. More on that soon.
+For my MSc thesis on Census Mechanisms, I'm using AG2 as the execution backbone for MassGen while exploring what orchestration pattern to use _for what goal_. More on that soon.

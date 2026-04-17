@@ -422,6 +422,7 @@ Every major entity is tenant-scoped.
 The same platform likely serves multiple business types through a common foundation:
 
 **Common core:**
+
 - customers
 - products
 - tax rules
@@ -431,6 +432,7 @@ The same platform likely serves multiple business types through a common foundat
 - permissions
 
 **Vertical modules:**
+
 - retail POS
 - restaurant POS
 - services invoicing

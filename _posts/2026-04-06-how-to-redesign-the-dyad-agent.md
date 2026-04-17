@@ -2,8 +2,8 @@
 layout: post
 title: "How to Redesign the Dyad Agent"
 date: 2026-04-06
-description: 
-tags: 
+description:
+tags:
 thumbnail: assets/img/posts/dyad-agent.png
 giscus_comments: true
 ---
@@ -17,7 +17,7 @@ After watching their recent developments ([Agentic AI with Dyad](https://juliahu
 Everything around us starts with modeling:
 
 - **Planes** - Aerodynamic simulations and stress testing
-- **Cars** - Crash simulations and performance optimization  
+- **Cars** - Crash simulations and performance optimization
 - **Buildings** - Structural analysis and environmental modeling
 
 Even the [Hindu temple built in Paris](https://youtu.be/shazte3R52k?t=93) began with 3D modeling before becoming a physical structure.
@@ -29,7 +29,6 @@ AI modeling is poised to become a multi-trillion dollar industry, and Dyad is po
 Agents are suppose to be more and more autonomous on long term tasks. But imagine if you have to monitor every step of the agent and intervene when it fails. Then you are the bottleneck and the agent is not really autonomous.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/dyad-agent/dyad_agent_now.png" title="Dyad Agent Current State" class="img-fluid rounded z-depth-1 mx-auto d-block" style="max-width: 30%;" %}
-
 
 ### Why JuliaHub has what nobody has (openai/anthropic/cursor etc.)
 
@@ -45,15 +44,14 @@ How can all of this be leveraged to build a truly unique agent/harness?
 
 {% include figure.liquid loading="eager" path="assets/img/posts/dyad-agent/dyad_agent_after.png" title="Dyad Agent Future State" class="img-fluid rounded z-depth-1 mx-auto d-block" style="max-width: 30%;" %}
 
-
 ### How to redesign the harness
 
 {% include figure.liquid loading="eager" path="assets/img/posts/dyad-agent/harness.png" title="Harness Architecture Diagram" class="img-fluid rounded z-depth-1 mx-auto d-block" style="max-width: 30%;" %}
 
-| Component | Implementation |
-|-----------|----------------|
-| **Harness** | Dyad (the evaluation and execution framework) |
-| **Model** | Claude Opus 4.6/4.5 (frontier reasoning) |
+| Component   | Implementation                                        |
+| ----------- | ----------------------------------------------------- |
+| **Harness** | Dyad (the evaluation and execution framework)         |
+| **Model**   | Claude Opus 4.6/4.5 (frontier reasoning)              |
 | **Context** | Julia Compiler + Type System + MCP/Plugin/Skill Store |
 
 ### The Meta-Harness Pattern
@@ -84,10 +82,11 @@ Memory is central to any agent. It has three layers:
 - **Sync Memory** - Team memory and patterns (shared knowledge, org-level patterns)
 
 **Storage Structure:**
+
 ```
 ~/.agent/
   user-memory/.../*.md
-  session-memory/.../*.md  
+  session-memory/.../*.md
   sync-memory/.../*.md
 ```
 
@@ -105,7 +104,6 @@ Memory can be improved in two ways:
 ### What future holds for Dyad
 
 Limitations of text-based models in building complex 3D structures. Coming soon...
-
 
 ### Food for thought
 

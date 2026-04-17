@@ -12,7 +12,7 @@ That's vanilla RAG in production. And it's everywhere in banking.
 
 ## Why traditional RAG fails at banking
 
-Traditional RAG systems take the user's raw query, throw it at a vector database, pull back whatever chunks score highest on cosine similarity, and shove them into an LLM. No query understanding. No planning. No awareness of what the user *actually* needs.
+Traditional RAG systems take the user's raw query, throw it at a vector database, pull back whatever chunks score highest on cosine similarity, and shove them into an LLM. No query understanding. No planning. No awareness of what the user _actually_ needs.
 
 This breaks down fast when:
 

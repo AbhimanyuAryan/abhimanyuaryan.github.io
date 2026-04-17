@@ -11,7 +11,7 @@ description: "Deep dive into the Emission and Shape modules — controlling how 
 
 ## Overview
 
-Two of the most important modules in Unity's Particle System are **Emission** and **Shape**. Together they answer: *how many particles?* and *from where?*
+Two of the most important modules in Unity's Particle System are **Emission** and **Shape**. Together they answer: _how many particles?_ and _from where?_
 
 ## Emission Module
 
@@ -19,19 +19,21 @@ The Emission module controls the **rate** at which particles are spawned.
 
 ### Rate over Time vs Rate over Distance
 
-| Setting | Use case |
-|---------|----------|
-| **Rate over Time** | Continuous effects like fire, smoke, waterfalls |
+| Setting                | Use case                                                            |
+| ---------------------- | ------------------------------------------------------------------- |
+| **Rate over Time**     | Continuous effects like fire, smoke, waterfalls                     |
 | **Rate over Distance** | Effects that respond to movement (tire tracks, dust from footsteps) |
 
 ### Bursts
 
 Bursts let you emit a fixed number of particles at specific times. Perfect for:
+
 - Explosions (single large burst)
 - Muzzle flash (burst on trigger)
 - Confetti cannons
 
 Burst settings:
+
 - **Time** — when in the particle system's lifetime to fire
 - **Count** — how many particles to emit
 - **Cycles** — how many times to repeat
@@ -53,12 +55,14 @@ The Shape module defines the **3D emitter geometry** — where in space particle
 ### Emit from options
 
 For Sphere and Cone you can choose to emit from:
+
 - **Volume** — Random point inside the shape
 - **Shell/Edge** — Only from the outer surface
 
 ## Practical exercise
 
 Try building a simple **campfire** effect using just these two modules:
+
 1. Set Shape to **Cone**, angle ~15°, radius ~0.1
 2. Set Emission Rate over Time to **30**
 3. Set Start Speed to **1–2** (use random between two constants)

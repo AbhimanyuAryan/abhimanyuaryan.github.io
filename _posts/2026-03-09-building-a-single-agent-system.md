@@ -121,6 +121,7 @@ class GTABaseAgent(ABC):
 ```
 
 Notice how the class mirrors our formal tuple:
+
 - `self.client` + `self.model_name` → $\phi_i$ (reasoning policy)
 - Actions are defined by the system prompt → $A_i$ (action space)
 - `self.conversation` → $M_i$ (internal memory)

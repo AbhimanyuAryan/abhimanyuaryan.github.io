@@ -2,56 +2,58 @@
 layout: default
 ---
 {% assign page_content = content | strip %}
-{% if page.source_url and page_content == "" %}
-<meta http-equiv="refresh" content="0; url={{ page.source_url }}">
-<script>window.location.href = "{{ page.source_url }}";</script>
-<p>Redirecting to <a href="{{ page.source_url }}">{{ page.source_url }}</a>...</p>
-{% else %}
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ page.title }}
-      {% if page.source_url %}
-        <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" title="Original source">
-          <svg width="1.4rem" height="1.4rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
-            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </a>
-      {% endif %}
-    </h1>
-
-    <p class="post-meta">
-      {{ page.date | date: '%B %d, %Y' }}
-      {% if page.source %}
-        &nbsp; &middot; &nbsp; <i class="fa-solid fa-link fa-sm"></i> {{ page.source }}
-      {% endif %}
-    </p>
-
-    <p class="post-tags">
-      {% if page.tags and page.tags.size > 0 %}
-        {% for tag in page.tags %}
-          <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-          {% unless forloop.last %}&nbsp; &middot; &nbsp;{% endunless %}
-        {% endfor %}
-      {% endif %}
-    </p>
-  </header>
-
-  <article class="post-content">
-    <div id="markdown-content">
-      {{ content }}
-    </div>
-  </article>
-
-  <hr>
+{% if page.source_url and page_content == '' %}
+  <meta http-equiv="refresh" content="0; url={{ page.source_url }}">
+  <script>
+    window.location.href = '{{ page.source_url }}';
+  </script>
   <p>
-    <a href="{{ '/ai-bytes/' | relative_url }}">
-      <i class="fa-solid fa-arrow-left fa-sm"></i> Back to AI Bytes
-    </a>
+    Redirecting to <a href="{{ page.source_url }}">{{ page.source_url }}</a>...
   </p>
+{% else %}
+  <div class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        {{ page.title }}
+        {% if page.source_url %}
+          <a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer" title="Original source">
+            <svg width="1.4rem" height="1.4rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+              <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        {% endif %}
+      </h1>
 
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
-  {% endif %}
-</div>
+      <p class="post-meta">
+        {{ page.date | date: '%B %d, %Y' }}
+        {% if page.source %}
+          &nbsp; &middot; &nbsp; <i class="fa-solid fa-link fa-sm"></i> {{ page.source }}
+        {% endif %}
+      </p>
+
+      <p class="post-tags">
+        {% if page.tags and page.tags.size > 0 %}
+          {% for tag in page.tags %}
+            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+            {% unless forloop.last %}&nbsp; &middot; &nbsp;{% endunless %}
+          {% endfor %}
+        {% endif %}
+      </p>
+    </header>
+
+    <article class="post-content">
+      <div id="markdown-content">
+        {{ content }}
+      </div>
+    </article>
+
+    <hr>
+    <p>
+      <a href="{{ '/ai-bytes/' | relative_url }}"> <i class="fa-solid fa-arrow-left fa-sm"></i> Back to AI Bytes </a>
+    </p>
+
+    {% if site.giscus and page.giscus_comments %}
+      {% include giscus.liquid %}
+    {% endif %}
+  </div>
 {% endif %}

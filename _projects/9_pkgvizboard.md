@@ -2,7 +2,7 @@
 layout: page
 title: "📦 PkgVizBoard"
 description: Package download statistics visualization for the entire Julia ecosystem, built with the Genie framework.
-img: assets/img/projects/pkgvizboard.gif
+img: assets/img/projects/pkgvizboard.svg
 importance: 3
 category: julia
 ---

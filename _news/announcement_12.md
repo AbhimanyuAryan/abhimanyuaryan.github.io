@@ -6,7 +6,7 @@ inline: false
 related_posts: false
 ---
 
-Delivered a hands-on session on game architecture in **Unity3D**, teaching core design patterns from Robert Nystrom's *Game Programming Patterns*, with a focus on **Factory**, **Observer**, and **Strategy**.
+Delivered a hands-on session on game architecture in **Unity3D**, teaching core design patterns from Robert Nystrom's _Game Programming Patterns_, with a focus on **Factory**, **Observer**, and **Strategy**.
 
 To make the concepts practical, participants built a **Flappy Bird** game end-to-end and applied these patterns directly in production-style Unity code.
 

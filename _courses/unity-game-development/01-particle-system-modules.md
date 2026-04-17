@@ -23,6 +23,7 @@ Unity's **Particle System** is one of the most powerful tools in the engine for 
 ## Key concepts
 
 **Particles** are short-lived GameObjects emitted by the system. Each one has:
+
 - A **lifetime** (how long it exists)
 - A **velocity** (where it moves)
 - A **size** and **color** (which can change over time)

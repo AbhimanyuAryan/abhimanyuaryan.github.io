@@ -34,13 +34,13 @@ Here's me asking an AI agent to inspect the submenu on my local site — it navi
 
 ## Why I prefer it over Playwright MCP
 
-| | **agent-browser** | **Playwright MCP** |
-|---|---|---|
-| **Runtime** | Pure Rust daemon, direct CDP — no Node.js needed | Requires Node.js + Playwright runtime |
-| **Interface** | Simple CLI commands any LLM can call | MCP protocol — needs a compatible client |
-| **Element selection** | Snapshot → ref workflow (`@e1`, `@e2`) — deterministic | CSS selectors or accessibility tree |
-| **Speed** | Daemon persists between commands, sub-millisecond dispatch | Cold start on each MCP tool call |
-| **Portability** | Works with *any* AI assistant that can run shell commands | Only works with MCP-compatible clients |
+|                       | **agent-browser**                                          | **Playwright MCP**                       |
+| --------------------- | ---------------------------------------------------------- | ---------------------------------------- |
+| **Runtime**           | Pure Rust daemon, direct CDP — no Node.js needed           | Requires Node.js + Playwright runtime    |
+| **Interface**         | Simple CLI commands any LLM can call                       | MCP protocol — needs a compatible client |
+| **Element selection** | Snapshot → ref workflow (`@e1`, `@e2`) — deterministic     | CSS selectors or accessibility tree      |
+| **Speed**             | Daemon persists between commands, sub-millisecond dispatch | Cold start on each MCP tool call         |
+| **Portability**       | Works with _any_ AI assistant that can run shell commands  | Only works with MCP-compatible clients   |
 
 The killer advantage: **any agent that can run a shell command can use it**. No special protocol, no SDK, no integration layer. Claude Code, Cursor, Windsurf, Gemini CLI, GitHub Copilot — they all work out of the box.
 
@@ -59,7 +59,7 @@ This command drops a `SKILL.md` into your project (e.g., `.claude/skills/agent-b
 - Session management and timeout handling
 - Best practices for chaining commands
 
-The AI reads this file as context and *learns* how to drive the browser. No custom code, no API wrappers — just a well-written instruction document that gets injected into the model's context.
+The AI reads this file as context and _learns_ how to drive the browser. No custom code, no API wrappers — just a well-written instruction document that gets injected into the model's context.
 
 This is a brilliant pattern: **documentation as integration**. The skill stays up to date because it's fetched from the repo, not copy-pasted.
 
@@ -83,6 +83,7 @@ No Playwright. No Puppeteer. No Node.js in the daemon at all. The daemon auto-st
 ## Security features worth noting
 
 For production agent deployments:
+
 - **Authentication Vault** — Encrypted credential storage; the LLM never sees passwords
 - **Domain Allowlist** — Restrict navigation to trusted domains only
 - **Action Policy** — Gate destructive actions with a policy file

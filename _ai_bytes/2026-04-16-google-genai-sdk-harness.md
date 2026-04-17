@@ -20,7 +20,7 @@ But here's the mistake people make: they copy-paste the whole thing into `Agents
 ## Why that's wrong
 
 - **Token waste** — you're burning context on instructions the model only needs when writing GenAI code
-- **Noise** — `Agents.md` should describe *how your agent behaves*, not SDK reference docs
+- **Noise** — `Agents.md` should describe _how your agent behaves_, not SDK reference docs
 - **Staleness** — SDK docs change, your `Agents.md` won't keep up
 
 ## What to do instead
@@ -38,7 +38,7 @@ Your harness should pull `docs/gemini-sdk.md` into context **only** when the age
 ## The pattern
 
 1. **AGENTS.md** → who the agent is, what it can do, rules of engagement
-2. **docs/*.md** → reference material, injected on demand
-3. **Harness** → the thing that decides *when* to inject *what*
+2. **docs/\*.md** → reference material, injected on demand
+3. **Harness** → the thing that decides _when_ to inject _what_
 
 That's how you build a harness that doesn't choke on its own context. Keep instructions close, but only pull them in when needed.

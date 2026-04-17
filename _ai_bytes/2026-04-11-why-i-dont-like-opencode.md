@@ -13,19 +13,18 @@ source: blog
 
 Model prompts often contain repetitive content, like system prompts and common instructions. Usually requrests are routed to servers that recently processed the same prompts, making it cheaper and faster than processing the entire prompt from scratch.
 
-> *"Reduce latency and cost with prompt caching... Cache Routing: Usually requests are routed to servers that recently processed the same prompts, making it cheaper and faster than processing the entire prompt from scratch."* 
-> 
+> _"Reduce latency and cost with prompt caching... Cache Routing: Usually requests are routed to servers that recently processed the same prompts, making it cheaper and faster than processing the entire prompt from scratch."_
+>
 > \- [OpenAI Prompt Caching Documentation](https://developers.openai.com/api/docs/guides/prompt-caching#:~:text=Reduce%20latency%20and%20cost%20with,Cache%20Routing)
-
 
 Now Opencode has something
 
 ```javascript
 // Called after EVERY user message, not just on context overflow
-SessionCompaction.prune({ sessionID })
+SessionCompaction.prune({ sessionID });
 
 // Silently erases tool outputs beyond last 40k tokens
-export const PRUNE_PROTECT = 40_000
+export const PRUNE_PROTECT = 40_000;
 ```
 
 Which actively trims the conversation history so the model only keeps what still matters. This is done for cost optimization.

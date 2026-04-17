@@ -42,11 +42,11 @@ When you drag an imported particle prefab into your scene:
 
 This is the most common issue with imported assets:
 
-| Pipeline | Shader prefix |
-|----------|---------------|
-| Built-in | `Particles/Standard` |
-| URP | `Universal Render Pipeline/Particles/...` |
-| HDRP | `HDRP/Particles/...` |
+| Pipeline | Shader prefix                             |
+| -------- | ----------------------------------------- |
+| Built-in | `Particles/Standard`                      |
+| URP      | `Universal Render Pipeline/Particles/...` |
+| HDRP     | `HDRP/Particles/...`                      |
 
 If particles appear **pink**, the shader is incompatible. Right-click the material → **Rendering → Convert to URP** (or HDRP).
 
