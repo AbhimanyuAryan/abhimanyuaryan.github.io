@@ -264,6 +264,11 @@ ninja.data = [{
           description: "Learn advanced TypeScript by studying production code from the pi-mono codebase — types that stand up to real agent-harness workloads.",
           section: "Course_catalog",handler: () => {
               window.location.href = "/courses/advanced-typescript-harness-builders/";
+            },},{id: "course_catalog-how-to-build-a-harness",
+          title: 'How to Build a Harness',
+          description: "A hands-on course that walks you through building a minimal coding agent (like pi) that talks to Anthropic Claude and edits your code — in ~400 lines of TypeScript.",
+          section: "Course_catalog",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/";
             },},{id: "course_catalog-unity-game-development",
           title: 'Unity Game Development',
           description: "Learn Unity3D from scratch — particle systems, game physics, AI, and building complete games. Taught in Hindi with English subtitles.",
@@ -404,6 +409,106 @@ ninja.data = [{
           description: "Generic handlers, Static, and interface inheritance chains — four extra patterns worth internalizing.",
           section: "Courses",handler: () => {
               window.location.href = "/courses/advanced-typescript-harness-builders/27-bonus-patterns/";
+            },},{id: "courses-1-what-is-a-harness",
+          title: '1. What Is a Harness?',
+          description: "Understand the loop: prompt → LLM → tool calls → results → repeat.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/01-what-is-a-harness/";
+            },},{id: "courses-2-the-message-protocol",
+          title: '2. The Message Protocol',
+          description: "UserMessage, AssistantMessage, ToolResultMessage — the conversation wire format.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/02-the-message-protocol/";
+            },},{id: "courses-3-the-model-object",
+          title: '3. The Model Object',
+          description: "How to describe a Claude model to your harness.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/03-the-model-object/";
+            },},{id: "courses-4-api-key-amp-client-setup",
+          title: '4. API Key &amp;amp; Client Setup',
+          description: "Read ANTHROPIC_API_KEY, create the SDK client.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/04-api-key-client-setup/";
+            },},{id: "courses-5-streaming-a-response",
+          title: '5. Streaming a Response',
+          description: "Send a prompt, stream text back token-by-token.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/05-streaming-a-response/";
+            },},{id: "courses-6-the-eventstream-class",
+          title: '6. The EventStream Class',
+          description: "A generic push-based AsyncIterable for streaming events.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/06-the-eventstream-class/";
+            },},{id: "courses-7-defining-a-tool",
+          title: '7. Defining a Tool',
+          description: "The Tool interface: name, description, JSON schema.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/07-defining-a-tool/";
+            },},{id: "courses-8-the-read-tool",
+          title: '8. The `read` Tool',
+          description: "Let Claude read files from disk.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/08-the-read-tool/";
+            },},{id: "courses-9-the-edit-tool",
+          title: '9. The `edit` Tool',
+          description: "Let Claude edit files with string replacement.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/09-the-edit-tool/";
+            },},{id: "courses-10-the-write-tool",
+          title: '10. The `write` Tool',
+          description: "Let Claude create new files.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/10-the-write-tool/";
+            },},{id: "courses-11-the-bash-tool",
+          title: '11. The `bash` Tool',
+          description: "Let Claude run shell commands.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/11-the-bash-tool/";
+            },},{id: "courses-12-converting-tools-for-the-api",
+          title: '12. Converting Tools for the API',
+          description: "Translate your Tool[] into Anthropic&#39;s tools parameter.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/12-converting-tools-for-the-api/";
+            },},{id: "courses-13-the-inner-loop",
+          title: '13. The Inner Loop',
+          description: "Stream response → check for tool calls → execute → feed results back → repeat.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/13-the-inner-loop/";
+            },},{id: "courses-14-tool-argument-validation",
+          title: '14. Tool Argument Validation',
+          description: "Validate LLM-provided arguments against your JSON schema.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/14-tool-argument-validation/";
+            },},{id: "courses-15-stop-reasons-amp-when-to-loop",
+          title: '15. Stop Reasons &amp;amp; When to Loop',
+          description: "stop, toolUse, error, aborted — what each means.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/15-stop-reasons/";
+            },},{id: "courses-16-building-the-system-prompt",
+          title: '16. Building the System Prompt',
+          description: "Tell Claude what tools it has, how to behave, what directory it&#39;s in.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/16-building-the-system-prompt/";
+            },},{id: "courses-17-project-context-amp-skills",
+          title: '17. Project Context &amp;amp; Skills',
+          description: "Load AGENTS.md, skill files, and inject them into the prompt.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/17-project-context-and-skills/";
+            },},{id: "courses-18-the-agent-class",
+          title: '18. The Agent Class',
+          description: "Stateful wrapper: owns transcript, emits events, handles abort.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/18-the-agent-class/";
+            },},{id: "courses-19-steering-amp-follow-ups",
+          title: '19. Steering &amp;amp; Follow-ups',
+          description: "Inject messages mid-run, queue follow-up prompts.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/19-steering-and-follow-ups/";
+            },},{id: "courses-20-putting-it-all-together",
+          title: '20. Putting It All Together',
+          description: "A working minimal harness in ~400 lines.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/how-to-build-a-harness/20-putting-it-all-together/";
             },},{id: "courses-particle-system-1-modules",
           title: 'Particle System 1: Modules',
           description: "An introduction to Unity&#39;s Particle System and its module-based architecture. Learn how the particle system is structured and how modules control every aspect of particle behaviour.",
