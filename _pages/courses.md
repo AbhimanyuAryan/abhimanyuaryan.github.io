@@ -24,8 +24,15 @@ nav_order: 3
 <div class="card h-100 hoverable" style="border-radius: 12px; overflow: hidden;">
 
               <div style="position: relative; padding-bottom: 56.25%; background: #000;">
+                {% if course.thumbnail_youtube_id and course.thumbnail_youtube_id != "" %}
+                  {% assign thumb_src = "https://img.youtube.com/vi/" | append: course.thumbnail_youtube_id | append: "/hqdefault.jpg" %}
+                {% elsif course.thumbnail_image %}
+                  {% assign thumb_src = course.thumbnail_image | relative_url %}
+                {% else %}
+                  {% assign thumb_src = "assets/img/rhino.png" | relative_url %}
+                {% endif %}
                 <img
-                  src="https://img.youtube.com/vi/{{ course.thumbnail_youtube_id }}/hqdefault.jpg"
+                  src="{{ thumb_src }}"
                   alt="{{ course.title }}"
                   style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
                   loading="lazy"

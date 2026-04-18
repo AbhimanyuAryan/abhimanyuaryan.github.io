@@ -32,6 +32,16 @@ Site runs at **http://localhost:8081**
 
 See the parent repo README for full setup instructions (cloning, pulling, pushing across machines).
 
+### Port already allocated
+
+If `docker compose up` fails with `Bind for 0.0.0.0:8081 failed: port is already allocated`, another container is holding the port. Free it and retry:
+
+```bash
+docker ps -q --filter "publish=8081" | xargs -r docker stop
+```
+
+For non-Docker processes on that port, use `lsof -i :8081` to find and stop the culprit.
+
 ## Stack
 
 - [Jekyll](https://jekyllrb.com/) + [al-folio](https://github.com/alshedivat/al-folio) theme

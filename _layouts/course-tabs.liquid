@@ -1,0 +1,424 @@
+---
+layout: default
+---
+{% assign chapters = site.courses | where: 'course_slug', page.course_slug | sort: 'order' %}
+
+<div class="post course-tabs-page">
+  <p style="margin-bottom: 1.5rem;">
+    <a href="{{ '/courses/' | relative_url }}"> <i class="fa-solid fa-arrow-left fa-sm"></i> All Courses </a>
+  </p>
+
+  <div class="row align-items-center mb-4">
+    <div class="col-md-5 mb-3 mb-md-0">
+      <div style="position: relative; padding-bottom: 56.25%; background: #000; border-radius: 8px; overflow: hidden;">
+        {% if page.thumbnail_youtube_id and page.thumbnail_youtube_id != '' %}
+          {% assign hero_src = 'https://img.youtube.com/vi/' | append: page.thumbnail_youtube_id | append: '/hqdefault.jpg' %}
+        {% elsif page.thumbnail_image %}
+          {% assign hero_src = page.thumbnail_image | relative_url %}
+        {% else %}
+          {% assign hero_src = 'assets/img/rhino.png' | relative_url %}
+        {% endif %}
+        <img
+          src="{{ hero_src }}"
+          alt="{{ page.title }}"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+        >
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <header>
+        <h1 class="post-title" style="margin-bottom: 0.5rem;">{{ page.title }}</h1>
+        <p style="font-size: 1.05rem; margin-bottom: 1rem;">{{ page.description }}</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          {% if page.level %}
+            <span
+              class="badge"
+              style="background: var(--global-theme-color); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;"
+            >
+              {{- page.level -}}
+            </span>
+          {% endif %}
+          {% if page.language %}
+            <span
+              class="badge"
+              style="background: var(--global-divider-color); color: var(--global-text-color); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;"
+            >
+              <i class="fa-solid fa-language fa-sm"></i> {{ page.language }}
+            </span>
+          {% endif %}
+          <span
+            class="badge"
+            style="background: var(--global-divider-color); color: var(--global-text-color); padding: 4px 10px; border-radius: 20px; font-size: 0.8rem;"
+          >
+            <i class="fa-solid fa-list-ol fa-sm"></i> {{ chapters.size }} chapter{% if chapters.size != 1 %}s{% endif %}
+          </span>
+        </div>
+
+        {% if page.tags %}
+          <p style="margin: 0;">
+            {% for tag in page.tags %}
+              <i class="fa-solid fa-hashtag fa-sm"></i> <span style="font-size: 0.85rem;">{{ tag }}</span>
+              {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
+      </header>
+    </div>
+  </div>
+
+  {% if content and content != '' %}
+    <div class="post-content" style="margin-bottom: 1.5rem;">
+      {{ content }}
+    </div>
+  {% endif %}
+
+  <div class="course-tabstrip-wrapper" role="navigation" aria-label="Course chapters">
+    <button type="button" class="course-tabstrip-arrow course-tabstrip-arrow-left" aria-label="Scroll chapters left">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div class="course-tabstrip" id="course-tabstrip">
+      <ul class="course-tabs-list" role="tablist">
+        {% for ch in chapters %}
+          {% assign ch_id = ch.chapter_id | default: ch.slug %}
+          <li role="presentation" class="course-tab-item{% if forloop.first %} active{% endif %}" data-chapter="{{ ch_id }}">
+            <a href="#{{ ch_id }}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+              <span class="course-tab-index">{{ ch.chapter_label | default: ch.order }}</span>
+              <span class="course-tab-title">{{ ch.tab_title | default: ch.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <button type="button" class="course-tabstrip-arrow course-tabstrip-arrow-right" aria-label="Scroll chapters right">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <div class="course-chapter-panes">
+    {% for ch in chapters %}
+      {% assign ch_id = ch.chapter_id | default: ch.slug %}
+      <section
+        class="course-chapter-pane{% if forloop.first %} active{% endif %}"
+        id="{{ ch_id }}"
+        role="tabpanel"
+        data-order="{{ ch.order }}"
+        {% unless forloop.first %}
+          hidden
+        {% endunless %}
+      >
+        <header class="course-chapter-header">
+          {% if ch.part_label %}
+            <div class="course-chapter-part">{{ ch.part_label }}</div>
+          {% endif %}
+          <h2 class="course-chapter-title">{{ ch.title }}</h2>
+          {% if ch.description %}
+            <p class="course-chapter-description">{{ ch.description }}</p>
+          {% endif %}
+        </header>
+
+        {% if ch.youtube_id and ch.youtube_id != '' %}
+          <div
+            class="video-container"
+            style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 1.5rem;"
+          >
+            <iframe
+              src="https://www.youtube.com/embed/{{ ch.youtube_id }}"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              title="{{ ch.title }}"
+            ></iframe>
+          </div>
+        {% endif %}
+
+        <div class="course-chapter-body">
+          {{ ch.content }}
+        </div>
+
+        <nav class="course-chapter-nav" aria-label="Chapter navigation">
+          {% assign prev_idx = forloop.index0 | minus: 1 %}
+          {% assign next_idx = forloop.index %}
+          {% if prev_idx >= 0 %}
+            {% assign prev_ch = chapters[prev_idx] %}
+            {% assign prev_id = prev_ch.chapter_id | default: prev_ch.slug %}
+            <a class="course-chapter-nav-prev" href="#{{ prev_id }}" data-chapter-target="{{ prev_id }}">
+              <i class="fa-solid fa-arrow-left fa-sm"></i> {{ prev_ch.tab_title | default: prev_ch.title }}
+            </a>
+          {% else -%}
+            <span></span>
+          {%- endif %}
+          {% if next_idx < chapters.size %}
+            {% assign next_ch = chapters[next_idx] %}
+            {% assign next_id = next_ch.chapter_id | default: next_ch.slug %}
+            <a class="course-chapter-nav-next" href="#{{ next_id }}" data-chapter-target="{{ next_id }}">
+              {{ next_ch.tab_title | default: next_ch.title }}
+              <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </a>
+          {% else -%}
+            <span></span>
+          {%- endif %}
+        </nav>
+      </section>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .course-tabstrip-wrapper {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 2px solid var(--global-divider-color);
+    margin-bottom: 1.75rem;
+    gap: 0;
+  }
+  .course-tabstrip {
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .course-tabstrip::-webkit-scrollbar {
+    display: none;
+  }
+  .course-tabs-list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 0;
+  }
+  .course-tab-item {
+    flex: 0 0 auto;
+  }
+  .course-tab-item > a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 1rem;
+    color: var(--global-text-color-light);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease,
+      background 0.15s ease;
+    border-radius: 6px 6px 0 0;
+  }
+  .course-tab-item > a:hover {
+    color: var(--global-text-color);
+    background: var(--global-bg-color-hover, rgba(128, 128, 128, 0.08));
+  }
+  .course-tab-item.active > a {
+    color: var(--global-theme-color);
+    border-bottom-color: var(--global-theme-color);
+  }
+  .course-tab-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.35rem;
+    border-radius: 999px;
+    background: var(--global-divider-color);
+    color: var(--global-text-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .course-tab-item.active .course-tab-index {
+    background: var(--global-theme-color);
+    color: #fff;
+  }
+  .course-tabstrip-arrow {
+    flex: 0 0 auto;
+    width: 36px;
+    background: transparent;
+    border: none;
+    color: var(--global-text-color-light);
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      color 0.15s ease,
+      opacity 0.15s ease;
+  }
+  .course-tabstrip-arrow:hover {
+    color: var(--global-theme-color);
+  }
+  .course-tabstrip-arrow:disabled,
+  .course-tabstrip-arrow[aria-disabled='true'] {
+    opacity: 0.25;
+    cursor: default;
+  }
+  .course-chapter-pane[hidden] {
+    display: none;
+  }
+  .course-chapter-header {
+    margin-bottom: 1rem;
+  }
+  .course-chapter-part {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.35rem;
+  }
+  .course-chapter-title {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+  .course-chapter-description {
+    color: var(--global-text-color-light);
+    margin-bottom: 0.5rem;
+  }
+  .course-chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-divider-color);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .course-chapter-nav a {
+    font-size: 0.9rem;
+  }
+</style>
+
+<script>
+  (function () {
+    function init() {
+      var wrapper = document.querySelector('.course-tabstrip-wrapper');
+      if (!wrapper) return;
+      var strip = wrapper.querySelector('.course-tabstrip');
+      var leftBtn = wrapper.querySelector('.course-tabstrip-arrow-left');
+      var rightBtn = wrapper.querySelector('.course-tabstrip-arrow-right');
+      var tabItems = Array.prototype.slice.call(wrapper.querySelectorAll('.course-tab-item'));
+      var panes = Array.prototype.slice.call(document.querySelectorAll('.course-chapter-pane'));
+
+      function activate(chapterId, opts) {
+        opts = opts || {};
+        var target = tabItems.find(function (t) {
+          return t.getAttribute('data-chapter') === chapterId;
+        });
+        if (!target) return;
+
+        tabItems.forEach(function (t) {
+          var active = t === target;
+          t.classList.toggle('active', active);
+          var link = t.querySelector('a');
+          if (link) link.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panes.forEach(function (p) {
+          var active = p.id === chapterId;
+          p.classList.toggle('active', active);
+          if (active) p.removeAttribute('hidden');
+          else p.setAttribute('hidden', '');
+        });
+
+        if (opts.updateHash !== false) {
+          try {
+            history.replaceState(null, '', '#' + chapterId);
+          } catch (e) {
+            /* noop */
+          }
+        }
+
+        // Scroll active tab into view inside the strip (not the page)
+        var stripRect = strip.getBoundingClientRect();
+        var tabRect = target.getBoundingClientRect();
+        if (tabRect.left < stripRect.left) {
+          strip.scrollBy({ left: tabRect.left - stripRect.left - 24, behavior: 'smooth' });
+        } else if (tabRect.right > stripRect.right) {
+          strip.scrollBy({ left: tabRect.right - stripRect.right + 24, behavior: 'smooth' });
+        }
+
+        if (opts.scrollIntoView) {
+          var pane = document.getElementById(chapterId);
+          if (pane) {
+            var y = pane.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      }
+
+      tabItems.forEach(function (t) {
+        var link = t.querySelector('a');
+        if (!link) return;
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          activate(t.getAttribute('data-chapter'));
+        });
+      });
+
+      document.querySelectorAll('[data-chapter-target]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          activate(el.getAttribute('data-chapter-target'), { scrollIntoView: true });
+        });
+      });
+
+      function updateArrowState() {
+        var max = strip.scrollWidth - strip.clientWidth;
+        var atStart = strip.scrollLeft <= 2;
+        var atEnd = strip.scrollLeft >= max - 2;
+        if (leftBtn) leftBtn.setAttribute('aria-disabled', atStart ? 'true' : 'false');
+        if (rightBtn) rightBtn.setAttribute('aria-disabled', atEnd || max <= 0 ? 'true' : 'false');
+      }
+
+      function scrollByTabs(direction) {
+        // Roughly 5 tabs per click, capped to clientWidth
+        var approxTab = 140;
+        var amount = Math.min(strip.clientWidth, approxTab * 5);
+        strip.scrollBy({ left: direction * amount, behavior: 'smooth' });
+      }
+
+      if (leftBtn)
+        leftBtn.addEventListener('click', function () {
+          scrollByTabs(-1);
+        });
+      if (rightBtn)
+        rightBtn.addEventListener('click', function () {
+          scrollByTabs(1);
+        });
+      strip.addEventListener('scroll', updateArrowState, { passive: true });
+      window.addEventListener('resize', updateArrowState);
+      updateArrowState();
+
+      // Hash deep-link
+      var initial = (window.location.hash || '').replace(/^#/, '');
+      if (initial) {
+        var match = tabItems.find(function (t) {
+          return t.getAttribute('data-chapter') === initial;
+        });
+        if (match) activate(initial, { updateHash: false });
+      }
+      window.addEventListener('hashchange', function () {
+        var id = (window.location.hash || '').replace(/^#/, '');
+        if (!id) return;
+        activate(id, { updateHash: false });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
