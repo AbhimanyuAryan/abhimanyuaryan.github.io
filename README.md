@@ -4,6 +4,14 @@ Personal blog and portfolio of Abhimanyu Aryan — AI engineer writing about age
 
 Live at [abhimanyuaryan.github.io](https://abhimanyuaryan.github.io)
 
+## Setup (once per clone)
+
+```bash
+npm install
+```
+
+This activates the pre-commit hook that auto-formats code with Prettier before every commit.
+
 ## Local Development
 
 This repo is used as a git submodule inside [TheAbhimanyuAryanShow](https://github.com/AIWithAbhimanyuAryan/TheAbhimanyuAryanShow). Run it locally from the parent repo:
