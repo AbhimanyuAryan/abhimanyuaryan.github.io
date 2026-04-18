@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+echo "Running Prettier..."
+npx prettier . --write
+
+if ! git diff --quiet; then
+  git add -A
+  echo "Prettier: formatted files staged into your commit."
+else
+  echo "Prettier: nothing to fix."
+fi
