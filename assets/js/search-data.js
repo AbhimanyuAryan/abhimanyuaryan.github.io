@@ -259,11 +259,151 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/web_development_julia_genie/";
+            },},{id: "course_catalog-advanced-typescript-for-harness-builders",
+          title: 'Advanced TypeScript for Harness Builders',
+          description: "Learn advanced TypeScript by studying production code from the pi-mono codebase — types that stand up to real agent-harness workloads.",
+          section: "Course_catalog",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/";
             },},{id: "course_catalog-unity-game-development",
           title: 'Unity Game Development',
           description: "Learn Unity3D from scratch — particle systems, game physics, AI, and building complete games. Taught in Hindi with English subtitles.",
           section: "Course_catalog",handler: () => {
               window.location.href = "/courses/unity-game-development/";
+            },},{id: "courses-0a-type-annotations-amp-basic-types",
+          title: '0a. Type Annotations &amp;amp; Basic Types',
+          description: "How TypeScript annotates parameters, return types, and variables — the gap that separates JS from TS.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/01-type-annotations-basic-types/";
+            },},{id: "courses-0b-interfaces-amp-type-aliases",
+          title: '0b. Interfaces &amp;amp; Type Aliases',
+          description: "Two ways to name an object shape — and when to reach for which.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/02-interfaces-type-aliases/";
+            },},{id: "courses-0c-optional-properties-amp-parameters",
+          title: '0c. Optional Properties &amp;amp; Parameters',
+          description: "The ? after a name says: this can be undefined, or omitted entirely.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/03-optional-properties-parameters/";
+            },},{id: "courses-0d-type-assertions-amp-non-null-assertions",
+          title: '0d. Type Assertions &amp;amp; Non-Null Assertions',
+          description: "Escape hatches: when you know more about a value than TypeScript does.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/04-type-assertions-non-null/";
+            },},{id: "courses-0e-type-narrowing-runtime",
+          title: '0e. Type Narrowing (Runtime)',
+          description: "TypeScript&#39;s killer feature: it tracks runtime checks and narrows types automatically.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/05-type-narrowing-runtime/";
+            },},{id: "courses-0f-import-type-amp-the-type-system-at-compile-time",
+          title: '0f. `import type` &amp;amp; the Type System at Compile Time',
+          description: "TypeScript types are erased at runtime. The compiled JavaScript has no types at all — that has consequences.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/06-import-type/";
+            },},{id: "courses-1-union-amp-literal-types",
+          title: '1. Union &amp;amp; Literal Types',
+          description: "String literal unions with an (string &amp; {}) escape hatch for autocomplete + extensibility.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/07-union-literal-types/";
+            },},{id: "courses-2-discriminated-unions",
+          title: '2. Discriminated Unions',
+          description: "A common literal property lets TypeScript narrow a union inside switch/if blocks.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/08-discriminated-unions/";
+            },},{id: "courses-3-exhaustive-checks-with-never",
+          title: '3. Exhaustive Checks with `never`',
+          description: "Compile-time completeness: the compiler errors at the default branch when a new union member is added.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/09-exhaustive-checks/";
+            },},{id: "courses-4-generics-amp-constraints",
+          title: '4. Generics &amp;amp; Constraints',
+          description: "`extends` clauses ensure type parameters meet a minimum shape, plus default type parameters.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/10-generics-constraints/";
+            },},{id: "courses-5-conditional-types",
+          title: '5. Conditional Types',
+          description: "`T extends U ? X : Y` evaluates types at the type level — often nested to pick between shapes.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/11-conditional-types/";
+            },},{id: "courses-6-distributive-conditional-types",
+          title: '6. Distributive Conditional Types',
+          description: "Naked type parameters distribute over unions — critical for Omit on discriminated unions.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/12-distributive-conditional-types/";
+            },},{id: "courses-7-the-infer-keyword",
+          title: '7. The `infer` Keyword',
+          description: "Extract a type from a structural position inside a conditional type.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/13-infer-keyword/";
+            },},{id: "courses-8-mapped-types-amp-index-access",
+          title: '8. Mapped Types &amp;amp; Index Access',
+          description: "Access nested types with [keyof T] and typeof to derive types from runtime objects.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/14-mapped-types-index-access/";
+            },},{id: "courses-9-utility-types-in-practice",
+          title: '9. Utility Types in Practice',
+          description: "Record, Pick, Omit, Partial, Extract — the built-in utility types used across pi-mono.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/15-utility-types/";
+            },},{id: "courses-10-intersection-types",
+          title: '10. Intersection Types',
+          description: "The &amp; operator merges two types — all properties from both sides must be present.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/16-intersection-types/";
+            },},{id: "courses-11-function-overloads",
+          title: '11. Function Overloads',
+          description: "Multiple call signatures let one name accept different argument types and return corresponding types.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/17-function-overloads/";
+            },},{id: "courses-12-type-guards-amp-is-predicates",
+          title: '12. Type Guards &amp;amp; `is` Predicates',
+          description: "Runtime narrowing: functions whose return type is a type predicate.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/18-type-guards-is-predicates/";
+            },},{id: "courses-13-declaration-merging-amp-module-augmentation",
+          title: '13. Declaration Merging &amp;amp; Module Augmentation',
+          description: "Extend third-party interfaces without forking them — the plugin pattern done right.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/19-declaration-merging/";
+            },},{id: "courses-14-as-const-assertions-amp-satisfies",
+          title: '14. `as const` Assertions &amp;amp; `satisfies`',
+          description: "Preserve literal types and validate shape without widening.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/20-as-const-satisfies/";
+            },},{id: "courses-15-generic-classes-with-asynciterable",
+          title: '15. Generic Classes with `AsyncIterable`',
+          description: "Build a push-based event stream that works with for await...of.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/21-async-iterable-classes/";
+            },},{id: "courses-16-async-generators",
+          title: '16. Async Generators',
+          description: "async function* yields values lazily over time — perfect for SSE parsing and WebSocket streams.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/22-async-generators/";
+            },},{id: "courses-17-node-js-built-in-imports-amp-conditional-loading",
+          title: '17. Node.js Built-in Imports &amp;amp; Conditional Loading',
+          description: "The node: protocol plus dynamic imports for isomorphic (browser + Node) code.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/23-node-builtin-conditional-imports/";
+            },},{id: "courses-18-type-only-imports-amp-re-exports",
+          title: '18. Type-Only Imports &amp;amp; Re-exports',
+          description: "Barrel files and selective re-exports control the public API surface.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/24-type-only-imports-re-exports/";
+            },},{id: "courses-19-accessor-properties-in-interfaces",
+          title: '19. Accessor Properties in Interfaces',
+          description: "Interfaces can define get/set signatures, not just data properties.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/25-accessor-properties-interfaces/";
+            },},{id: "courses-20-readonlyarray-pick-facades-amp-immutable-apis",
+          title: '20. `ReadonlyArray`, `Pick` Facades &amp;amp; Immutable APIs',
+          description: "Expose read-only views to prevent mutation of internal state.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/26-readonly-immutable-apis/";
+            },},{id: "courses-bonus-patterns",
+          title: 'Bonus Patterns',
+          description: "Generic handlers, Static, and interface inheritance chains — four extra patterns worth internalizing.",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/advanced-typescript-harness-builders/27-bonus-patterns/";
             },},{id: "courses-particle-system-1-modules",
           title: 'Particle System 1: Modules',
           description: "An introduction to Unity&#39;s Particle System and its module-based architecture. Learn how the particle system is structured and how modules control every aspect of particle behaviour.",
