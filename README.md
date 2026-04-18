@@ -12,6 +12,14 @@ npm install
 
 This activates the pre-commit hook that auto-formats code with Prettier before every commit.
 
+## Pulling changes
+
+Always use rebase to keep history linear:
+
+```bash
+git pull --rebase
+```
+
 ## Local Development
 
 This repo is used as a git submodule inside [TheAbhimanyuAryanShow](https://github.com/AIWithAbhimanyuAryan/TheAbhimanyuAryanShow). Run it locally from the parent repo:
