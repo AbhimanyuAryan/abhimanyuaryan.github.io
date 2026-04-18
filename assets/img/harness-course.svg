@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="How to Build a Harness">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="270" fill="url(#bg)"/>
+  <g transform="translate(32,36)">
+    <rect width="96" height="96" rx="14" fill="#d97706" stroke="#ffffff" stroke-opacity="0.25"/>
+    <text x="48" y="70" text-anchor="middle" font-family="Menlo,Consolas,monospace" font-size="46" font-weight="700" fill="#ffffff">{ }</text>
+  </g>
+  <g font-family="Helvetica,Arial,sans-serif" fill="#ffffff">
+    <text x="150" y="86" font-size="22" font-weight="700">How to Build</text>
+    <text x="150" y="116" font-size="18" font-weight="500" fill-opacity="0.9">a Harness</text>
+    <text x="32" y="176" font-size="13" fill-opacity="0.85">Agent Loop · Tools · Streaming · Claude API</text>
+    <text x="32" y="198" font-size="13" fill-opacity="0.85">TypeScript · Node.js · ~400 lines end-to-end</text>
+    <text x="32" y="238" font-size="12" fill-opacity="0.65">built on the pi-mono reference</text>
+  </g>
+</svg>
