@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
+        },{id: "nav-courses",
+          title: "Courses",
+          description: "Video courses on game development, AI, and programming — free on YouTube.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/courses/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -65,12 +65,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/ai-bytes/";
               },
-            },{id: "dropdown-courses",
-              title: "courses",
+            },{id: "dropdown-projects",
+              title: "projects",
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "/courses/";
+                window.location.href = "/projects/";
               },
             },{id: "post-developing-cloud-based-invoicing-and-pos-agentic-software",
         
