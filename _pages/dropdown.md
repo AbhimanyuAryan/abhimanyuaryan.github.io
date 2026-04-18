@@ -13,6 +13,7 @@ children:
   - title: divider
   - title: AI Bytes
     permalink: /ai-bytes/
-  - title: courses
-    permalink: /courses/
+  - title: divider
+  - title: projects
+    permalink: /projects/
 ---

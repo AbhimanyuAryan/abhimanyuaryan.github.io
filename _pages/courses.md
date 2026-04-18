@@ -3,7 +3,8 @@ layout: default
 permalink: /courses/
 title: Courses
 description: Video courses on game development, AI, and programming — free on YouTube.
-nav: false
+nav: true
+nav_order: 3
 ---
 
 <div class="post">
