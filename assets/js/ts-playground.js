@@ -54,9 +54,9 @@
       console.error = capture('error');
       window.addEventListener('message', function(e) {
         if (e.data && e.data.type === 'run') {
-          try { new Function(e.data.code)(); }
-          catch(err) { out.push({ type: 'error', text: err.toString() }); }
-          parent.postMessage({ type: 'result', lines: out }, '*');
+          var s = document.createElement('script');
+          s.textContent = '(function(){try{' + e.data.code + '}catch(e){out.push({type:"error",text:e.toString()});}parent.postMessage({type:"result",lines:out},"*");})();';
+          document.body.appendChild(s);
         }
       });
       parent.postMessage({ type: 'ready' }, '*');
