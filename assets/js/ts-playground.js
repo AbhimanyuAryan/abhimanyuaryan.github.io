@@ -224,15 +224,54 @@
     consolePane.appendChild(consoleHeader);
     consolePane.appendChild(consoleBody);
 
+    // ── vertical resize handle ────────────────────────────────────────────
+    const vertHandle = document.createElement("div");
+    vertHandle.className = "ts-vert-handle";
+    vertHandle.title = "Drag to resize";
+
     wrap.appendChild(header);
     wrap.appendChild(panes);
+    wrap.appendChild(vertHandle);
     wrap.appendChild(consolePane);
+
+    let manualHeight = 0;
 
     // ── auto-resize ───────────────────────────────────────────────────────
     function syncHeight() {
       textarea.style.height = "auto";
-      textarea.style.height = textarea.scrollHeight + "px";
+      textarea.style.height = Math.max(manualHeight, textarea.scrollHeight) + "px";
       outputPre.style.minHeight = textarea.style.height;
+    }
+
+    vertHandle.addEventListener("mousedown", startVertDrag);
+    vertHandle.addEventListener("touchstart", startVertDrag, { passive: false });
+
+    let vertStartY, vertStartH;
+
+    function startVertDrag(e) {
+      vertStartY = e.touches ? e.touches[0].clientY : e.clientY;
+      vertStartH = textarea.getBoundingClientRect().height;
+      vertHandle.classList.add("ts-drag-active");
+      document.addEventListener("mousemove", onVertDrag);
+      document.addEventListener("mouseup", stopVertDrag);
+      document.addEventListener("touchmove", onVertDrag, { passive: false });
+      document.addEventListener("touchend", stopVertDrag);
+      e.preventDefault();
+    }
+
+    function onVertDrag(e) {
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      manualHeight = Math.max(80, vertStartH + (clientY - vertStartY));
+      syncHeight();
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function stopVertDrag() {
+      vertHandle.classList.remove("ts-drag-active");
+      document.removeEventListener("mousemove", onVertDrag);
+      document.removeEventListener("mouseup", stopVertDrag);
+      document.removeEventListener("touchmove", onVertDrag);
+      document.removeEventListener("touchend", stopVertDrag);
     }
     textarea.addEventListener("input", () => {
       compiledJS = null;

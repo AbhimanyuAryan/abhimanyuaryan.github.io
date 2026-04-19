@@ -194,6 +194,31 @@
     }
   }
 
+  // ── Vertical resize handle ────────────────────────────────────────────
+  .ts-vert-handle {
+    height: 8px;
+    background: var(--global-divider-color);
+    cursor: row-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    touch-action: none;
+    transition: background 0.15s;
+
+    &::after {
+      content: "⠿";
+      font-size: 0.55rem;
+      color: var(--global-text-color-light);
+      line-height: 1;
+    }
+
+    &:hover,
+    &.ts-drag-active {
+      background: var(--global-theme-color);
+    }
+  }
+
   // ── Console pane ──────────────────────────────────────────────────────
   .ts-console {
     border-top: 1px dashed var(--global-divider-color);
