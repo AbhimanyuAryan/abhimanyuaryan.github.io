@@ -1,0 +1,208 @@
+/*******************************************************************************
+ * TypeScript Playground — inline TS→JS editor for course chapters & blog posts
+ ******************************************************************************/
+
+@use "variables" as v;
+
+.ts-playground {
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 2px;
+  overflow: hidden;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 0.82rem;
+
+  // ── Header ──────────────────────────────────────────────────────────────
+  .ts-playground-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.35rem 0.75rem;
+    background: var(--global-code-bg-color);
+    border-bottom: 1px dashed var(--global-theme-color);
+  }
+
+  .ts-playground-lang {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--global-theme-color);
+    white-space: nowrap;
+
+    &.ts-lang-right {
+      margin-left: auto;
+    }
+  }
+
+  .ts-playground-actions {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  // ── Buttons ─────────────────────────────────────────────────────────────
+  .ts-btn {
+    padding: 0.18rem 0.55rem;
+    font-size: 0.72rem;
+    font-family: inherit;
+    border: 1px solid var(--global-divider-color);
+    background: transparent;
+    color: var(--global-text-color);
+    cursor: pointer;
+    border-radius: 2px;
+    transition:
+      color 0.15s,
+      border-color 0.15s,
+      background 0.15s;
+    line-height: 1.6;
+
+    &:hover:not(:disabled) {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: auto;
+    }
+  }
+
+  .ts-compile-btn {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+
+    &:hover:not(:disabled) {
+      background: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+    }
+  }
+
+  // ── Panes ────────────────────────────────────────────────────────────────
+  .ts-playground-panes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ts-pane-input {
+    border-right: 1px dashed var(--global-divider-color);
+
+    @media (max-width: 700px) {
+      border-right: none;
+      border-bottom: 1px dashed var(--global-divider-color);
+    }
+  }
+
+  // ── Editor ───────────────────────────────────────────────────────────────
+  .ts-editor {
+    display: block;
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    border: none;
+    resize: none;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.55;
+    outline: none;
+    tab-size: 2;
+
+    &:focus {
+      box-shadow: inset 3px 0 0 var(--global-theme-color);
+    }
+  }
+
+  // ── Output ───────────────────────────────────────────────────────────────
+  .ts-output {
+    margin: 0;
+    padding: 0.75rem;
+    min-height: 120px;
+    background: var(--global-code-bg-color);
+    border: none;
+    border-radius: 0;
+    overflow-x: auto;
+    line-height: 1.55;
+
+    .ts-output-code {
+      font-family: inherit;
+      font-size: inherit;
+      color: var(--global-text-color-light);
+      white-space: pre;
+    }
+  }
+
+  .ts-pane-output.ts-has-output .ts-output-code {
+    color: var(--global-text-color);
+  }
+
+  .ts-pane-output.ts-has-error .ts-output-code {
+    color: var(--global-danger-block);
+  }
+
+  // ── Run button ────────────────────────────────────────────────────────
+  .ts-run-btn {
+    border-color: #63c0f5;
+    color: #63c0f5;
+
+    &:hover:not(:disabled) {
+      background: #63c0f5;
+      color: #151515;
+    }
+  }
+
+  // ── Console pane ──────────────────────────────────────────────────────
+  .ts-console {
+    border-top: 1px dashed var(--global-divider-color);
+  }
+
+  .ts-console-header {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--global-link-color, #63c0f5);
+    background: var(--global-code-bg-color);
+    border-bottom: 1px dashed var(--global-divider-color);
+  }
+
+  .ts-console-body {
+    padding: 0.5rem 0.75rem;
+    background: var(--global-bg-color);
+    min-height: 2rem;
+  }
+
+  .ts-console-line {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .ts-console-prefix {
+    flex-shrink: 0;
+    opacity: 0.6;
+  }
+
+  .ts-console-log {
+    color: var(--global-text-color);
+  }
+  .ts-console-warn {
+    color: var(--global-warning-block, #f4bf75);
+  }
+  .ts-console-error {
+    color: var(--global-danger-block, #ac4142);
+  }
+  .ts-console-empty {
+    color: var(--global-text-color-light);
+    font-style: italic;
+  }
+}
