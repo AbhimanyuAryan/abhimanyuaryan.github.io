@@ -16,7 +16,7 @@ nav_order: 3
 {% assign all_courses = site.course_catalog %}
 {% if all_courses.size > 0 %}
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-1">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-4">
 {% for course in all_courses %}
 {% assign lesson_count = site.courses | where: "course_slug", course.course_slug | size %}
 <div class="col">

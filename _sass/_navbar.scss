@@ -21,7 +21,8 @@
   }
 
   a:hover {
-    color: var(--global-hover-color);
+    color: var(--global-hover-text-color);
+    background-color: var(--global-hover-color);
   }
 
   .dropdown-divider {
@@ -33,8 +34,8 @@
   color: var(--global-text-color);
 
   &:hover {
-    color: var(--global-hover-color);
-    background-color: var(--global-bg-color);
+    color: var(--global-hover-text-color);
+    background-color: var(--global-hover-color);
   }
 }
 
@@ -63,7 +64,8 @@
     color: var(--global-text-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-hover-text-color);
+      background-color: var(--global-hover-color);
     }
   }
 
@@ -73,7 +75,8 @@
     color: var(--global-theme-color);
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-hover-text-color);
+      background-color: var(--global-hover-color);
     }
   }
 
