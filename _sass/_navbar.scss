@@ -165,3 +165,14 @@
     color: var(--global-hover-color);
   }
 }
+
+#theme-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}

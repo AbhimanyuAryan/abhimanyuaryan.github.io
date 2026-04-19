@@ -196,3 +196,163 @@ footer {
     background: $hacker-conifer;
   }
 }
+
+// Light Hacker Theme — same terminal aesthetic, inverted palette
+$light-hacker-green: #3d7500;
+$light-hacker-bg: #f0f5e8;
+$light-hacker-text: #1c1c1c;
+$light-hacker-link: #0055a0;
+$light-hacker-code-color: #7a3069;
+$light-hacker-footer-bg: #e6edd9;
+
+html[data-theme="hacker-light"] {
+  color-scheme: light;
+  --global-bg-color: #{$light-hacker-bg};
+  --global-code-bg-color: rgba(0, 0, 0, 0.04);
+  --global-text-color: #{$light-hacker-text};
+  --global-text-color-light: #555;
+  --global-theme-color: #{$light-hacker-green};
+  --global-hover-color: #{$light-hacker-green};
+  --global-hover-text-color: #{$light-hacker-bg};
+  --global-footer-bg-color: #{$light-hacker-footer-bg};
+  --global-footer-text-color: #555;
+  --global-footer-link-color: #{$light-hacker-green};
+  --global-distill-app-color: #888;
+  --global-divider-color: #aaa;
+  --global-card-bg-color: rgba(255, 255, 255, 0.6);
+  --global-highlight-color: #{$light-hacker-green};
+  --global-back-to-top-bg-color: rgba(240, 245, 232, 0.85);
+  --global-back-to-top-text-color: #{$light-hacker-green};
+  --global-newsletter-bg-color: rgba(255, 255, 255, 0.6);
+  --global-newsletter-text-color: #{$light-hacker-text};
+
+  --global-tip-block: #{$light-hacker-green};
+  --global-tip-block-bg: rgba(61, 117, 0, 0.08);
+  --global-tip-block-text: #{$light-hacker-text};
+  --global-tip-block-title: #{$light-hacker-green};
+  --global-warning-block: #b87800;
+  --global-warning-block-bg: rgba(184, 120, 0, 0.08);
+  --global-warning-block-text: #{$light-hacker-text};
+  --global-warning-block-title: #b87800;
+  --global-danger-block: #cc2222;
+  --global-danger-block-bg: rgba(204, 34, 34, 0.08);
+  --global-danger-block-text: #{$light-hacker-text};
+  --global-danger-block-title: #cc2222;
+
+  .only-light {
+    display: block;
+  }
+
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: v.$back-to-top-bottom;
+    right: v.$back-to-top-right;
+    height: v.$back-to-top-height;
+    width: v.$back-to-top-width;
+    z-index: v.$back-to-top-z-index;
+  }
+
+  body {
+    background-image: none;
+    background-color: #{$light-hacker-bg};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #{$light-hacker-green};
+    text-shadow: none;
+  }
+
+  a {
+    color: #{$light-hacker-link};
+    text-shadow: none;
+
+    &:hover {
+      color: color.adjust($light-hacker-link, $lightness: -15%);
+      text-shadow: none;
+    }
+  }
+
+  pre {
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  code:not([class]) {
+    color: #{$light-hacker-code-color};
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  table {
+    color: #{$light-hacker-text};
+
+    th {
+      color: #{$light-hacker-text};
+      border-bottom-color: #{$light-hacker-green};
+    }
+
+    td {
+      color: #{$light-hacker-text};
+      border-bottom-color: rgba($light-hacker-green, 0.3);
+    }
+  }
+
+  .table,
+  .table th,
+  .table td,
+  .card-body,
+  .card-text,
+  .card-title,
+  p,
+  li,
+  span,
+  div {
+    color: #{$light-hacker-text};
+  }
+
+  hr {
+    border-bottom-color: #{$light-hacker-green};
+  }
+
+  .card {
+    border-color: rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      border-color: rgba($light-hacker-green, 0.5);
+      box-shadow: 0 0 12px rgba($light-hacker-green, 0.12);
+    }
+  }
+
+  nav.navbar {
+    border-bottom-color: #{$light-hacker-green};
+  }
+
+  footer {
+    border-top-color: #{$light-hacker-green};
+  }
+
+  ::selection {
+    background: rgba($light-hacker-green, 0.2);
+    color: #{$light-hacker-text};
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #{$light-hacker-bg};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bbb;
+
+    &:hover {
+      background: #{$light-hacker-green};
+    }
+  }
+}

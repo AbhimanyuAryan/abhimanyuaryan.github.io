@@ -126,6 +126,14 @@
               </button>
             </li>
           {% endif %}
+          {% if site.enable_darkmode %}
+            <!-- Theme Toggle -->
+            <li class="nav-item">
+              <button id="theme-toggle" title="Toggle theme" onclick="toggleTheme()">
+                <span class="nav-link" id="theme-toggle-icon">☀</span>
+              </button>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>
