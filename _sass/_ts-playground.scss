@@ -32,12 +32,20 @@
     &.ts-lang-right {
       margin-left: auto;
     }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   .ts-playground-actions {
     display: flex;
     gap: 0.35rem;
     flex-shrink: 0;
+
+    @media (max-width: 700px) {
+      margin: 0 auto;
+    }
   }
 
   // ── Buttons ─────────────────────────────────────────────────────────────
@@ -80,20 +88,49 @@
 
   // ── Panes ────────────────────────────────────────────────────────────────
   .ts-playground-panes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 
     @media (max-width: 700px) {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
   }
 
+  .ts-pane-input,
+  .ts-pane-output {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+  }
+
   .ts-pane-input {
-    border-right: 1px dashed var(--global-divider-color);
+    @media (max-width: 700px) {
+      border-bottom: 1px dashed var(--global-divider-color);
+    }
+  }
+
+  // ── Drag handle ───────────────────────────────────────────────────────────
+  .ts-drag-handle {
+    flex: 0 0 5px;
+    background: var(--global-divider-color);
+    cursor: col-resize;
+    position: relative;
+    transition: background 0.15s;
+    user-select: none;
+    touch-action: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 -4px;
+    }
+
+    &:hover,
+    &.ts-drag-active {
+      background: var(--global-theme-color);
+    }
 
     @media (max-width: 700px) {
-      border-right: none;
-      border-bottom: 1px dashed var(--global-divider-color);
+      display: none;
     }
   }
 

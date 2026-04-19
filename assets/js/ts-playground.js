@@ -163,8 +163,51 @@
     outputPre.appendChild(outputCode);
     outputPane.appendChild(outputPre);
 
+    const dragHandle = document.createElement("div");
+    dragHandle.className = "ts-drag-handle";
+    dragHandle.title = "Drag to resize";
+
     panes.appendChild(inputPane);
+    panes.appendChild(dragHandle);
     panes.appendChild(outputPane);
+
+    // ── drag-to-resize ────────────────────────────────────────────────────
+    dragHandle.addEventListener("mousedown", startDrag);
+    dragHandle.addEventListener("touchstart", startDrag, { passive: false });
+
+    let dragStartX, dragStartW, dragTotalW;
+
+    function startDrag(e) {
+      dragStartX = e.touches ? e.touches[0].clientX : e.clientX;
+      dragTotalW = panes.getBoundingClientRect().width;
+      dragStartW = inputPane.getBoundingClientRect().width;
+      dragHandle.classList.add("ts-drag-active");
+      document.addEventListener("mousemove", onDrag);
+      document.addEventListener("mouseup", stopDrag);
+      document.addEventListener("touchmove", onDrag, { passive: false });
+      document.addEventListener("touchend", stopDrag);
+      e.preventDefault();
+    }
+
+    function onDrag(e) {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const delta = clientX - dragStartX;
+      const handleW = dragHandle.offsetWidth;
+      const usable = dragTotalW - handleW;
+      const newW = Math.max(80, Math.min(usable - 80, dragStartW + delta));
+      const pct = (newW / usable) * 100;
+      inputPane.style.flex = `0 0 ${pct}%`;
+      outputPane.style.flex = `0 0 ${100 - pct}%`;
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function stopDrag() {
+      dragHandle.classList.remove("ts-drag-active");
+      document.removeEventListener("mousemove", onDrag);
+      document.removeEventListener("mouseup", stopDrag);
+      document.removeEventListener("touchmove", onDrag);
+      document.removeEventListener("touchend", stopDrag);
+    }
 
     // ── console pane (full width, hidden until first run) ─────────────────
     const consolePane = document.createElement("div");
