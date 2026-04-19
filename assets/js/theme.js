@@ -57,11 +57,10 @@ let applyTheme = () => {
     }
   }
 
-  // Update toggle button icon.
-  let toggleIcon = document.getElementById("theme-toggle-icon");
-  if (toggleIcon) {
-    toggleIcon.textContent = isDarkTheme(theme) ? "☀" : "☾";
-  }
+  // Update toggle button icons (desktop + mobile).
+  document.querySelectorAll("#theme-toggle-icon, #theme-toggle-icon-mobile").forEach((el) => {
+    el.textContent = isDarkTheme(theme) ? "☀" : "☾";
+  });
 
   // Set jupyter notebooks theme.
   let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");

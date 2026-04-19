@@ -24,9 +24,15 @@
         <!-- Social Icons -->
         <div class="navbar-brand social">{% social_links %}</div>
       {% endif %}
+      {% if site.enable_darkmode %}
+        <!-- Theme Toggle (visible on mobile, outside collapsed nav) -->
+        <button id="theme-toggle-mobile" class="d-sm-none ml-auto mr-2" title="Toggle theme" onclick="toggleTheme()">
+          <span class="nav-link" id="theme-toggle-icon-mobile">☀</span>
+        </button>
+      {% endif %}
       <!-- Navbar Toggle -->
       <button
-        class="navbar-toggler collapsed ml-auto"
+        class="navbar-toggler collapsed {% unless site.enable_darkmode %}ml-auto{% endunless %}"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
