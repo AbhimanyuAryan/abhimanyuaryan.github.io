@@ -1,7 +1,7 @@
 extra:
-  label: Senior FullStack Engineer & Educator
+  label: Lead AI Engineer & Educator
   image: ""
-  summary: Senior FullStack Engineer with 10+ years of experience building web frameworks, multi-agent systems, AR/VR applications, and ML pipelines. Currently pursuing a Masters in Informatics Engineering at University of Minho.
+  summary: Lead AI Engineer with 10+ years of experience building web frameworks, multi-agent systems, AR/VR applications, and ML pipelines. Currently pursuing a Masters in Informatics Engineering at University of Minho.
   address:
     street: "R. da Quinta da Armada, 22"
     city: Braga
@@ -43,7 +43,7 @@ cv:
 
     Experience:
       - company: Shine
-        position: Senior FullStack Engineer
+        position: Lead AI Engineer
         location: Remote
         start_date: 2026-01
         end_date: present
@@ -51,7 +51,7 @@ cv:
           - Building internal tooling with Agents
 
       - company: CEGID
-        position: Senior FullStack Engineer
+        position: Lead AI Engineer
         location: Lisbon
         start_date: 2024-09
         end_date: present

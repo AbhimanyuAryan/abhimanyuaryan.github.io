@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started as **Senior FullStack Engineer at CEGID** (Lisbon).
+Started as **Lead AI Engineer at CEGID** (Lisbon).

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Senior FullStack Engineer & Educator. <a href='https://github.com/AbhimanyuAryan'>GitHub</a>. Braga, Portugal.
+subtitle: Lead AI Engineer & Educator. <a href='https://github.com/AbhimanyuAryan'>GitHub</a>. Braga, Portugal.
 
 profile:
   align: right
@@ -26,7 +26,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a Senior FullStack Engineer with 10+ years of experience across web development, machine learning, AR/VR, and multi-agent systems. Currently working at **CEGID** (Lisbon) leading an AI Agentic evals team, and pursuing a **Masters in Informatics Engineering** at the University of Minho.
+I'm a Lead AI Engineer with 10+ years of experience across web development, machine learning, AR/VR, and multi-agent systems. Currently working at **CEGID** (Lisbon) leading an AI Agentic evals team, and pursuing a **Masters in Informatics Engineering** at the University of Minho.
 
 I've contributed to open-source Julia web frameworks ([Genie](https://genieframework.com/)), built AR/VR experiences for JPMorgan and Mahindra, tested UAV object detection systems with the Indian Air Force in the Pokhran desert (site of India's first nuclear test, 1974), and spoken at Google Developer Conference, PyCon, and Women Who Code.
 

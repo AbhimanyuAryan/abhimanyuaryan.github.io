@@ -15,7 +15,7 @@ nav_order: 4
   <img src="{{ '/assets/img/repos/abhimanyu.png' | relative_url }}" alt="AbhimanyuAryan" style="width:80px;height:80px;border-radius:50%;object-fit:cover;flex-shrink:0;">
   <div>
     <h5 class="mb-1"><a href="https://github.com/AbhimanyuAryan" target="_blank" rel="noopener">AbhimanyuAryan</a></h5>
-    <p class="text-muted small mb-0">Senior FullStack Engineer &amp; Educator. Building multi-agent systems, web frameworks, and AR/VR experiences.</p>
+    <p class="text-muted small mb-0">Lead AI Engineer &amp; Educator. Building multi-agent systems, web frameworks, and AR/VR experiences.</p>
   </div>
 </div>
 
