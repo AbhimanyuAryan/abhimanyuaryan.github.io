@@ -11,7 +11,7 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    <p class="desc"><span id="typed-subtitle"></span></p>
   </header>
 
   <article>
@@ -81,3 +81,26 @@ layout: default
     {% endif %}
   </article>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Typed('#typed-subtitle', {
+      strings: [
+        'Senior FullStack Engineer & Educator.',
+        'Multi-Agent Systems Builder.',
+        'AR/VR & Game Developer.',
+        'Open Source Contributor.',
+        'Speaker & Educator.',
+        'Based in Braga, Portugal.',
+      ],
+      typeSpeed: 45,
+      backSpeed: 25,
+      backDelay: 1800,
+      loop: true,
+      smartBackspace: true,
+      cursorChar: '█',
+      contentType: 'text',
+    });
+  });
+</script>
