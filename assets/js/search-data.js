@@ -572,8 +572,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_17/";
-            },},{id: "news-started-as-senior-fullstack-engineer-at-cegid-lisbon",
-          title: 'Started as Senior FullStack Engineer at CEGID (Lisbon).',
+            },},{id: "news-started-as-lead-ai-engineer-at-cegid-lisbon",
+          title: 'Started as Lead AI Engineer at CEGID (Lisbon).',
           description: "",
           section: "News",},{id: "news-talk-at-voxel51-reducing-hallucinations-in-chatgpt-using-knowledge-graphs",
           title: 'Talk at Voxel51: Reducing Hallucinations in ChatGPT Using Knowledge Graphs',
