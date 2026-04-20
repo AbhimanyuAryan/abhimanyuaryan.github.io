@@ -4,7 +4,7 @@ permalink: /courses/
 title: Courses
 description: Video courses on game development, AI, and programming — free on YouTube.
 nav: true
-nav_order: 3
+nav_order: 1
 ---
 
 <div class="post">
