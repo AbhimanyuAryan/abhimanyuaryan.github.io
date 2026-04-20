@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
+  },{id: "nav-courses",
+          title: "Courses",
+          description: "Video courses on game development, AI, and programming — free on YouTube.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/courses/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -23,12 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-courses",
-          title: "Courses",
-          description: "Video courses on game development, AI, and programming — free on YouTube.",
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/courses/";
+            window.location.href = "/blog/";
           },
         },{id: "nav-repositories",
           title: "repositories",
