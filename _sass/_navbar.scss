@@ -63,6 +63,7 @@
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    white-space: nowrap;
 
     &:hover {
       color: var(--global-hover-text-color);
