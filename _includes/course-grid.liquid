@@ -24,7 +24,7 @@
         {% endif %}
       </div>
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="courses row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for lesson in lessons %}
           <div class="col">
             <a href="{{ lesson.url | relative_url }}" style="text-decoration: none; color: inherit;">

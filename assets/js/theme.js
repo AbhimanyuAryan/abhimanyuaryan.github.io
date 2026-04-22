@@ -1,13 +1,21 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-let isDarkTheme = (theme) => theme === "hacker";
+const DARK_THEME = "hacker";
+const LIGHT_THEME = "hacker-light";
 
-let determineComputedTheme = () => localStorage.getItem("theme") || "hacker";
+let isDarkTheme = (theme) => theme === DARK_THEME;
 
-let determineThemeSetting = () => localStorage.getItem("theme") || "hacker";
+let determineAutomaticTheme = () => {
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return DARK_THEME;
+  }
+  return LIGHT_THEME;
+};
+
+let determineComputedTheme = () => localStorage.getItem("theme") || determineAutomaticTheme();
 
 let toggleTheme = () => {
-  let next = determineComputedTheme() === "hacker" ? "hacker-light" : "hacker";
+  let next = determineComputedTheme() === DARK_THEME ? LIGHT_THEME : DARK_THEME;
   localStorage.setItem("theme", next);
   transTheme();
   applyTheme();
@@ -221,6 +229,20 @@ let transTheme = () => {
 
 let initTheme = () => {
   applyTheme();
+
+  if (!window.matchMedia) return;
+  const colorSchemeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  const updateTheme = () => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme();
+    }
+  };
+
+  if (typeof colorSchemeMedia.addEventListener === "function") {
+    colorSchemeMedia.addEventListener("change", updateTheme);
+  } else if (typeof colorSchemeMedia.addListener === "function") {
+    colorSchemeMedia.addListener(updateTheme);
+  }
 };
 
 // Calendar helpers
