@@ -247,6 +247,11 @@ ninja.data = [{
           description: "How to use Google GenAI SDK to build the world&#39;s best harness",
           section: "Ai_bytes",handler: () => {
               window.location.href = "/ai-bytes/2026-04-16-google-genai-sdk-harness/";
+            },},{id: "ai_bytes-your-harness-is-burning-your-token-budget-with-pdfs",
+          title: 'Your harness is burning your token budget with PDFs',
+          description: "That PDF you&#39;re feeding your agent? It&#39;s walking through two doors at once and you&#39;re paying for both. Here&#39;s the math and the one-line fix.",
+          section: "Ai_bytes",handler: () => {
+              window.location.href = "/ai-bytes/2026-06-20-your-harness-is-burning-tokens-with-pdfs/";
             },},{id: "books-web-development-with-julia-and-genie",
           title: 'Web Development with Julia and Genie',
           description: "",
